@@ -56,7 +56,7 @@ msgstr ""
 msgid "Top"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:116
 msgid "Sidebar"
 msgstr ""
 
@@ -102,7 +102,7 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:71, components/page/content-page.php:31
+#: inc/template-tags.php:71
 msgid "Edit %s"
 msgstr ""
 
@@ -120,6 +120,14 @@ msgstr ""
 
 #: components/header/navbar.php:6
 msgid "Menu"
+msgstr ""
+
+#: components/header/navbar.php:26
+msgid "Search"
+msgstr ""
+
+#: components/header/navbar.php:35
+msgid "What are you searching for?"
 msgstr ""
 
 #: components/page/content-page.php:21, components/post/content.php:43

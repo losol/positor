@@ -13,7 +13,7 @@
 	<?php if ( '' != get_the_post_thumbnail() ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'positor-featured-image' ); ?>
+				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'img-responsive' )); ?>
 			</a>
 		</div>
 	<?php endif; ?>
@@ -45,5 +45,7 @@
 			) );
 		?>
 	</div>
-	<?php get_template_part( 'components/post/content', 'footer' ); ?>
+		<footer class="entry-footer">
+		<?php positor_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

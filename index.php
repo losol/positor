@@ -11,11 +11,12 @@
  *
  * @package Positor
  */
+?>
+<?php get_header(); ?>
 
-get_header(); ?>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+<main id="primary" class="container content-area fl-archive" role="main">
+	<div class="row">
+		
 		<?php
 		if ( have_posts() ) :
 
@@ -46,8 +47,9 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main>
+		
 	</div>
+	</main>
 <?php
 get_sidebar();
 get_footer();

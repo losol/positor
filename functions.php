@@ -42,7 +42,7 @@ function positor_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'positor-featured-image', 640, 9999 );
+	add_image_size( 'positor-featured-image', 1200, 630, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -53,8 +53,8 @@ function positor_setup() {
 	 * Add support for core custom logo.
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 200,
-		'width'       => 200,
+		'height'      => 100,
+		'width'       => 400,
 		'flex-width'  => true,
 		'flex-height' => true,
 	) );
@@ -104,6 +104,7 @@ function positor_the_custom_logo() {
 		the_custom_logo();
 	}
 }
+
 
 /**
  * Register widget area.
