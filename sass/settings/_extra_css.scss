@@ -1,0 +1,389 @@
+/* Some extra straight forward css here? */
+
+/* Background gradient
+*/
+
+body {
+    background: rgba(255,255,255,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 71%, rgba(219,215,219,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(71%, rgba(246,246,246,1)), color-stop(100%, rgba(219,215,219,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 71%, rgba(219,215,219,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 71%, rgba(219,215,219,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 71%, rgba(219,215,219,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 71%, rgba(219,215,219,1) 100%);
+}
+
+.font-weight-normal b, .font-weight-normal strong {
+    font-weight: normal!important;
+}
+
+.position-relative {
+    position: relative!important;
+}
+
+.position-absolute {
+    position: absolute!important;
+}
+.top-left {
+    left: 0px;
+    top: 0px;
+}
+
+.left {
+    left: 0px;
+}
+
+.pl-10
+ {
+    padding-left:5rem;
+}
+
+.bg-darkgray {background-color:#333;}
+.bg-gray {background-color:#55595c;}
+.bg-blue {background-color:#9bc4e2;}
+
+.bg-cover{
+   background-size: cover!important;
+}
+
+.black-marker {float:left;clear:left;background: rgba(44, 44, 44, 0.4); padding:2px;}
+
+.bg-opa10 {
+background-color: rgba(44, 44, 44, 0.1);
+background: rgba(44, 44, 44, 0.1);
+}
+.bg-opa20 {
+background-color: rgba(44, 44, 44, 0.2);
+background: rgba(44, 44, 44, 0.2);
+}
+.bg-opa30 {
+background-color: rgba(44, 44, 44, 0.2);
+background: rgba(44, 44, 44, 0.3);
+}
+.bg-opa40 {
+background-color: rgba(44, 44, 44, 0.2);
+background: rgba(44, 44, 44, 0.4);
+}
+.bg-circle
+{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  padding: 14px 4px;
+  color: #ececec;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.bg-circle-outline
+{
+  width: 50px;
+  height: 50px;
+  color:smoke;
+  padding: 8px 2px;
+  border: 2px solid;
+  border-color: smoke;
+  border-radius: 50%;
+}
+
+
+.bg-circle a, .bg-circle a:hover, .media a:focus
+{
+  text-decoration: none !important;
+  outline: none;
+  color: #ececec;
+}
+.bg-circle-outline a, .bg-circle-outline a:hover, .media a:focus
+{
+  text-decoration: none !important;
+  outline: none;
+  color: #ececec;
+}
+
+
+
+
+.bg-dimmed {
+  background: rgba(0, 0, 0, 0.7);
+}
+.card-badge {
+    text-transform: uppercase;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.card-grey {
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.display-1 .text-white {color: #fff;}
+
+.redtop {
+  border-top: 10px solid #ed1c24; }
+
+.redbottom {
+  border-bottom: 0.4pt dotted #ed1c24; }
+
+.bluetop {
+  border-top: 10px solid #355E7C;
+}
+
+.bluebottom {
+  border-bottom: 5px solid #355E7C;
+}
+.text-shadow {
+    text-shadow: 1px 1px 0 #fff;
+}
+
+
+/* button hack to get green success buttons */
+.btn {
+    -webkit-appearance: inherit;
+    }
+    
+/* Some links should not have any decoration */
+h1 a, h2 a, h3 a, h4 a {
+    text-decoration: none;
+}
+
+    .link-no-decoration {
+        text-decoration: none !important;
+    }
+
+    .link-no-decoration * {
+        text-decoration: none !important;
+    }
+
+
+/* Breadcrumb */
+.breadcrumb {
+    margin-bottom: 0rem;
+}
+
+ul.breadcrumb {
+    margin-left: 0px;
+    padding-left: 1rem;
+}
+
+.breadcrumb > li + li::before {
+    content: ">";
+}
+
+
+/* Image captions overlay effect */
+div.caption-overlay {
+    background-color: #000;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+}
+
+/* Authorcards TODO -should move margins to pt-classes*/
+.authorcard {
+    margin-top: 60px;
+}
+
+img.authorcard-profilephoto {
+    height: 100px;
+    width: 100px;
+    margin-top: -75px;
+}
+
+
+    /* Nice blockquote */
+    blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid #ccc;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
+
+    blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+
+    blockquote p {
+        display: inline;
+    }
+   
+    /*****/
+    /* Hr-fancy with star */
+    hr.fancy-inverse,
+    hr.fancy {
+        padding: 0;
+        border: none;
+        border-top: solid 1px;
+        text-align: center;
+        max-width: 250px;
+        margin: 25px auto 30px;
+    }
+
+    hr.fancy-inverse:after,
+    hr.fancy:after {
+        content: "\f0f1";
+        font-family: FontAwesome;
+        display: inline-block;
+        position: relative;
+        top: -0.8em;
+        font-size: 2em;
+        padding: 0 0.25em;
+    }
+
+    hr.fancy-inverse {
+        border-color: white;
+    }
+
+    hr.fancy-inverse:after {
+        background-color: #18bc9c;
+        color: white;
+    }
+
+    hr.fancy {
+        border-color: #2c3e50;
+    }
+
+    hr.fancy:after {
+        background-color: white;
+        background-color: #f7f7f9;
+    }
+
+
+.current-menu-item a {color: #ed1c24!important;}
+
+
+/* 
+Wordpress specific styles from understrap
+- consider if more could be removed.... 
+*/
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+img 
+{ max-width: 100%; 
+height: auto;
+ }
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Pagination
+--------------------------------------------------------------*/
+
+/* =Index pagination
+----------------------------------------------- */
+
+/* The containing box with a nice white background */
+.paging-navigation {
+	font-family: sans-serif;
+	padding: 1em;
+	background: #fff;
+	background: hsl(0, 0%, 100%);
+}
+
+/* Remove bullets and list indentation */
+.paging-navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Make the list items appear horizontally */
+.paging-navigation li {
+	display: inline;
+}
+
+/* Give each link and the current item some padding to make them easy to click */
+a.page-numbers,
+span.page-numbers {
+	padding: .3em .7em;
+	color: #333;
+	color: hsl(0, 0%, 20%);
+}
+
+/* Link hover state */
+a:hover.page-numbers {
+	color: #000;
+	color: hsl(0, 0%, 0%);
+}
+
+/* Current page bold and dark */
+.paging-navigation .current {
+	font-weight: bold;
+	color: #000;
+	color: hsl(0, 0%, 0%);
+}

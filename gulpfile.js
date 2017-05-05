@@ -22,12 +22,12 @@ var paths = {
     js: "js/**/*.js",
     minJs: "js/**/*.min.js",
     jsSrc: "js/source/",
-    jsDest: "js/",
+    jsDest: "assets/js/",
     css:  "css/**/*.css",
-    cssDest: "css/",
+    cssDest: "assets/stylesheets/",
     minCss: "css/**/*.min.css",
     libSrc: "node_modules/",
-    libDest: "lib/",
+    libDest: "assets/libs/",
     bootstrapSassSrc: "node_modules/bootstrap/scss/"
 };
 

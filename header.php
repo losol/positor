@@ -21,18 +21,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'positor' ); ?></a>
+	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'positor' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="header" class="site-header" role="banner">
 
-		<?php get_template_part( 'components/header/site', 'branding' ); ?>
-
-		<?php positor_the_custom_logo(); ?>
-
-		<?php get_template_part( 'components/navigation/navbar', 'top' ); ?>
+		<?php get_template_part( 'components/header/navbar', 'top' ); ?>
 
 		<?php positor_social_menu(); ?>
 
 	</header>
-	<div id="content" class="site-content">
+	<main id="content" class="site-content">
