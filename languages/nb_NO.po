@@ -1,0 +1,164 @@
+# Copyright (C) 2017 positor
+# This file is distributed under the same license as the positor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: positor\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.1\n"
+"Last-Translator: \n"
+"Language: nb\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oi! Siden ble ikke funnet."
+
+#: 404.php:20
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Vi fant ingenting her. Du kan forsøke en av lenkene under eller et søk?"
+
+#: 404.php:32
+msgid "Most Used Categories"
+msgstr "Mest brukte kategorier"
+
+#: 404.php:49
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Se i de månedlige arkivene. %1$s"
+
+#: comments.php:31
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "En kommentar til &ldquo;%s&rdquo;"
+msgstr[1] "%1$s kommentarer om &ldquo;%2$s&rdquo;"
+
+#: comments.php:40, comments.php:60
+msgid "Comment navigation"
+msgstr "Naviger i kommentarer"
+
+#: comments.php:43, comments.php:63
+msgid "Older Comments"
+msgstr "Eldre kommentarer"
+
+#: comments.php:44, comments.php:64
+msgid "Newer Comments"
+msgstr "Nyere kommentarer"
+
+#: comments.php:77
+msgid "Comments are closed."
+msgstr "Kommentarfeltet er stengt."
+
+#: functions.php:49
+msgid "Top"
+msgstr "Topp"
+
+#: functions.php:115
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: header.php:24
+msgid "Skip to content"
+msgstr "Hopp til innholdet"
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr "Søkeresultater for: %s"
+
+#: inc/template-tags.php:28
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Publisert %s"
+
+#: inc/template-tags.php:33
+msgctxt "post author"
+msgid "by %s"
+msgstr "av %s"
+
+#: inc/template-tags.php:50, inc/template-tags.php:56
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:52
+msgid "Posted in %1$s"
+msgstr "Publisert i %1$s"
+
+#: inc/template-tags.php:58
+msgid "Tagged %1$s"
+msgstr "Emneknagg %1$s"
+
+#: inc/template-tags.php:64
+msgid "Leave a comment"
+msgstr "Legg igjen en kommentar"
+
+#: inc/template-tags.php:64
+msgid "1 Comment"
+msgstr "1 kommentar"
+
+#: inc/template-tags.php:64
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: inc/template-tags.php:71, components/page/content-page.php:31
+msgid "Edit %s"
+msgstr "Rediger %s"
+
+#: components/footer/site-info.php:2
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: components/footer/site-info.php:2
+msgid "Proudly powered by %s"
+msgstr "Kjører på %s"
+
+#: components/footer/site-info.php:4
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s by %2$s."
+
+#: components/header/navbar.php:6
+msgid "Menu"
+msgstr "Meny"
+
+#: components/page/content-page.php:21, components/post/content.php:43
+msgid "Pages:"
+msgstr "Sider:"
+
+#: components/post/content-none.php:14
+msgid "Nothing Found"
+msgstr "Fant ingenting"
+
+#: components/post/content-none.php:20
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Klar for å legge ut første innlegg? <a href=\"%1$s\">Begynn her</a>."
+
+#: components/post/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Beklager, men vi fikk ingen treff på søket. Prøv igjen med andre søkeord."
+
+#: components/post/content-none.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Vi kan ikke finne det du leter etter. Kanskje det hjelper å søke."
+
+#: components/post/content.php:38
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Les mer %s <span class=\"meta-nav\">&rarr;</span>"

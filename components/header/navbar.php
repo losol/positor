@@ -1,13 +1,12 @@
 <nav id="site-navigation" role="navigation" class="navbar navbar-toggleable-sm navbar-inverse bg-primary link-no-decoration">
    
-   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-left"><?php positor_the_custom_logo(); ?></a>
+   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-left px-1"><?php positor_the_custom_logo(); ?></a>
    
    <button class="btn-link text-white text-uppercase text-nowrap hidden-md-up" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
      <i class="fa fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
    </button>
 
-   
-   <a class="navbar-brand site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+   <a class="navbar-brand site-title px-1" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
    <?php
    wp_nav_menu([
      'menu'            => 'top',

@@ -13,7 +13,8 @@ var gulp = require("gulp"),
     sourcemaps = require('gulp-sourcemaps'),
     clone = require('gulp-clone'),
     cssnano = require('gulp-cssnano'),
-    merge = require('gulp-merge')
+    merge = require('gulp-merge'),
+    wpPot = require('gulp-wp-pot')
 ;
 
 var webroot = "./";
@@ -121,4 +122,13 @@ gulp.task('make:js', function () {
     ])
         .pipe(concat('positor.js'))
         .pipe(gulp.dest(paths.jsDest));
+});
+
+// gulp make:pot - Make .pot file for translation
+gulp.task('make:pot', function () {
+    return gulp.src('**/*.php')
+        .pipe(wpPot( {
+            domain: 'positor'
+        } ))
+        .pipe(gulp.dest('languages/positor.pot'));
 });
