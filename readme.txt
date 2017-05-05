@@ -34,3 +34,4 @@ Positor includes support for Jetpack's Infinite Scroll as well as other features
 
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+* bs4navwalker by Dominic Businaro - @dominicbusinaro, GPL-2+, https://github.com/dominicbusinaro/bs4navwalker, 

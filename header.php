@@ -30,7 +30,7 @@
 
 		<?php positor_the_custom_logo(); ?>
 
-		<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
+		<?php get_template_part( 'components/navigation/navbar', 'top' ); ?>
 
 		<?php positor_social_menu(); ?>
 

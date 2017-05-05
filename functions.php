@@ -158,3 +158,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Add Bootstrap 4 nav walker
+ */
+require get_template_directory() . '/inc/bs4navwalker.php';
