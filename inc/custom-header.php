@@ -35,7 +35,7 @@ if ( ! function_exists( 'positor_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see positor_custom_header_setup().
+ * @see positor_custom_header_setup()
  */
 function positor_header_style() {
 	$header_text_color = get_header_textcolor();
