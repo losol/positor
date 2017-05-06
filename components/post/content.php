@@ -9,43 +9,36 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'mt-5' ); ?>>
+	<header class="text-center">
+		<?php
+			positor_the_categories();
+			the_title( '<h2 class="py-1 display-3"><a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		 ?>
+	</header>
 	<?php if ( '' != get_the_post_thumbnail() ) : ?>
-		<div class="post-thumbnail">
+		<div class="post-thumbnail py-3 ml-auto">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'img-responsive' )); ?>
+				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'mx-auto d-block' )); ?>
 			</a>
 		</div>
 	<?php endif; ?>
 
-	<header class="entry-header">
-		<?php
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			}
 
-		if ( 'post' === get_post_type() ) : ?>
-		<?php get_template_part( 'components/post/content', 'meta' ); ?>
-		<?php
-		endif; ?>
-	</header>
 	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'positor' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'positor' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<a href="<?php the_permalink(); ?>" class="link-no-decoration">
+		
+			<?php
+			positor_the_excerpt();
+			?>
+		</a>
+		<a href="<?php the_permalink(); ?>" class="link-no-decoration sr-only">
+			<?php
+				esc_html_e( 'Read ', 'positor' ); 
+				the_title();
+			?>
+		</a>
 	</div>
 		<footer class="entry-footer">
-		<?php positor_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -14,7 +14,7 @@
 ?>
 <?php get_header(); ?>
 
-<main id="primary" class="container content-area fl-archive" role="main">
+<main id="primary" class="container content-area" role="main">
 	<div class="row">
 		
 		<?php

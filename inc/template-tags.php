@@ -39,6 +39,73 @@ function positor_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'positor_the_excerpt' ) ) :
+/**
+ * Prints HTML with the categories, formatted as Bootstrap 4 badges. 
+ */
+function positor_the_excerpt() {
+
+				if ( get_theme_mod( 'activello_excerpts', 1 ) && get_the_excerpt() != "" ) :
+					the_excerpt();
+				else :
+					the_content();
+				endif;
+		}
+endif;
+
+if ( ! function_exists( 'positor_the_categories' ) ) :
+/**
+ * Prints HTML with the categories, formatted as Bootstrap 4 badges. 
+ */
+function positor_the_categories() {
+		$categories_list = get_the_category();
+		if ( $categories_list && positor_categorized_blog() ) {
+			echo '<div class="entry-categories"><span class="sr-only">'. esc_html__( 'Posted in ', 'positor' ) . '</span>';
+			
+			foreach ($categories_list as $category) {
+				echo '<span class="badge badge-primary mr-1">';
+				echo $category->name;
+				echo '</span>';
+			
+			}
+			echo '</div>';
+			}
+		}
+endif;
+
+if ( ! function_exists( 'positor_the_tags' ) ) :
+/**
+ * Prints HTML with the categories, formatted as Bootstrap 4 badges. 
+ */
+function positor_the_tags() {
+		$tags_list = get_the_tags();
+		if ( $tags_list ) {
+			echo '<div class="entry-tags"><span class="sr-only">'. esc_html__( 'Tagged with ', 'positor' ) . '</span>';
+			
+			foreach ($tags_list as $tag) {
+				echo '<span class="badge badge-primary mr-1">';
+				echo $category->name;
+				echo '</span>';
+			
+			}
+			echo '</div>';
+			}
+		}
+endif;
+
+if ( ! function_exists( 'positor_the_comments' ) ) :
+/**
+ * Prints HTML with the categories, formatted as Bootstrap 4 badges. 
+ */
+function positor_the_comments() {
+			if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		echo '<span class="comments-link">';
+		comments_popup_link( esc_html__( 'Leave a comment', 'positor' ), esc_html__( '1 Comment', 'positor' ), esc_html__( '% Comments', 'positor' ) );
+		echo '</span>';
+	}
+		}
+endif;
+
 if ( ! function_exists( 'positor_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
@@ -49,7 +116,7 @@ function positor_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'positor' ) );
 		if ( $categories_list && positor_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'positor' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links"><span class="sr-only">' . esc_html__( 'Posted in ', 'positor' ) . '</span>' . '%1$s' . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
@@ -65,15 +132,6 @@ function positor_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'positor' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 endif;
 

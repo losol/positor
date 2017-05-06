@@ -42,7 +42,9 @@ function positor_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'positor-featured-image', 1200, 630, true );
+	add_image_size( 'positor-featured-image', 1200, 430, true );
+
+    set_post_thumbnail_size( 1200, 430, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

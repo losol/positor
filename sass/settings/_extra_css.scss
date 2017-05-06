@@ -13,6 +13,13 @@ body {
     background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 71%, rgba(219,215,219,1) 100%);
 }
 
+.badge a
+{
+  color: #ececec;
+  text-decoration: none;
+  font-weight: normal;
+}
+
 .font-weight-normal b, .font-weight-normal strong {
     font-weight: normal!important;
 }
