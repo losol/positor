@@ -53,6 +53,32 @@ body {
    background-size: cover!important;
 }
 
+.footer-contact i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    vertical-align: middle;
+}
+
+.footer-contact p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+
+
+.footer-contact p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .black-marker {float:left;clear:left;background: rgba(44, 44, 44, 0.4); padding:2px;}
 
 .bg-opa10 {

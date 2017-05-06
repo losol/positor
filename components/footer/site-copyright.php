@@ -1,0 +1,1 @@
+2017 &copy; <?php bloginfo( 'name' ); ?>
