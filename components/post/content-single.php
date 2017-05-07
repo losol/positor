@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'mt-5' ); ?>>
 	<header class="">
 		<?php
-			the_title( '<h1 class="py-1 display-2"><a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+			the_title( '<h1 class="py-1 display-2">', '</h1>' );
 		 ?>
 	</header>
 	<?php if ( '' != get_the_post_thumbnail() ) : ?>

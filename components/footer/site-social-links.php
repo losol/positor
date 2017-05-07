@@ -1,4 +1,4 @@
-<div class="d-inline-block">
+<div class="d-flex">
     <?php 
         $positor_social_link = get_theme_mod( 'positor_social_link' );
         if ($positor_social_link["facebook"] != '#') :
