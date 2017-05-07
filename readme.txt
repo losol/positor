@@ -1,11 +1,10 @@
 === Positor ===
+Contributors: Ole Kristan Losvik
+Tags: Bootstrap 4
 
-Contributors:
-Tags:
-
-Requires at least:
-Tested up to:
-Stable tag: 1.0.0
+Requires at least: 4.4.0
+Tested up to: 4.7.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,8 +34,8 @@ Positor includes support for Jetpack's Infinite Scroll as well as other features
 
 
 == Credits ==
-* Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * bs4navwalker by Dominic Businaro - @dominicbusinaro, GPL-2+, https://github.com/dominicbusinaro/bs4navwalker
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
