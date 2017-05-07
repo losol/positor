@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-A minimalistic theme with a clean design giving focus to your content. Theme is based on on Bootstrap 4.
+A minimalistic theme with a clean design giving focus to your content. Theme is built on Bootstrap 4.
 
 == Installation ==
 
@@ -20,9 +20,9 @@ A minimalistic theme with a clean design giving focus to your content. Theme is 
 
 == Frequently Asked Questions ==
 
-= Does this theme support any plugins? =
+= Where can i find the source code and sass files? =
 
-Positor includes support for Jetpack's Infinite Scroll as well as other features.
+Positor and it´s full source code is available at [GitHub](https://github.com/losol/positor).
 
 == Changelog ==
 
