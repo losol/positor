@@ -9,8 +9,9 @@
  ?>
 <?php get_header(); ?>
 <div class="container-fluid bg-warning">
-	<div class="row">
-	<p class="display-1">404<span class="text-muted">Fant ikke siden</span></p>
+	<div class="row py-3"><div class="container">
+	<p class="pt-5 display-1 text-white">404 - <?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'positor' ); ?></span></p>
+</div>
 </div>
 </div>
 <div class="container">
@@ -19,11 +20,8 @@
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title pt-5"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'positor' ); ?></h1>
-				</header>
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'positor' ); ?></p>
+					<p class="lead pt-5"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'positor' ); ?></p>
 					
 					<?php
 						get_search_form();
