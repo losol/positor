@@ -1,4 +1,37 @@
 "use strict";
+// Project configuration
+var project 	    = 'positor', // Project name, used for build zip.
+	url 		    = 'local.wordpress.dev', // Local Development URL for BrowserSync. Change as-needed.
+	build 		    = './buildtheme/', // Files that you want to package into a zip go here
+	buildInclude    = [
+				// include common file types
+				'**/*.php',
+				'**/*.html',
+				'**/*.css',
+				'**/*.js',
+				'**/*.svg',
+				'**/*.ttf',
+				'**/*.otf',
+				'**/*.eot',
+				'**/*.woff',
+				'**/*.woff2',
+                '**/*.pot',
+                '**/*.mo',
+                '**/*.po',
+                '**/*.txt',
+
+				// include specific files and folders
+				'screenshot.png',
+
+				// exclude files and folders
+				'!node_modules/**/*',
+				'!assets/bower_components/**/*',
+				'!style.css.map',
+				'!assets/js/custom/*',
+				'!assets/css/patrials/*'
+
+			];
+
 
 var gulp = require("gulp"),
     rimraf = require("rimraf"),
@@ -14,7 +47,9 @@ var gulp = require("gulp"),
     clone = require('gulp-clone'),
     cssnano = require('gulp-cssnano'),
     merge = require('gulp-merge'),
-    wpPot = require('gulp-wp-pot')
+    zip  = require('gulp-zip'),
+    wpPot = require('gulp-wp-pot'),
+    notify = require('gulp-notify')
 ;
 
 var webroot = "./";
@@ -124,11 +159,35 @@ gulp.task('make:js', function () {
         .pipe(gulp.dest(paths.jsDest));
 });
 
-// gulp make:pot - Make .pot file for translation
-gulp.task('make:pot', function () {
+// gulp build:pot - Make .pot file for translation
+gulp.task('build:pot', function () {
     return gulp.src('**/*.php')
         .pipe(wpPot( {
             domain: 'positor'
         } ))
         .pipe(gulp.dest('languages/positor.pot'));
 });
+
+ /**
+  * Build task that moves essential theme files for production-ready sites
+  *
+  * build:theme copies all the files in buildInclude to build folder - check variable values at the top
+  */
+
+  gulp.task('build:theme', function() {
+  	return 	gulp.src(buildInclude)
+  		.pipe(gulp.dest(build))
+  		.pipe(notify({ message: 'Copy from buildFiles complete', onLast: true }));
+  });
+
+   /**
+  * Zipping build directory for distribution
+  *
+  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
+ */
+ gulp.task('build:zip', function () {
+ 	return 	gulp.src(build+'/**/')
+ 		.pipe(zip(project+'.zip'))
+ 		.pipe(gulp.dest('./'))
+ 		.pipe(notify({ message: 'Zip task complete', onLast: true }));
+ });
