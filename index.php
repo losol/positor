@@ -14,10 +14,16 @@
 ?>
 <?php get_header(); ?>
 
-<main id="primary" class="container content-area" role="main">
-	<div class="row">
-		
-		<?php
+
+	<div class="container">
+		<div class="row">
+			<main id="primary" role="main">
+				<?php
+				if ( is_active_sidebar( 'sidebar-1' ) ) {
+					echo 'col-md-9';
+				} else {
+					echo 'col-md-12';
+				};
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
