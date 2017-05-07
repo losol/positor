@@ -24,11 +24,13 @@ var project 	    = 'positor', // Project name, used for build zip.
 				'screenshot.png',
 
 				// exclude files and folders
-				'!node_modules/**/*',
+				'!buildtheme/**/*',
+                '!node_modules/**/*',
 				'!assets/bower_components/**/*',
 				'!style.css.map',
 				'!assets/js/custom/*',
 				'!assets/css/patrials/*'
+
 
 			];
 
