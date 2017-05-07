@@ -37,6 +37,8 @@ Positor includes support for Jetpack's Infinite Scroll as well as other features
 
 = 1.0.3 - 07.05.2017
 * Fix of social media link variable giving notice. 
+* Better spacing in sidebar widgets
+* Fixed menu containing way too many or long elements
 
 
 == Credits ==

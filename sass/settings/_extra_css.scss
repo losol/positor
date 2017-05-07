@@ -23,7 +23,12 @@ body {
 .font-weight-normal b, .font-weight-normal strong {
     font-weight: normal!important;
 }
-
+#top_menu {
+    flex-wrap: wrap;
+}
+h1 {
+    word-break: break-word;
+}
 .position-relative {
     position: relative!important;
 }
