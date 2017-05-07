@@ -24,7 +24,7 @@
 
 	<header id="header" class="site-header">
 
-		<?php get_template_part( 'components/header/navbar', 'top' ); ?>
+		<?php get_template_part( 'components/header/navbar', 'top' ); ?> 
 		<?php positor_social_menu(); ?>
 
 	</header>
