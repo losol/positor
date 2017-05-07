@@ -19,6 +19,7 @@
 		<div class="post-thumbnail py-1 ml-auto">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'mx-auto d-block' )); ?>
+				<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
 			</a>
 		</div>
 	<?php endif; ?>
