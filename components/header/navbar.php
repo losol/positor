@@ -1,4 +1,4 @@
-<nav id="site-navigation" role="navigation" class="navbar navbar-toggleable-sm navbar-inverse bg-primary link-no-decoration">
+<nav id="site-navigation" class="navbar navbar-toggleable-sm navbar-inverse bg-primary link-no-decoration">
    
 
    <div class="hidden-sm-down">
@@ -17,7 +17,7 @@
      'container'       => 'div',
      'container_id'    => 'bs4navbar',
      'container_class' => 'collapse navbar-collapse',
-     'menu_id'         => 'bs4navbar',
+     'menu_id'         => 'top_menu',
      'menu_class'      => 'navbar-nav mr-auto',
      'depth'           => 2,
      'fallback_cb'     => 'bs4navwalker::fallback',
@@ -37,7 +37,7 @@
          <div class="input-group">
            <input name="s" type="text" class="form-control" placeholder="<?php esc_html_e( 'What are you searching for?', 'positor' ); ?>">
            <span class="input-group-btn">
-             <button type="submit" value="Search" class="btn btn-danger" type="button"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;</button>
+             <button type="submit" value="Search" class="btn btn-danger"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;</button>
             </span>
          </div>
     </form>
