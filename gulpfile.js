@@ -2,7 +2,7 @@
 // Project configuration
 var project 	    = 'positor', // Project name, used for build zip.
 	url 		    = 'local.wordpress.dev', // Local Development URL for BrowserSync. Change as-needed.
-	build 		    = './buildtheme/', // Files that you want to package into a zip go here
+	build 		    = './temp/buildtheme/', // Files that you want to package into a zip go here
 	buildInclude    = [
 				// include common file types
 				'**/*.php',
@@ -24,7 +24,7 @@ var project 	    = 'positor', // Project name, used for build zip.
 				'screenshot.png',
 
 				// exclude files and folders
-				'!buildtheme/**/*',
+				'!temp/**/*',
                 '!node_modules/**/*',
 				'!assets/bower_components/**/*',
 				'!style.css.map',
