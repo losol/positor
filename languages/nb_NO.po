@@ -21,24 +21,13 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:17
+#: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oi! Siden ble ikke funnet."
 
-#: 404.php:20
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Vi fant ingenting her. Du kan forsøke en av lenkene under eller et søk?"
-
-#: 404.php:32
-msgid "Most Used Categories"
-msgstr "Mest brukte kategorier"
-
-#: 404.php:49
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Se i de månedlige arkivene. %1$s"
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Vi fant ingenting her. Kanskje du vil forsøke et søk?"
 
 #: comments.php:31
 msgctxt "comments title"
@@ -71,7 +60,7 @@ msgstr "Topp"
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: header.php:24
+#: header.php:23
 msgid "Skip to content"
 msgstr "Hopp til innholdet"
 
@@ -107,11 +96,11 @@ msgstr "av %s"
 
 #: inc/template-tags.php:63, inc/template-tags.php:119
 msgid "Posted in "
-msgstr "Publisert i %1$s"
+msgstr "Publisert i %1$s "
 
 #: inc/template-tags.php:83
 msgid "Tagged with "
-msgstr "Emneknagg %1$s"
+msgstr "Emneknagg "
 
 #: inc/template-tags.php:103, inc/template-tags.php:131
 msgid "Leave a comment"
@@ -145,7 +134,7 @@ msgstr "Søk"
 msgid "What are you searching for?"
 msgstr "Hva søker du etter?"
 
-#: components/page/content-page.php:21, components/post/content-single.php:43
+#: components/page/content-page.php:21
 msgid "Pages:"
 msgstr "Sider:"
 
@@ -171,13 +160,19 @@ msgid ""
 "searching can help."
 msgstr "Vi kan ikke finne det du leter etter. Kanskje det hjelper å søke."
 
-#: components/post/content-search.php:36, components/post/content.php:36
+#: components/post/content-search.php:36,
+#: components/post/content-single.php:32, components/post/content.php:36
 msgid "Read "
 msgstr "Les "
 
-#: components/post/content-single.php:38
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Les mer %s <span class=\"meta-nav\">&rarr;</span>"
+#~ msgid "Most Used Categories"
+#~ msgstr "Mest brukte kategorier"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Se i de månedlige arkivene. %1$s"
+
+#~ msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Les mer %s <span class=\"meta-nav\">&rarr;</span>"
 
 #~ msgid "Edit %s"
 #~ msgstr "Rediger %s"
