@@ -52,11 +52,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:49
+#: functions.php:51
 msgid "Top"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:118
 msgid "Sidebar"
 msgstr ""
 
@@ -66,6 +66,22 @@ msgstr ""
 
 #: search.php:19
 msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/customizer.php:25
+msgid "Social media links"
+msgstr ""
+
+#: inc/customizer.php:35
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/customizer.php:40
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "LinkedIn URL"
 msgstr ""
 
 #: inc/template-tags.php:28
@@ -78,59 +94,47 @@ msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:50, inc/template-tags.php:56
-msgid ", "
+#: inc/template-tags.php:63, inc/template-tags.php:119
+msgid "Posted in "
 msgstr ""
 
-#: inc/template-tags.php:52
-msgid "Posted in %1$s"
+#: inc/template-tags.php:83
+msgid "Tagged with "
 msgstr ""
 
-#: inc/template-tags.php:58
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc/template-tags.php:64
+#: inc/template-tags.php:103, inc/template-tags.php:131
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:64
+#: inc/template-tags.php:103, inc/template-tags.php:131
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:64
+#: inc/template-tags.php:103, inc/template-tags.php:131
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:71
-msgid "Edit %s"
+#: inc/template-tags.php:117, inc/template-tags.php:123
+msgid ", "
 msgstr ""
 
-#: components/footer/site-info.php:2
-msgid "https://wordpress.org/"
+#: inc/template-tags.php:125
+msgid "Tagged %1$s"
 msgstr ""
 
-#: components/footer/site-info.php:2
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: components/footer/site-info.php:4
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: components/header/navbar.php:6
+#: components/header/navbar.php:9
 msgid "Menu"
 msgstr ""
 
-#: components/header/navbar.php:26
+#: components/header/navbar.php:29
 msgid "Search"
 msgstr ""
 
-#: components/header/navbar.php:35
+#: components/header/navbar.php:38
 msgid "What are you searching for?"
 msgstr ""
 
-#: components/page/content-page.php:21, components/post/content.php:43
+#: components/page/content-page.php:21, components/post/content-single.php:43
 msgid "Pages:"
 msgstr ""
 
@@ -150,6 +154,10 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: components/post/content.php:38
+#: components/post/content-search.php:36, components/post/content.php:36
+msgid "Read "
+msgstr ""
+
+#: components/post/content-single.php:38
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

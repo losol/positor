@@ -26,14 +26,11 @@ function positor_customize_register( $wp_customize ) {
 		'priority'   => 300,
 	) );
 
-	$social_links_default_settings = array(
-        'default' => '',
-	);
 
-	$wp_customize->add_setting('positor_social_link[facebook]', $social_links_default_settings);
-	$wp_customize->add_setting('positor_social_link[twitter]', $social_links_default_settings);
-	$wp_customize->add_setting('positor_social_link[linkedin]', $social_links_default_settings);
-
+	$wp_customize->add_setting('positor_social_link[facebook]', array(	'default'	=> '', 	'sanitize_callback'	=> 'esc_attr', ));
+	$wp_customize->add_setting('positor_social_link[twitter]', array(	'default'	=> '', 	'sanitize_callback'	=> 'esc_attr', ));
+	$wp_customize->add_setting('positor_social_link[linkedin]', array(	'default'	=> '', 	'sanitize_callback'	=> 'esc_attr', ));
+	
 	$wp_customize->add_control('facebook', array(
 		'label'      => __('Facebook URL', 'positor'),
 		'section'    => 'positor_social_media_settings',

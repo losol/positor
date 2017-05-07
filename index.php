@@ -14,16 +14,19 @@
 ?>
 <?php get_header(); ?>
 
+<div class="container">
+	<div class="row">
+	
+		<?php
+		if ( is_active_sidebar( 'sidebar-1' ) ) {
+			echo '<div class="col-md-9">';
+		} else {
+			echo '<div class="col-md-12">';
+		};
+		?>
 
-	<div class="container">
-		<div class="row">
-			<main id="primary" role="main">
-				<?php
-				if ( is_active_sidebar( 'sidebar-1' ) ) {
-					echo 'col-md-9';
-				} else {
-					echo 'col-md-12';
-				};
+		<main id="primary" role="main">
+		<?php
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
@@ -52,10 +55,16 @@
 			get_template_part( 'components/post/content', 'none' );
 
 		endif; ?>
-
+		</main>
 		
 	</div>
-</main>
+
 <?php
 get_sidebar();
+?>
+
+</div>
+
+</div>
+<?php
 get_footer();

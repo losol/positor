@@ -10,14 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'mt-5' ); ?>>
-	<header class="text-center">
+	<header class="">
 		<?php
-			positor_the_categories();
 			the_title( '<h2 class="py-1 display-3"><a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		 ?>
 	</header>
 	<?php if ( '' != get_the_post_thumbnail() ) : ?>
-		<div class="post-thumbnail py-3 ml-auto">
+		<div class="post-thumbnail py-1 ml-auto">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'mx-auto d-block' )); ?>
 			</a>

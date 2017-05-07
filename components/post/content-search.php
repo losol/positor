@@ -9,16 +9,35 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-			<?php get_template_part( 'components/post/content', 'meta' ); ?>
-		<?php endif; ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'mt-5' ); ?>>
+	<header class="">
+		<?php
+			the_title( '<h2 class="py-1 display-3"><a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		 ?>
 	</header>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+	<?php if ( '' != get_the_post_thumbnail() ) : ?>
+		<div class="post-thumbnail py-1 ml-auto">
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'mx-auto d-block' )); ?>
+			</a>
+		</div>
+	<?php endif; ?>
+
+
+	<div class="entry-content">
+		<a href="<?php the_permalink(); ?>" class="link-no-decoration">
+		
+			<?php
+			positor_the_excerpt();
+			?>
+		</a>
+		<a href="<?php the_permalink(); ?>" class="link-no-decoration sr-only">
+			<?php
+				esc_html_e( 'Read ', 'positor' ); 
+				the_title();
+			?>
+		</a>
 	</div>
-	<?php get_template_part( 'components/post/content', 'footer' ); ?>
-</article>
+		<footer class="entry-footer">
+	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->

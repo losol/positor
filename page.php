@@ -11,10 +11,20 @@
  *
  * @package Positor
  */
+ ?>
 
-get_header(); ?>
+<?php get_header(); ?>
 
-	<div id="primary" class="content-area">
+<div class="container">
+	<div class="row">
+	
+		<?php
+		if ( is_active_sidebar( 'sidebar-1' ) ) {
+			echo '<div class="col-md-9">';
+		} else {
+			echo '<div class="col-md-12">';
+		};
+		?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -32,6 +42,13 @@ get_header(); ?>
 
 		</main>
 	</div>
+
 <?php
 get_sidebar();
+?>
+
+</div>
+
+</div>
+<?php
 get_footer();

@@ -6,18 +6,26 @@
  *
  * @package Positor
  */
+?>
+<?php get_header(); ?>
 
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="container">
+	<div class="row">
+	
+		<?php
+		if ( is_active_sidebar( 'sidebar-1' ) ) {
+			echo '<div class="col-md-9">';
+		} else {
+			echo '<div class="col-md-12">';
+		};
+		?>		<main id="main" class="site-main container" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="page-title pt-5">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header>
@@ -44,6 +52,13 @@ get_header(); ?>
 
 		</main>
 	</div>
+
 <?php
 get_sidebar();
+?>
+
+</div>
+
+</div>
+<?php
 get_footer();
