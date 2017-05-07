@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-A simple but nice wordpress theme based on Bootstrap 4.
+A minimalistic theme with a clean design giving focus to your content. Theme is based on on Bootstrap 4.
 
 == Installation ==
 
@@ -31,6 +31,12 @@ Positor includes support for Jetpack's Infinite Scroll as well as other features
 
 = 1.0.1 - 06.05.2017 =
 * Added norwegian translation.
+
+= 1.0.2 - 07.05.2017
+* Better build structure
+
+= 1.0.3 - 07.05.2017
+* Fix of social media link variable giving notice. 
 
 
 == Credits ==

@@ -1,7 +1,7 @@
 {
   "name": "positor",
-  "version": "1.0.0",
-  "description": "Wordpress-theme",
+  "version": "1.0.3",
+  "description": "A minimalistic WordPress theme giving focus to your content",
   "author": "Ole Kristian Losvik",
   "license": "GPL-2.0",
   "dependencies": {

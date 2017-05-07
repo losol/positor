@@ -8,7 +8,11 @@
  */
  ?>
 <?php get_header(); ?>
-
+<div class="container-fluid bg-warning">
+	<div class="row">
+	<p class="display-1">404<span class="text-muted">Fant ikke siden</span></p>
+</div>
+</div>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">

@@ -66,7 +66,8 @@ var paths = {
     minCss: "css/**/*.min.css",
     libSrc: "node_modules/",
     libDest: "assets/libs/",
-    bootstrapSassSrc: "node_modules/bootstrap/scss/"
+    bootstrapSassSrc: "node_modules/bootstrap/scss/",
+    temp: "./temp/"
 };
 
 gulp.task("clean:js", function (cb) {
@@ -81,7 +82,11 @@ gulp.task("clean:lib", function (cb) {
     rimraf(paths.libDest, cb);
 });
 
-gulp.task("clean", ["clean:js", "clean:css", "clean:lib"]);
+gulp.task("clean:temp", function (cb) {
+    rimraf(paths.libDest, cb);
+});
+
+gulp.task("clean", ["clean:js", "clean:css", "clean:lib", "clean:temp"]);
 
 gulp.task("minify:js", function () {
     return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
@@ -190,6 +195,6 @@ gulp.task('build:pot', function () {
  gulp.task('build:zip', function () {
  	return 	gulp.src(build+'/**/')
  		.pipe(zip(project+'.zip'))
- 		.pipe(gulp.dest('./'))
+ 		.pipe(gulp.dest(paths.temp))
  		.pipe(notify({ message: 'Zip task complete', onLast: true }));
  });
