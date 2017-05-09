@@ -167,3 +167,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Add Bootstrap 4 nav walker
  */
 require get_template_directory() . '/inc/bs4navwalker.php';
+
+/**
+ * Add WooCommerce support
+ */
+require get_template_directory() . '/inc/woocommerce.php';

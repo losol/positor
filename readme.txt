@@ -42,8 +42,11 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 
 = 1.0.4 - 09.05.2017
 * Showing social icons and related posts if Jetpack is installed and functions enabled.
-* Showing post meta information: author, photographer
+* Showing post meta information: author, photographer, tags, categories
 * Showing issue number for articles published in print magazine.
+
+= 1.0.5 - 10.05.2017
+* Added woocommerce support
 
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
