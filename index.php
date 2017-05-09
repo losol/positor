@@ -25,13 +25,9 @@
 		};
 		?>
 
-		<main id="primary">
-			
+		<main id="main">
 		
 		<?php
-		/* Get the sticky posts */
-		get_template_part( 'components/frontpage/sticky' );
-
 		
 		if ( have_posts() ) :
 

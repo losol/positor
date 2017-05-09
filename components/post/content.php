@@ -11,6 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'mt-5' ); ?>>
 	<header class="">
+		<?php if (is_sticky() && is_home() && !is_paged()) : ?>
+			<span class="h3 badge badge-info">
+				<?php _e('Featured', 'positor'); ?>
+			</span>
+		<?php endif; ?>
 		<?php
 			the_title( '<h2 class="py-1 display-3"><a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		 ?>
