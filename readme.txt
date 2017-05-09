@@ -40,10 +40,14 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 * Better spacing in sidebar widgets
 * Fixed menu containing way too many or long elements
 
+= 1.0.4 - 09.05.2017
+* Showing social icons and related posts if Jetpack is installed and functions enabled.
+* Showing post meta information: author, photographer
+* Showing issue number for articles published in print magazine.
 
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-* bs4navwalker by Dominic Businaro - @dominicbusinaro, GPL-2+, https://github.com/dominicbusinaro/bs4navwalker
+* bs4navwalker (https://github.com/dominicbusinaro/bs4navwalker) by Dominic Businaro - @dominicbusinaro, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)

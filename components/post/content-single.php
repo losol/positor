@@ -8,21 +8,40 @@
  */
 
 ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
+	<header>
+        <div class="col-md-12 py-3">
+            <?php
+                the_title( '<h1 class=" display-2">', '</h1>' );
+            ?>
+            <?php if ( '' != get_the_post_thumbnail() ) : ?>
+                <div class="post-thumbnail py-1 ml-auto">		
+                        <?php the_post_thumbnail( 'positor-featured-image', array( 'class' => '' )); ?>
+                        <p><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
+                </div>
+            <?php endif; ?>
+                <div><p class="lead">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'mt-5' ); ?>>
+                        <?php positor_the_excerpt() ?>
+
+                </p></div>
+            </div>
+        </div>
+    </header>
+
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
 	<header class="">
 		<?php
-			the_title( '<h1 class="py-1 display-2">', '</h1>' );
+			the_title( '<h1 class=" display-2">', '</h1>' );
 		 ?>
-	</header>
-	<?php if ( '' != get_the_post_thumbnail() ) : ?>
-		<div class="post-thumbnail py-1 ml-auto">		
-				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'mx-auto d-block' )); ?>
-				<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-		</div>
-	<?php endif; ?>
-
-
+		<?php if ( '' != get_the_post_thumbnail() ) : ?>
+			<div class="post-thumbnail py-1 ml-auto">		
+					<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'mx-auto d-block' )); ?>
+					<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+			</div>
+		<?php endif; ?>
+</header>
 	<div class="entry-content">		
 			<?php
 			the_content();
@@ -36,4 +55,4 @@
 	</div>
 		<footer class="entry-footer">
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</article>

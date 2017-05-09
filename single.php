@@ -9,44 +9,50 @@
 ?>
 
 <?php get_header(); ?>
+<?php
+	while ( have_posts() ) : the_post(); ?>
 
+<div class="bg-lightgray">
+	<div class="container pt-5">
+		<div class="row">
+			<?php get_template_part( 'components/post/content-single-header', get_post_format() ); ?>
+		</div>
+	</div>
+</div>
 <div class="container">
-	<div class="row">
-	
+	<div class="row pt-3">
+		<div class="col-md-8">
 		<?php
-		if ( is_active_sidebar( 'sidebar-1' ) ) {
-			echo '<div class="col-md-9">';
-		} else {
-			echo '<div class="col-md-12">';
-		};
-		?>
-		<main id="main" class="site-main">
 
-		<?php
-		while ( have_posts() ) : the_post();
+				get_template_part( 'components/post/content-single-body', get_post_format() );
 
-			get_template_part( 'components/post/content-single', get_post_format() );
+				get_template_part( 'components/common/issue-published', get_post_format() );
+				get_template_part( 'components/common/related-posts', get_post_format() );
+				get_template_part( 'components/common/social-sharing', get_post_format() );
+?>
 
-			the_post_navigation();
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main>
+			</main>
+		</div>
+	<div class="col-md-3 offset-md-1">
+		<aside id="secondary" role="complementary">
+			<?php 
+			get_template_part( 'components/common/meta', get_post_format() );
+  			get_template_part( 'sidebar', get_post_format() );
+			
+			?>
+		</aside>
 	</div>
 
 <?php
-get_sidebar();
+
 ?>
 
 </div>
 
 </div>
-<?php
+
+<?php	
+endwhile; // End of the loop.
 get_footer();
 

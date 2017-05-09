@@ -25,19 +25,18 @@
 
 
 	<div class="entry-content">
-		<a href="<?php the_permalink(); ?>" class="link-no-decoration">
+		<a href="<?php the_permalink(); ?>" class="link-no-decoration lead">
 		
 			<?php
 			positor_the_excerpt();
 			?>
 		</a>
-		<a href="<?php the_permalink(); ?>" class="link-no-decoration">
-			&there4;
+		<a href="<?php the_permalink(); ?>" class="">
+
 			<?php
 				esc_html_e( 'Read ', 'positor' ); 
 				the_title();
 			?>
-			&there4;
 		</a>
 	</div>
 		<footer class="entry-footer">

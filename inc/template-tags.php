@@ -41,15 +41,15 @@ endif;
 
 if ( ! function_exists( 'positor_the_excerpt' ) ) :
 /**
- * Prints HTML with the categories, formatted as Bootstrap 4 badges. 
+ * Gets excerpt if defined, otherwise the_content
  */
 function positor_the_excerpt() {
 
-				if ( get_theme_mod( 'activello_excerpts', 1 ) && get_the_excerpt() != "" ) :
-					the_excerpt();
-				else :
-					the_content();
-				endif;
+			if ( get_the_excerpt() != "" ) :
+				the_excerpt();
+			else :
+				the_content();
+			endif;
 		}
 endif;
 
@@ -83,8 +83,8 @@ function positor_the_tags() {
 			echo '<div class="entry-tags"><span class="sr-only">'. esc_html__( 'Tagged with ', 'positor' ) . '</span>';
 			
 			foreach ($tags_list as $tag) {
-				echo '<span class="badge badge-primary mr-1">';
-				echo $category->name;
+				echo '<span class="badge badge-warning mr-1">';
+				echo $tag->name;
 				echo '</span>';
 			
 			}

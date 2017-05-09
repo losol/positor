@@ -10,10 +10,7 @@
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
+dynamic_sidebar( 'sidebar-1' ); 
 ?>
-<div class="col-md-3">
-	<aside id="secondary" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</aside>
-</div>
+
 

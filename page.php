@@ -31,24 +31,22 @@
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'components/page/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				get_template_part( 'components/common/comments');
 
 			endwhile; // End of the loop.
 			?>
 
 		</main>
+		</div>
+		<?php		
+			if ( is_active_sidebar( 'sidebar-1' ) ) :
+			echo '<div class="col-md-3">';
+			get_sidebar();
+			echo '</div>';
+			endif;
+		?>
 	</div>
-
-<?php
-get_sidebar();
-?>
-
 </div>
 
-</div>
 <?php
 get_footer();
