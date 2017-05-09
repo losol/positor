@@ -21,149 +21,210 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:19
+#: 404.php:13, temp/buildtheme/404.php:13
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oi! Siden ble ikke funnet."
 
-#: 404.php:22
+#: 404.php:24, temp/buildtheme/404.php:24
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "Vi fant ingenting her. Kanskje du vil forsøke et søk?"
 
-#: comments.php:31
+#: comments.php:31, temp/buildtheme/comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "En kommentar til &ldquo;%s&rdquo;"
 msgstr[1] "%1$s kommentarer om &ldquo;%2$s&rdquo;"
 
-#: comments.php:40, comments.php:60
+#: comments.php:40, comments.php:60, temp/buildtheme/comments.php:40,
+#: temp/buildtheme/comments.php:60
 msgid "Comment navigation"
 msgstr "Naviger i kommentarer"
 
-#: comments.php:43, comments.php:63
+#: comments.php:43, comments.php:63, temp/buildtheme/comments.php:43,
+#: temp/buildtheme/comments.php:63
 msgid "Older Comments"
 msgstr "Eldre kommentarer"
 
-#: comments.php:44, comments.php:64
+#: comments.php:44, comments.php:64, temp/buildtheme/comments.php:44,
+#: temp/buildtheme/comments.php:64
 msgid "Newer Comments"
 msgstr "Nyere kommentarer"
 
-#: comments.php:77
+#: comments.php:77, temp/buildtheme/comments.php:77
 msgid "Comments are closed."
 msgstr "Kommentarfeltet er stengt."
 
-#: functions.php:51
+#: functions.php:51, temp/buildtheme/functions.php:51
 msgid "Top"
 msgstr "Topp"
 
-#: functions.php:118
+#: functions.php:118, temp/buildtheme/functions.php:118
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: header.php:23
+#: header.php:23, temp/buildtheme/header.php:23
 msgid "Skip to content"
 msgstr "Hopp til innholdet"
 
-#: search.php:19
+#: search.php:19, temp/buildtheme/search.php:19
 msgid "Search Results for: %s"
 msgstr "Søkeresultater for: %s"
 
-#: inc/customizer.php:25
+#: searchform.php:4, components/header/navbar.php:38,
+#: temp/buildtheme/searchform.php:4,
+#: temp/buildtheme/components/header/navbar.php:38
+msgid "What are you searching for?"
+msgstr "Hva søker du etter?"
+
+#: inc/customizer.php:25, temp/buildtheme/inc/customizer.php:25
 msgid "Social media links"
 msgstr "Sosiale media"
 
-#: inc/customizer.php:35
+#: inc/customizer.php:35, temp/buildtheme/inc/customizer.php:35
 msgid "Facebook URL"
 msgstr "Facebook URL"
 
-#: inc/customizer.php:40
+#: inc/customizer.php:40, temp/buildtheme/inc/customizer.php:40
 msgid "Twitter URL"
 msgstr "Twitter URL"
 
-#: inc/customizer.php:45
+#: inc/customizer.php:45, temp/buildtheme/inc/customizer.php:45
 msgid "LinkedIn URL"
 msgstr "LinkedIn URL"
 
-#: inc/template-tags.php:28
+#: inc/template-tags.php:28, temp/buildtheme/inc/template-tags.php:28
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "Publisert %s"
 
-#: inc/template-tags.php:33
+#: inc/template-tags.php:33, temp/buildtheme/inc/template-tags.php:33
 msgctxt "post author"
 msgid "by %s"
 msgstr "av %s"
 
-#: inc/template-tags.php:63, inc/template-tags.php:119
+#: inc/template-tags.php:63, inc/template-tags.php:119,
+#: temp/buildtheme/inc/template-tags.php:63,
+#: temp/buildtheme/inc/template-tags.php:119
 msgid "Posted in "
 msgstr "Publisert i %1$s "
 
-#: inc/template-tags.php:83
+#: inc/template-tags.php:83, temp/buildtheme/inc/template-tags.php:83
 msgid "Tagged with "
 msgstr "Emneknagg "
 
-#: inc/template-tags.php:103, inc/template-tags.php:131
+#: inc/template-tags.php:103, inc/template-tags.php:131,
+#: temp/buildtheme/inc/template-tags.php:103,
+#: temp/buildtheme/inc/template-tags.php:131
 msgid "Leave a comment"
 msgstr "Legg igjen en kommentar"
 
-#: inc/template-tags.php:103, inc/template-tags.php:131
+#: inc/template-tags.php:103, inc/template-tags.php:131,
+#: temp/buildtheme/inc/template-tags.php:103,
+#: temp/buildtheme/inc/template-tags.php:131
 msgid "1 Comment"
 msgstr "1 kommentar"
 
-#: inc/template-tags.php:103, inc/template-tags.php:131
+#: inc/template-tags.php:103, inc/template-tags.php:131,
+#: temp/buildtheme/inc/template-tags.php:103,
+#: temp/buildtheme/inc/template-tags.php:131
 msgid "% Comments"
 msgstr "% kommentarer"
 
-#: inc/template-tags.php:117, inc/template-tags.php:123
+#: inc/template-tags.php:117, inc/template-tags.php:123,
+#: temp/buildtheme/inc/template-tags.php:117,
+#: temp/buildtheme/inc/template-tags.php:123
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:125
+#: inc/template-tags.php:125, temp/buildtheme/inc/template-tags.php:125
 msgid "Tagged %1$s"
 msgstr "Emneknagg %1$s"
 
-#: components/header/navbar.php:9
+#: components/common/issue-published.php:4,
+#: temp/buildtheme/components/common/issue-published.php:4
+msgid "This article was published in issue "
+msgstr "Artikkelen var på trykk i nummer "
+
+#: components/common/meta.php:7, temp/buildtheme/components/common/meta.php:7
+msgid "Author: "
+msgstr "Skribent: "
+
+#: components/common/meta.php:19, temp/buildtheme/components/common/meta.php:19
+msgid "Image: "
+msgstr "Foto: "
+
+#: components/common/meta.php:24, temp/buildtheme/components/common/meta.php:24
+msgid "Published: "
+msgstr "Publisert: "
+
+#: components/common/meta.php:27, temp/buildtheme/components/common/meta.php:27
+msgid ", updated: "
+msgstr ", oppdatert: "
+
+#: components/common/meta.php:37, components/common/meta.php:46,
+#: temp/buildtheme/components/common/meta.php:37,
+#: temp/buildtheme/components/common/meta.php:46
+#, fuzzy
+#| msgid "Posted in "
+msgid "Posted in: "
+msgstr "Publisert i %1$s "
+
+#: components/header/navbar.php:9,
+#: temp/buildtheme/components/header/navbar.php:9
 msgid "Menu"
 msgstr "Meny"
 
-#: components/header/navbar.php:29
+#: components/header/navbar.php:29,
+#: temp/buildtheme/components/header/navbar.php:29
 msgid "Search"
 msgstr "Søk"
 
-#: components/header/navbar.php:38
-msgid "What are you searching for?"
-msgstr "Hva søker du etter?"
-
-#: components/page/content-page.php:21
+#: components/page/content-page.php:21,
+#: temp/buildtheme/components/page/content-page.php:21
 msgid "Pages:"
 msgstr "Sider:"
 
-#: components/post/content-none.php:14
+#: components/post/content-none.php:14,
+#: temp/buildtheme/components/post/content-none.php:14
 msgid "Nothing Found"
 msgstr "Fant ingenting"
 
-#: components/post/content-none.php:20
+#: components/post/content-none.php:20,
+#: temp/buildtheme/components/post/content-none.php:20
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "Klar for å legge ut første innlegg? <a href=\"%1$s\">Begynn her</a>."
 
-#: components/post/content-none.php:24
+#: components/post/content-none.php:24,
+#: temp/buildtheme/components/post/content-none.php:24
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 "Beklager, men vi fikk ingen treff på søket. Prøv igjen med andre søkeord."
 
-#: components/post/content-none.php:30
+#: components/post/content-none.php:30,
+#: temp/buildtheme/components/post/content-none.php:30
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "Vi kan ikke finne det du leter etter. Kanskje det hjelper å søke."
 
 #: components/post/content-search.php:36,
-#: components/post/content-single.php:32, components/post/content.php:36
+#: components/post/content-single.php:51,
+#: components/post/content-sticky.php:42, components/post/content.php:37,
+#: temp/buildtheme/components/post/content-search.php:36,
+#: temp/buildtheme/components/post/content-single.php:51,
+#: temp/buildtheme/components/post/content-sticky.php:42,
+#: temp/buildtheme/components/post/content.php:37
 msgid "Read "
 msgstr "Les "
+
+#: components/post/content-sticky.php:16,
+#: temp/buildtheme/components/post/content-sticky.php:16
+msgid "Sticky "
+msgstr "Festet "
 
 #~ msgid "Most Used Categories"
 #~ msgstr "Mest brukte kategorier"

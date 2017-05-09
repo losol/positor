@@ -13,139 +13,167 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:19
+#: 404.php:13, temp/buildtheme/404.php:13
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:22
+#: 404.php:24, temp/buildtheme/404.php:24
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: comments.php:31
+#: comments.php:31, temp/buildtheme/comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:40, comments.php:60
+#: comments.php:40, comments.php:60, temp/buildtheme/comments.php:40, temp/buildtheme/comments.php:60
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:43, comments.php:63
+#: comments.php:43, comments.php:63, temp/buildtheme/comments.php:43, temp/buildtheme/comments.php:63
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:44, comments.php:64
+#: comments.php:44, comments.php:64, temp/buildtheme/comments.php:44, temp/buildtheme/comments.php:64
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:77
+#: comments.php:77, temp/buildtheme/comments.php:77
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:51
+#: functions.php:51, temp/buildtheme/functions.php:51
 msgid "Top"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:118, temp/buildtheme/functions.php:118
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:23
+#: header.php:23, temp/buildtheme/header.php:23
 msgid "Skip to content"
 msgstr ""
 
-#: search.php:19
+#: search.php:19, temp/buildtheme/search.php:19
 msgid "Search Results for: %s"
 msgstr ""
 
-#: inc/customizer.php:25
+#: searchform.php:4, components/header/navbar.php:38, temp/buildtheme/searchform.php:4, temp/buildtheme/components/header/navbar.php:38
+msgid "What are you searching for?"
+msgstr ""
+
+#: inc/customizer.php:25, temp/buildtheme/inc/customizer.php:25
 msgid "Social media links"
 msgstr ""
 
-#: inc/customizer.php:35
+#: inc/customizer.php:35, temp/buildtheme/inc/customizer.php:35
 msgid "Facebook URL"
 msgstr ""
 
-#: inc/customizer.php:40
+#: inc/customizer.php:40, temp/buildtheme/inc/customizer.php:40
 msgid "Twitter URL"
 msgstr ""
 
-#: inc/customizer.php:45
+#: inc/customizer.php:45, temp/buildtheme/inc/customizer.php:45
 msgid "LinkedIn URL"
 msgstr ""
 
-#: inc/template-tags.php:28
+#: inc/template-tags.php:28, temp/buildtheme/inc/template-tags.php:28
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:33
+#: inc/template-tags.php:33, temp/buildtheme/inc/template-tags.php:33
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:63, inc/template-tags.php:119
+#: inc/template-tags.php:63, inc/template-tags.php:119, temp/buildtheme/inc/template-tags.php:63, temp/buildtheme/inc/template-tags.php:119
 msgid "Posted in "
 msgstr ""
 
-#: inc/template-tags.php:83
+#: inc/template-tags.php:83, temp/buildtheme/inc/template-tags.php:83
 msgid "Tagged with "
 msgstr ""
 
-#: inc/template-tags.php:103, inc/template-tags.php:131
+#: inc/template-tags.php:103, inc/template-tags.php:131, temp/buildtheme/inc/template-tags.php:103, temp/buildtheme/inc/template-tags.php:131
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:103, inc/template-tags.php:131
+#: inc/template-tags.php:103, inc/template-tags.php:131, temp/buildtheme/inc/template-tags.php:103, temp/buildtheme/inc/template-tags.php:131
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:103, inc/template-tags.php:131
+#: inc/template-tags.php:103, inc/template-tags.php:131, temp/buildtheme/inc/template-tags.php:103, temp/buildtheme/inc/template-tags.php:131
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:117, inc/template-tags.php:123
+#: inc/template-tags.php:117, inc/template-tags.php:123, temp/buildtheme/inc/template-tags.php:117, temp/buildtheme/inc/template-tags.php:123
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:125
+#: inc/template-tags.php:125, temp/buildtheme/inc/template-tags.php:125
 msgid "Tagged %1$s"
 msgstr ""
 
-#: components/header/navbar.php:9
+#: components/common/issue-published.php:4, temp/buildtheme/components/common/issue-published.php:4
+msgid "This article was published in issue "
+msgstr ""
+
+#: components/common/meta.php:7, temp/buildtheme/components/common/meta.php:7
+msgid "Author: "
+msgstr ""
+
+#: components/common/meta.php:19, temp/buildtheme/components/common/meta.php:19
+msgid "Image: "
+msgstr ""
+
+#: components/common/meta.php:24, temp/buildtheme/components/common/meta.php:24
+msgid "Published: "
+msgstr ""
+
+#: components/common/meta.php:27, temp/buildtheme/components/common/meta.php:27
+msgid ", updated: "
+msgstr ""
+
+#: components/common/meta.php:37, components/common/meta.php:46, temp/buildtheme/components/common/meta.php:37, temp/buildtheme/components/common/meta.php:46
+msgid "Posted in: "
+msgstr ""
+
+#: components/header/navbar.php:9, temp/buildtheme/components/header/navbar.php:9
 msgid "Menu"
 msgstr ""
 
-#: components/header/navbar.php:29
+#: components/header/navbar.php:29, temp/buildtheme/components/header/navbar.php:29
 msgid "Search"
 msgstr ""
 
-#: components/header/navbar.php:38
-msgid "What are you searching for?"
-msgstr ""
-
-#: components/page/content-page.php:21
+#: components/page/content-page.php:21, temp/buildtheme/components/page/content-page.php:21
 msgid "Pages:"
 msgstr ""
 
-#: components/post/content-none.php:14
+#: components/post/content-none.php:14, temp/buildtheme/components/post/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
 
-#: components/post/content-none.php:20
+#: components/post/content-none.php:20, temp/buildtheme/components/post/content-none.php:20
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: components/post/content-none.php:24
+#: components/post/content-none.php:24, temp/buildtheme/components/post/content-none.php:24
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: components/post/content-none.php:30
+#: components/post/content-none.php:30, temp/buildtheme/components/post/content-none.php:30
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: components/post/content-search.php:36, components/post/content-single.php:32, components/post/content.php:36
+#: components/post/content-search.php:36, components/post/content-single.php:51, components/post/content-sticky.php:42, components/post/content.php:37, temp/buildtheme/components/post/content-search.php:36, temp/buildtheme/components/post/content-single.php:51, temp/buildtheme/components/post/content-sticky.php:42, temp/buildtheme/components/post/content.php:37
 msgid "Read "
+msgstr ""
+
+#: components/post/content-sticky.php:16, temp/buildtheme/components/post/content-sticky.php:16
+msgid "Sticky "
 msgstr ""
