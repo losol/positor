@@ -1,6 +1,6 @@
  <?php
 /**
- * Template Name: Full Width Page
+ * Template Name: Full Width
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -11,7 +11,6 @@
 <?php get_header(); ?>
 <div class="container-fluid" id="content">
 	<div class="row">
-		<div class="col-md-12">
 			<main id="main">
 				<?php
 				while ( have_posts() ) : the_post();
@@ -22,7 +21,6 @@
 				endwhile; // End of the loop.
 				?>
 			</main>
-		</div>
 	</div>
 </div>
 
