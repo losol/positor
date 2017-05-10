@@ -15,7 +15,7 @@
 
 <?php get_header(); ?>
 <div id="content">
-	<div class="container">
+	<div class="container px-0">
 		<div class="row">
 		
 			<?php
