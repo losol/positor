@@ -14,8 +14,7 @@
  ?>
 
 <?php get_header(); ?>
-<div id="content">
-	<div class="container px-0">
+<div id="content" class="container px-0">
 		<div class="row">
 		
 			<?php
@@ -46,7 +45,6 @@
 				endif;
 			?>
 		</div>
-	</div>
 </div>
 
 <?php
