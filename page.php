@@ -15,7 +15,8 @@
 
 <?php get_header(); ?>
 <div id="content">
-	<div class="row">
+	<div class="container">
+		<div class="row">
 	
 		<?php
 		if ( is_active_sidebar( 'sidebar-1' ) ) {
@@ -44,6 +45,7 @@
 			echo '</div>';
 			endif;
 		?>
+	</div>
 	</div>
 </div>
 
