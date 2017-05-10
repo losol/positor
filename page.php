@@ -17,35 +17,35 @@
 <div id="content">
 	<div class="container">
 		<div class="row">
-	
-		<?php
-		if ( is_active_sidebar( 'sidebar-1' ) ) {
-			echo '<div class="col-md-9">';
-		} else {
-			echo '<div class="col-md-12">';
-		};
-		?>
-		<main id="main">
-
+		
 			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'components/page/content', 'page' );
-				get_template_part( 'components/common/comments');
-
-			endwhile; // End of the loop.
+			if ( is_active_sidebar( 'sidebar-1' ) ) {
+				echo '<div class="col-md-9">';
+			} else {
+				echo '<div class="col-md-12">';
+			};
 			?>
+			<main id="main">
 
-		</main>
+				<?php
+				while ( have_posts() ) : the_post();
+
+					get_template_part( 'components/page/content', 'page' );
+					get_template_part( 'components/common/comments');
+
+				endwhile; // End of the loop.
+				?>
+
+			</main>
+			</div>
+			<?php		
+				if ( is_active_sidebar( 'sidebar-1' ) ) :
+				echo '<div class="col-md-3">';
+				get_sidebar();
+				echo '</div>';
+				endif;
+			?>
 		</div>
-		<?php		
-			if ( is_active_sidebar( 'sidebar-1' ) ) :
-			echo '<div class="col-md-3">';
-			get_sidebar();
-			echo '</div>';
-			endif;
-		?>
-	</div>
 	</div>
 </div>
 
