@@ -62,7 +62,7 @@ function positor_the_author_bio() {
 			if ( get_post_meta(get_the_ID(), 'author_bio', true) ) :
 					echo get_post_meta(get_the_ID(), 'author_bio', true);
 			else :
-				echo "asdf". get_the_author_meta();
+				the_author_meta();
 			endif;
 		}
 endif;
@@ -78,13 +78,14 @@ function positor_the_excerpt() {
 			if ( has_excerpt() ) :
 					the_excerpt();
 
-			// Is there a more tag? Then use the teaser.
+			// Is there a more tag? Then use the teaser. ()
 			elseif ( get_the_content('', false) != get_the_content('', true)  ) :
 				global $more; 
 				$more = 0;
 				echo strip_tags(get_the_content( '', false ));
 				$more = 1;
-
+			
+			// Otherwise make an automatic excerpt
 			else :
 				the_excerpt(40);
 
