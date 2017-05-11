@@ -1,20 +1,16 @@
 
 <div class="pt-4 pl-2">
     <?php // Show author_alias if assigned
-    if (get_post_meta(get_the_ID(), 'author_alias', true) != "") :
         echo '<div class="pl-4 m-2">';
         echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-pencil" aria-hidden="true"></i></p>';
-        echo '<span class="sr-only">' . __( 'Author: ', 'positor' ) . '</span>'. get_post_meta(get_the_ID(), 'author_alias', true); 
-        if (get_post_meta(get_the_ID(), 'author_bio', true) != "") : 
-            echo '<span class="text-muted">&nbsp;' . get_post_meta(get_the_ID(), 'author_bio', true) . '</span>';
-        endif;
+        echo '<span class="sr-only">' . __( 'Author: ', 'positor' ) . '</span>'. positor_the_author() . '<br>'; 
+        echo '<span class="text-muted">' . positor_the_author_bio() . '</span>';
         echo '</p></div>';
-    endif;
     ?>
 
     <?php // Show photographer_alias if assigned
     if (get_post_meta(get_the_ID(), 'photographer_alias', true) != "") :
-        echo '<div class="pl-4 m-2">';
+        echo '<div class="pl-4 m-2 pt-2">';
         echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-camera-retro" aria-hidden="true"></i></p>';
         echo '<span class="sr-only">' . __( 'Image: ', 'positor' ) . '</span>'. get_post_meta(get_the_ID(), 'photographer_alias', true); 
         echo '</p></div>';

@@ -10,6 +10,7 @@
                 </div>
             <?php endif; ?>
                 <div><p class="lead">
+                    <?php positor_the_excerpt(); ?>
 					<?php // Get only the teaser first, by overriding more. 
 						global $more; 
 						$more = 0;

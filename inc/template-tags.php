@@ -39,6 +39,35 @@ function positor_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'positor_the_author' ) ) :
+/**
+ * Gets author from custom field if exists, otherwise the_author
+ */
+function positor_the_author() {
+
+			if ( get_post_meta(get_the_ID(), 'author_alias', true) ) :
+					echo get_post_meta(get_the_ID(), 'author_alias', true);
+			else :
+				the_author();
+			endif;
+		}
+endif;
+
+if ( ! function_exists( 'positor_the_author_bio' ) ) :
+/**
+ * Gets author bio from custom field if exists, otherwise the_author_meta
+ */
+function positor_the_author_bio() {
+
+			if ( get_post_meta(get_the_ID(), 'author_bio', true) ) :
+					echo get_post_meta(get_the_ID(), 'author_bio', true);
+			else :
+				echo "asdf". get_the_author_meta();
+			endif;
+		}
+endif;
+
+
 if ( ! function_exists( 'positor_the_excerpt' ) ) :
 /**
  * Gets excerpt if defined, otherwise the_content
@@ -46,7 +75,7 @@ if ( ! function_exists( 'positor_the_excerpt' ) ) :
 function positor_the_excerpt() {
 
 			if ( get_the_excerpt() != "" ) :
-				the_excerpt();
+					the_excerpt();
 			else :
 				the_content();
 			endif;

@@ -11,9 +11,9 @@
  ?>
 
 <?php get_header(); ?>
-<div class="container" id="content">
+<div class="container fl-content-full" id="content">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12 fl-content">
 		<main id="main">
 
 			<?php

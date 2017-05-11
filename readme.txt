@@ -18,11 +18,19 @@ A minimalistic theme with a clean design giving focus to your content. Theme is 
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+Custom fields used in this theme: 
+* Issue number for showing if the article was published in a printed issue: issue_number
+* Author alias for showing an author not registed as a user in WordPress: author_alias
+* Author bio for authors not registered as a user: author_bio
+
+
 == Frequently Asked Questions ==
 
 = Where can i find the source code and sass files? =
 
 Positor and it´s full source code is available at [GitHub](https://github.com/losol/positor).
+
+
 
 == Changelog ==
 
