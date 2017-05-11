@@ -70,14 +70,45 @@ endif;
 
 if ( ! function_exists( 'positor_the_excerpt' ) ) :
 /**
- * Gets excerpt if defined, otherwise the_content
+ * Gets excerpt if defined, otherwise the teaser (text over the more tag).
  */
 function positor_the_excerpt() {
 
-			if ( get_the_excerpt() != "" ) :
+			// Choose the manual excerpt if exists
+			if ( has_excerpt() ) :
 					the_excerpt();
+
+			// Is there a more tag? Then use the teaser.
+			elseif ( get_the_content('', false) != get_the_content('', true)  ) :
+				global $more; 
+				$more = 0;
+				echo strip_tags(get_the_content( '', false ));
+				$more = 1;
+
 			else :
-				the_content();
+				the_excerpt(40);
+
+			endif;
+		}
+endif;
+
+if ( ! function_exists( 'positor_the_post_intro' ) ) :
+/**
+ * Gets excerpt if defined, otherwise the teaser (text over the more tag).
+ */
+function positor_the_post_intro() {
+
+			// Choose the manual excerpt if exists
+			if ( has_excerpt() ) :
+					the_excerpt();
+
+			// Is there a more tag? Then use the teaser.
+			elseif ( get_the_content('', false) != get_the_content('', true)  ) :
+				global $more; 
+				$more = 0;
+				echo strip_tags(get_the_content( '', false ));
+				$more = 1;
+
 			endif;
 		}
 endif;

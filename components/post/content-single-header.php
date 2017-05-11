@@ -10,13 +10,7 @@
                 </div>
             <?php endif; ?>
                 <div><p class="lead">
-                    <?php positor_the_excerpt(); ?>
-					<?php // Get only the teaser first, by overriding more. 
-						global $more; 
-						$more = 0;
-						echo strip_tags(get_the_content( '' ));
-						$more = 1;
-						?>
+                    <?php positor_the_post_intro(); ?>
                 </p></div>
             </div>
     </header>
