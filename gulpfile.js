@@ -139,7 +139,7 @@ gulp.task('make:css', function () {
 gulp.task('make:js', function () {
     gulp.src([
         paths.libSrc + 'tether/dist/js/tether.min.js',
-        paths.libSrc + 'jquery/dist/jquery.min.js',
+        //paths.libSrc + 'jquery/dist/jquery.min.js',
         paths.libSrc + 'bootstrap/dist/js/bootstrap.min.js',
         paths.libSrc + 'moment/moment.js',
         paths.libSrc + 'moment/locale/nb.js',
