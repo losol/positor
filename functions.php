@@ -73,6 +73,13 @@ function positor_setup() {
 		'caption',
 	) );
 
+	/**
+	* Register custom post formats supported.
+	*
+	* @link https://codex.wordpress.org/Post_Formats
+	*/
+	add_theme_support( 'post-formats', array( 'video', 'status' ) );
+
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'positor_custom_background_args', array(
 		'default-color' => 'ffffff',
@@ -90,7 +97,7 @@ add_action( 'after_setup_theme', 'positor_setup' );
  * @global int $content_width
  */
 function positor_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'positor_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'positor_content_width', 940 );
 }
 add_action( 'after_setup_theme', 'positor_content_width', 0 );
 
@@ -106,6 +113,7 @@ function positor_the_custom_logo() {
 		the_custom_logo();
 	}
 }
+
 
 
 /**
@@ -132,7 +140,7 @@ add_action( 'widgets_init', 'positor_widgets_init' );
 function positor_scripts() {
 	wp_enqueue_style( 'positor-bootstrap', get_template_directory_uri().'/assets/stylesheets/positor.min.css' );
 	wp_enqueue_style( 'positor-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'positor-scripts', get_template_directory_uri() . '/assets/js/positor.min.js', array(), '1', false );
+	wp_enqueue_script( 'positor-scripts', get_template_directory_uri() . '/assets/js/positor.min.js', array( 'jquery' ), '20170529', false );
 	wp_enqueue_script( 'positor-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'positor-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -172,3 +180,8 @@ require get_template_directory() . '/inc/bs4navwalker.php';
  * Add WooCommerce support
  */
 require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Add responsive videos
+ */
+require get_template_directory() . '/inc/video-embed.php';
