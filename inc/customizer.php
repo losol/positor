@@ -17,8 +17,40 @@ function positor_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	function positor_sanitize_checkbox( $input ){
+            //returns the checkbox as int
+            return filter_var($input, FILTER_SANITIZE_NUMBER_INT);
+        }
+		
 	/**
-	* Adds a section for settings links to social media pages
+	* SECTION: Custom field settings
+	*/
+
+	$wp_customize->add_section( 'positor_custom_field_settings' , array(
+		'title'      => __( 'Custom field settings', 'positor' ),
+		'priority'   => 300,
+	) );
+
+	/* Hide Advanced Custom Fields? */
+
+		
+	$wp_customize->add_setting( 'positor_hide_acf', array(
+		'default'           => true,
+		'sanitize_callback' => 'positor_sanitize_checkbox' 
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_hide_acf', array(
+	'label'       => esc_html__( 'Hide the Custom Fields menu', 'positor' ),
+	'description' => esc_html__( 'Check this on to hide the Custom Fields menu', 'positor' ),
+	'section'     => 'positor_custom_field_settings',
+	'settings'    => 'positor_hide_acf',
+	'type'        => 'checkbox',
+	'priority'    => 10
+	) ) );
+
+
+	/**
+	* SECTION: Social media pages
 	*/
 
 	$wp_customize->add_section( 'positor_social_media_settings' , array(
@@ -57,3 +89,6 @@ function positor_customize_preview_js() {
 	wp_enqueue_script( 'positor_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'positor_customize_preview_js' );
+
+
+
