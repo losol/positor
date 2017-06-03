@@ -54,5 +54,6 @@
 		</a>
 	</div>
 		<footer class="entry-footer">
+		
 	</footer><!-- .entry-footer -->
 </article>

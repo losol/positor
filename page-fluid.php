@@ -13,7 +13,6 @@
 <?php get_header(); ?>
 <div class="container-fluid fl-content-full" id="content">
 	<div class="row">
-		<div class="col-md-12 fl-content">
 		<main id="main">
 
 			<?php
@@ -26,7 +25,6 @@
 			?>
 
 		</main>
-		</div>
 	</div>
 </div>
 

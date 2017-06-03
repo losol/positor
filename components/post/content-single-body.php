@@ -14,5 +14,8 @@
 			?> 
 	</div>
 		<footer class="entry-footer">
+		<?php // Comments
+		get_template_part( 'components/common/comments');
+		?>
 	</footer><!-- .entry-footer -->
 </article>
