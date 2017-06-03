@@ -1,7 +1,7 @@
  <?php
 /**
- * Template Name: No sidebar
- * The template for displaying all pages with right sidebar
+ * Template Name: Fluid page
+ * The template for displaying pages stretching over the whole width of the screen.
  *
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -11,7 +11,7 @@
  ?>
 
 <?php get_header(); ?>
-<div class="container fl-content-full px-0" id="content">
+<div class="container-fluid fl-content-full" id="content">
 	<div class="row">
 		<div class="col-md-12 fl-content">
 		<main id="main">
