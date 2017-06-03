@@ -59,9 +59,14 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 = 1.0.6 - 12.05.2017
 * Automatic choose between manual excerpt (first choice), teaser (text before more) and automatic excerpt.
 
+= 1.1.0 - 31.05.2017
+* Added video post format
+* Advanced custom fields
+
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+* normalize.css (http://necolas.github.io/normalize.css/), (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * bs4navwalker (https://github.com/dominicbusinaro/bs4navwalker) by Dominic Businaro - @dominicbusinaro, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
+* Advanced custom fields (https://www.advancedcustomfields.com/) by Elliot Condon, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

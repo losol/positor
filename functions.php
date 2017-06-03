@@ -152,6 +152,17 @@ function positor_scripts() {
 add_action( 'wp_enqueue_scripts', 'positor_scripts' );
 
 /**
+ * Add advanced custom fields
+ */
+if( ! class_exists('Acf') )
+{
+	define( 'ACF_LITE' , true );
+	include_once('inc/advanced-custom-fields/acf.php' );
+}
+
+
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -185,3 +196,8 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Add responsive videos
  */
 require get_template_directory() . '/inc/video-embed.php';
+
+/**
+ * Add custom fields for post formats
+ */
+require get_template_directory() . '/inc/post-formats.php';
