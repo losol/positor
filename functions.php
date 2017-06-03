@@ -78,7 +78,7 @@ function positor_setup() {
 	*
 	* @link https://codex.wordpress.org/Post_Formats
 	*/
-	add_theme_support( 'post-formats', array( 'video', 'status' ) );
+	add_theme_support( 'post-formats', array( 'video') );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'positor_custom_background_args', array(
