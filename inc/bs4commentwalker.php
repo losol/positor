@@ -1,18 +1,33 @@
 <?php
 /**
- * A custom WordPress comment walker class for showing comments in a Bootstrap 4 theme.
+ * A custom WordPress comment walker class for showing comments in a Bootstrap 4 theme. Uses media list to present comments. 
+ * Based on the work of Aymene Bourafai: https://github.com/bourafai/wp-bootstrap-4-comment-walker
+ * 
+ * Copy this file to your inc folder. In functions.php add: 
+ *     require get_template_directory() . '/inc/bs4commentwalker.php';
  *
- * @package     WP Bootstrap 4 Comment Walker
+ * Replace wp_list_comments in your comments.php with this to use this
+ * 		<?php 
+ *			wp_list_comments( array(
+ *				'style'         => 'ol',
+ *				'max_depth'     => 3,
+ *				'short_ping'    => true,
+ *				'avatar_size'   => '75',
+ *				'walker'        => new Bootstrap_Comment_Walker(),
+ *			) );
+ *			?>
+ *
+ * @package     WP Bootstrap 4 Media list Comment Walker
  * @version     1.0.0
- * @author      Ole Kristian Losvik, based on wordk by Aymene Bourafai
+ * @author      Ole Kristian Losvik
  * @license     http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
- * @link        https://github.com/bourafai/wp-bootstrap-4-comment-walker
+ * @link        https://gist.github.com/losviko/733f3b79c89b58b0e39f4744200cb19e
  */
 
 class Bootstrap_Comment_Walker extends Walker_Comment {
 	/**
 	 * Output a comment in the HTML5 format.
-	 *
+	 * 
 	 * @since 1.0.0
 	 *
 	 * @see wp_list_comments()
@@ -24,7 +39,7 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 	protected function html5_comment( $comment, $depth, $args ) {
 		$tag = ( $args['style'] === 'div' ) ? 'div' : 'li';
 ?>		
-		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'has-children media' : ' media' ); ?>>
+		<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'has-children media' : ' media' ); ?>>
 			
 
 			<div class="media-body " id="div-comment-<?php comment_ID(); ?>">
@@ -60,7 +75,7 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 
 					</div><!-- .comment-metadata -->
 				</div>
-				<div class="warning-color">
+				<div class="text-warning">
 					<?php if ( '0' == $comment->comment_approved ) : ?>
 					<p class="card-text comment-awaiting-moderation label label-info text-muted small"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
 					<?php endif; ?>				

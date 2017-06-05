@@ -65,6 +65,7 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 
 = 1.1.1 - 05.06.2017
 * Added comments functionality
+* Fix of widgets in sidebar
 
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
