@@ -200,11 +200,11 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	* Add Bootstrap 4 nav walker
 	 */
 	require get_template_directory() . '/inc/bs4navwalker.php';
-	
+
 	/**
-	* Add Bootstrap 4 comments walker
+	* Add Bootstrap 4 comment walker
 	 */
-	require get_template_directory() . ('/inc/bs4commentwalker.php');
+	require get_template_directory() . '/inc/bs4commentwalker.php';
 	
 	/**
 	* Add WooCommerce support
