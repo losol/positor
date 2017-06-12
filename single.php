@@ -25,7 +25,6 @@
 		<?php
 
 				get_template_part( 'components/post/content-single-body', get_post_format() );
-				wp_link_pages();
 
 				get_template_part( 'components/common/issue-published', get_post_format() );
 				get_template_part( 'components/common/related-posts', get_post_format() );

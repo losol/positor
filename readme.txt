@@ -82,11 +82,10 @@ Edits based on user feedback from @joyously
 * Added clearfix on footer
 * Searchform fix with right action
 * Better print styling
-* Multipage posts now with page links.
+* Post navigation added, multipage posts now with page links.
+* Meta: Time and date by user preference
 
-Planned features
-* Option for showing post navigation links
-* Time and date by user preference
+
 
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

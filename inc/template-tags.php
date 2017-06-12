@@ -124,9 +124,9 @@ function positor_the_categories() {
 			echo '<div class="entry-categories"><span class="sr-only">'. esc_html__( 'Posted in ', 'positor' ) . '</span>';
 			
 			foreach ($categories_list as $category) {
-				echo '<span class="badge badge-primary mr-1">';
+				echo '<a href="' . get_category_link($category->term_id) . '" class="badge badge-primary mr-1">';
 				echo $category->name;
-				echo '</span>';
+				echo '</a>';
 			
 			}
 			echo '</div>';
@@ -144,9 +144,9 @@ function positor_the_tags() {
 			echo '<div class="entry-tags"><span class="sr-only">'. esc_html__( 'Tagged with ', 'positor' ) . '</span>';
 			
 			foreach ($tags_list as $tag) {
-				echo '<span class="badge badge-warning mr-1">';
+				echo '<a href="' . get_category_link($tag->term_id) . '" class="badge badge-warning mr-1">';
 				echo $tag->name;
-				echo '</span>';
+				echo '</a>';
 			
 			}
 			echo '</div>';

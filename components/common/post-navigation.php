@@ -1,0 +1,2 @@
+<?php previous_post_link('<i class="fa fa-chevron-left" aria-hidden="true"></i> %link'); ?>
+<p class="text-right"><?php next_post_link('%link <i class="fa fa-chevron-right" aria-hidden="true"></i> '); ?></span>

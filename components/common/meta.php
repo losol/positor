@@ -17,10 +17,10 @@
     endif;
     ?>
     <?php // Show published date
-        echo '<div class="pl-4 m-2"><p class="position-absolute left"><i class="fa fa-2x fa-fw fa-calendar" aria-hidden="true"></i></p>'. __( 'Published: ', 'positor' ) . get_the_date('j.n.Y');	
+        echo '<div class="pl-4 m-2"><p class="position-absolute left"><i class="fa fa-2x fa-fw fa-calendar" aria-hidden="true"></i></p>'. __( 'Published: ', 'positor' ) . get_the_date('');	
         // If updated date is different, show this as well
         if ( get_the_date( 'j.n.Y' ) !== get_the_modified_date( 'j.n.Y' ) ) {
-                echo __( ', updated: ', 'positor' ) . get_the_modified_date('j.n.Y')  ;
+                echo __( ', updated: ', 'positor' ) . get_the_modified_date('')  ;
             }
 
         echo '</small></p></div>';

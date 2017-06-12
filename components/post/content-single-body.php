@@ -14,8 +14,11 @@
 			?> 
 	</div>
 		<footer class="entry-footer">
-		<?php // Comments
-		get_template_part( 'components/common/comments');
+			<?php
+			get_template_part( 'components/common/post-navigation', get_post_format() );
+			wp_link_pages();
+			// Comments
+			get_template_part( 'components/common/comments');
 		?>
 	</footer><!-- .entry-footer -->
 </article>
