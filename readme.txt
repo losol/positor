@@ -86,6 +86,9 @@ Edits based on user feedback from @joyously on wordpress.org
 * Post navigation added, multipage posts now with page links.
 * Meta: Time and date by user preference, added links
 
+= 1.1.4 - 13.06.2017 =
+* Minor bug fix
+
 
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
