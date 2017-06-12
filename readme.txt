@@ -40,36 +40,49 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 = 1.0.1 - 06.05.2017 =
 * Added norwegian translation.
 
-= 1.0.2 - 07.05.2017
+= 1.0.2 - 07.05.2017 =
 * Better build structure
 
-= 1.0.3 - 07.05.2017
+= 1.0.3 - 07.05.2017 =
 * Fix of social media link variable giving notice. 
 * Better spacing in sidebar widgets
 * Fixed menu containing way too many or long elements
 
-= 1.0.4 - 09.05.2017
+= 1.0.4 - 09.05.2017 =
 * Showing social icons and related posts if Jetpack is installed and functions enabled.
 * Showing post meta information: author, photographer, tags, categories
 * Showing issue number for articles published in print magazine.
 
-= 1.0.5 - 10.05.2017
+= 1.0.5 - 10.05.2017 =
 * Added woocommerce support
 
-= 1.0.6 - 12.05.2017
+= 1.0.6 - 12.05.2017 =
 * Automatic choose between manual excerpt (first choice), teaser (text before more) and automatic excerpt.
 
-= 1.1.0 - 31.05.2017
+= 1.1.0 - 31.05.2017 =
 * Added video post format
 * Automatic plugin recommandation of Advanced custom fields
 
-= 1.1.1 - 05.06.2017
+= 1.1.1 - 05.06.2017 =
 * Added comments functionality
 * Fix of widgets in sidebar
 
-= 1.1.2 - 05.06.2017
+= 1.1.2 - 05.06.2017 =
 * Added more translated texts
 
+= 1.1.3 - 12.06.2017 =
+Edits based on user feedback from @joyously 
+* Changed from required to recommended plugin for Advanced Custom Fields 
+* Added a menu fallback with a button for adding a new menu if no menu is assigned in the top bar
+* Corrected sidebar being way too small on pages. 
+* Comments: Now shows users chosen avatars, reply uses user set comments levels
+* Hide social links if empty
+* Added better styling for wordpress image galleries
+* CSS-fixes: Quotes are now closed, a bit padding on tables, new abbr styling which differs from links.
+* Added clearfix on footer
+* Searchform fix with right action
+* Better print styling
+* Multipage posts now with page links.
 
 Planned features
 * Option for showing post navigation links
@@ -83,18 +96,3 @@ Planned features
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
 * TGM-Plugin-Activation (https://github.com/TGMPA/TGM-Plugin-Activation) by Thomas Griffin, Gary Jones, Juliette Reinders Folmer,[GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Advanced custom fields (https://www.advancedcustomfields.com/) by Elliot Condon, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-
-
-Edits based on user feedback from @joyously 
-* Changed from required to recommended plugin for Advanced Custom Fields 
-* Added a menu fallback with a button for adding a new menu if no menu is assigned in the top bar
-* Corrected sidebar being way too small on pages. 
-* Comments: Now shows users chosen avatars, reply uses user set comments levels
-* Hide social links if empty
-* Added better styling for wordpress image galleries
-* CSS-fixes: Quotes are now closed, a bit padding on tables, new abbr styling which differs from links.
-* Added clearfix on footer
-
-
-Not taken into account: 
-* I was looking at why the footer shows the site title twice, and saw that you are naming classes for styles, such as 'text-muted' and 'text-white'. This is not a good idea in an environment where child themes and users can change styles and colors easily. It is better to name classes using nouns instead of adjectives.

@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'positor' ); ?></a>
 
-	<header id="header" class="site-header">
+	<header id="header" class="site-header hidden-print">
 
 		<?php get_template_part( 'components/header/navbar', 'top' ); ?> 
 		<?php positor_social_menu(); ?>

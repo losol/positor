@@ -25,6 +25,7 @@
 		<?php
 
 				get_template_part( 'components/post/content-single-body', get_post_format() );
+				wp_link_pages();
 
 				get_template_part( 'components/common/issue-published', get_post_format() );
 				get_template_part( 'components/common/related-posts', get_post_format() );
@@ -34,7 +35,7 @@
 
 			</main>
 		</div>
-	<div class="col-md-3 offset-md-1">
+	<div class="col-md-3 offset-md-1 hidden-print">
 		<aside id="secondary" role="complementary">
 			<?php 
 			get_template_part( 'components/common/meta', get_post_format() );
