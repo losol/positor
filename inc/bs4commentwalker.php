@@ -39,7 +39,7 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 	protected function html5_comment( $comment, $depth, $args ) {
 		$tag = ( $args['style'] === 'div' ) ? 'div' : 'li';
 ?>		
-		<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'has-children media' : ' media' ); ?>>
+		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'has-children media' : ' media' ); ?>>
 			
 
 			<div class="media-body " id="div-comment-<?php comment_ID(); ?>">
@@ -59,7 +59,7 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
                         <div class="comment-content">
                         <?php comment_text(); ?>
                         <div class="d-inline d-block">
-							<?php edit_comment_link( __( 'Edit' ), '', '' ); ?>
+							<?php edit_comment_link( __( 'Edit', 'positor' ), '', '' ); ?>
 							<?php
 								comment_reply_link( array_merge( $args, array(
 									'add_below' => 'div',
@@ -77,9 +77,9 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 				</div>
 				<div class="text-warning">
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-					<p class="card-text comment-awaiting-moderation label label-info text-muted small"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
+					<p class="comment-awaiting-moderation label label-info text-muted small"><?php _e( 'Your comment is awaiting moderation.', 'positor' ); ?></p>
 					<?php endif; ?>				
-
+                </div>
 
 								
 				<!-- </div> -->
