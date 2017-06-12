@@ -39,8 +39,10 @@
 			</div>
 			<?php		
 				if ( is_active_sidebar( 'sidebar-1' ) ) :
+				echo '<div class="col-md-3">';
 				get_sidebar();
 				endif;
+				echo '</div>';
 			?>
 		</div>
 </div>

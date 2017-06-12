@@ -16,14 +16,6 @@
 
 <div class="container">
 	<div class="row">
-	
-		<?php
-		if ( is_active_sidebar( 'sidebar-1' ) ) {
-			echo '<div class="col-md-9">';
-		} else {
-			echo '<div class="col-md-12">';
-		};
-		?>
 
 		<main id="main">
 		
@@ -54,9 +46,6 @@
 		
 	</div>
 
-<?php
-get_sidebar();
-?>
 
 </div>
 
