@@ -71,7 +71,7 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 * Added more translated texts
 
 = 1.1.3 - 12.06.2017 =
-Edits based on user feedback from @joyously 
+Edits based on user feedback from @joyously on wordpress.org
 * Changed from required to recommended plugin for Advanced Custom Fields 
 * Added a menu fallback with a button for adding a new menu if no menu is assigned in the top bar
 * Corrected sidebar being way too small on pages. 
@@ -83,8 +83,7 @@ Edits based on user feedback from @joyously
 * Searchform fix with right action
 * Better print styling
 * Post navigation added, multipage posts now with page links.
-* Meta: Time and date by user preference
-
+* Meta: Time and date by user preference, added links
 
 
 == Credits ==

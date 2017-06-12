@@ -8,10 +8,23 @@
             if ( has_post_format( 'video' )) {
                 // Get the video URL and put it in the $video variable
                 $this_video_url = get_post_meta($post->ID, 'video_url', true);
-                // Add responsive wrapper and embed video via oEmbed
-                echo '<div class="embed-responsive embed-responsive-16by9">';
-                echo wp_oembed_get( $this_video_url ); 
-                echo '</div>';
+
+                if ($this_video_url != '') {
+                    // If from facebook embed video via oEmbed
+                    if (strpos($this_video_url, 'facebook.com/')) {
+                        // Add  wrapper and embed video via oEmbed
+                        echo '<div class="embed-responsive">';
+                        echo wp_oembed_get( $this_video_url ); 
+                        echo '</div>';
+                    
+                    }
+                    else {
+                        // Add responsive wrapper and embed video via oEmbed
+                        echo '<div class="embed-responsive embed-responsive-16by9">';
+                        echo wp_oembed_get( $this_video_url ); 
+                        echo '</div>';
+                    }
+                }
             }
             // Post format: other
             else {
