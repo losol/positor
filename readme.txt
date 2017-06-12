@@ -69,6 +69,7 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 
 = 1.1.2 - 05.06.2017 =
 * Added more translated texts
+* Better support for Facebook embeds
 
 = 1.1.3 - 12.06.2017 =
 Edits based on user feedback from @joyously on wordpress.org
