@@ -253,6 +253,9 @@ img.authorcard-profilephoto {
         margin-right: 0.25em;
         vertical-align: -0.4em;
     }
+    blockquote:after {
+        content: no-close-quote;
+    }
 
     blockquote p {
         display: inline;

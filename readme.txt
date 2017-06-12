@@ -70,6 +70,11 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 = 1.1.2 - 05.06.2017
 * Added more translated texts
 
+
+Planned features
+* Option for showing post navigation links
+* Time and date by user preference
+
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -86,7 +91,8 @@ Edits based on user feedback from @joyously
 * Corrected sidebar being way too small on pages. 
 * Now shows users chosen avatars
 * Hide social links if empty
-
+* Added better styling for wordpress image galleries
+* CSS-fix: Quotes are now closed
 
 Not taken into account: 
 * I was looking at why the footer shows the site title twice, and saw that you are naming classes for styles, such as 'text-muted' and 'text-white'. This is not a good idea in an environment where child themes and users can change styles and colors easily. It is better to name classes using nouns instead of adjectives.
