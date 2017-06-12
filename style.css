@@ -166,3 +166,28 @@ a img.aligncenter {
   padding:1rem;
   }
 
+/* Add a bit spacing on tables. */
+td {
+	padding:0.5rem;
+}
+
+/* Fix definitions list. */
+dt  {
+    clear:left;
+    float:left;
+    width:30%;
+    font-size: 90%;
+}
+
+dd {
+    clear:right;
+    display:block;
+    font-size: 90%;
+    padding-left: 30%;
+}
+
+abbr{
+    font-size: 90%;
+    text-transform: uppercase;
+    text-decoration: underline none;
+}

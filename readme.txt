@@ -89,10 +89,12 @@ Edits based on user feedback from @joyously
 * Changed from required to recommended plugin for Advanced Custom Fields 
 * Added a menu fallback with a button for adding a new menu if no menu is assigned in the top bar
 * Corrected sidebar being way too small on pages. 
-* Now shows users chosen avatars
+* Comments: Now shows users chosen avatars, reply uses user set comments levels
 * Hide social links if empty
 * Added better styling for wordpress image galleries
-* CSS-fix: Quotes are now closed
+* CSS-fixes: Quotes are now closed, a bit padding on tables, new abbr styling which differs from links.
+* Added clearfix on footer
+
 
 Not taken into account: 
 * I was looking at why the footer shows the site title twice, and saw that you are naming classes for styles, such as 'text-muted' and 'text-white'. This is not a good idea in an environment where child themes and users can change styles and colors easily. It is better to name classes using nouns instead of adjectives.
