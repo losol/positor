@@ -1,6 +1,7 @@
 <?php
 /**
  * A custom WordPress comment walker class for showing comments in a Bootstrap 4 theme. Uses media list to present comments. 
+ *
  * Based on the work of Aymene Bourafai: https://github.com/bourafai/wp-bootstrap-4-comment-walker
  * 
  * Copy this file to your inc folder. In functions.php add: 
@@ -46,7 +47,7 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 				<div class="media">
 					<div class="d-flex mr-3">
 						<?php if ( $args['avatar_size'] != 0  ): ?>
-							<?php echo get_avatar( $comment, $args['avatar_size'],'mm','', array('class'=>"comment_avatar rounded-circle") ); ?>
+							<img class="comment_avatar rounded-circle" src="<?php echo get_avatar_url( $comment, $args['avatar_size'],'mm','', array('default'=> 'avatar_default') );?>">
 						<?php endif; ?>
 					</div>
 					<div class="media-body mb-5">

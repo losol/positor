@@ -78,3 +78,10 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 * FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
 * TGM-Plugin-Activation (https://github.com/TGMPA/TGM-Plugin-Activation) by Thomas Griffin, Gary Jones, Juliette Reinders Folmer,[GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Advanced custom fields (https://www.advancedcustomfields.com/) by Elliot Condon, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+
+
+Edits based on user feedback from @joyously 
+* Changed from required to recommended plugin for Advanced Custom Fields 
+* Added a menu fallback with a button for adding a new menu if no menu is assigned in the top bar
+* Corrected sidebar being way too small on pages. 
+* Now shows users chosen avatars

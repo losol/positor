@@ -20,8 +20,8 @@
      'menu_id'         => 'top_menu',
      'menu_class'      => 'navbar-nav mr-auto',
      'depth'           => 2,
-     'fallback_cb'     => 'bs4navwalker::fallback',
-     'walker'          => new bs4navwalker()
+     'walker'          => new bs4navwalker(),
+    'fallback_cb'     => 'bs4navwalker::fallback',
    ]);
    ?>
 
