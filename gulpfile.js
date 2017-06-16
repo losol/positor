@@ -199,3 +199,5 @@ gulp.task('build:pot', function () {
  		.pipe(gulp.dest(paths.temp))
  		.pipe(notify({ message: 'Zip task complete', onLast: true }));
  });
+
+ gulp.task("build", ["clean:temp", "build:theme", "build:zip"]);

@@ -14,7 +14,7 @@
 <div class="container-fluid bg-inverse mt-5 py-3">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 text-white">
+			<div class="col-md-8 text-inverse">
 				<?php get_template_part( 'components/footer/site', 'info' ); ?>
 			</div>
 			<div class="col-md-4 text-right">

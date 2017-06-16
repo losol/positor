@@ -23,17 +23,30 @@ function positor_customize_register( $wp_customize ) {
         }
 		
 	/**
-	* SECTION: Custom field settings
+	* SECTION: Admin settings
 	*/
 
-	$wp_customize->add_section( 'positor_custom_field_settings' , array(
-		'title'      => __( 'Custom field settings', 'positor' ),
+	$wp_customize->add_section( 'positor_admin_settings' , array(
+		'title'      => __( 'Admin settings', 'positor' ),
 		'priority'   => 300,
 	) );
 
-	/* Hide Advanced Custom Fields? */
+	/* Simplify editor styles? */	
+	$wp_customize->add_setting( 'positor_simplify_editor', array(
+		'default'           => false,
+		'sanitize_callback' => 'positor_sanitize_checkbox' 
+	) );
 
-		
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_simplify_editor', array(
+	'label'       => esc_html__( 'Show only common styles in editor', 'positor' ),
+	'description' => esc_html__( 'Check this to show fewer paragraph styles in the post editor', 'positor' ),
+	'section'     => 'positor_admin_settings',
+	'settings'    => 'positor_simplify_editor',
+	'type'        => 'checkbox',
+	'priority'    => 10
+	) ) );
+
+	/* Hide Advanced Custom Fields? */	
 	$wp_customize->add_setting( 'positor_hide_acf', array(
 		'default'           => true,
 		'sanitize_callback' => 'positor_sanitize_checkbox' 
@@ -42,7 +55,7 @@ function positor_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_hide_acf', array(
 	'label'       => esc_html__( 'Hide the Custom Fields menu', 'positor' ),
 	'description' => esc_html__( 'Check this on to hide the Custom Fields menu', 'positor' ),
-	'section'     => 'positor_custom_field_settings',
+	'section'     => 'positor_admin_settings',
 	'settings'    => 'positor_hide_acf',
 	'type'        => 'checkbox',
 	'priority'    => 10

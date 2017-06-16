@@ -78,6 +78,22 @@ function positor_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+	
+	/**
+	* Simplify styles in editor 
+	* Accepts only "true" or "false" as possible values.
+	* Modify TinyMCE editor to remove H1.	
+	*/
+	if( get_theme_mod( 'positor_simplify_editor' ) == true) {
+		add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
+
+		function tiny_mce_remove_unused_formats($init) {
+			// Add block format elements you want to show in dropdown
+			$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3';
+			return $init;
+		}
+	}
+
 }
 endif;
 add_action( 'after_setup_theme', 'positor_setup' );
@@ -145,7 +161,6 @@ add_action( 'after_setup_theme', 'positor_setup' );
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'positor_scripts' );
-	
 	
 	
 	/**
