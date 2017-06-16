@@ -26,10 +26,9 @@ Custom fields used in this theme:
 
 == Frequently Asked Questions ==
 
-= Where can i find the source code and sass files? =
+= Where can I find the source code and sass files? =
 
 Positor and it´s full source code is available at [GitHub](https://github.com/losol/positor).
-
 
 
 == Changelog ==
@@ -88,6 +87,9 @@ Edits based on user feedback from @joyously on wordpress.org
 
 = 1.1.4 - 13.06.2017 =
 * Minor bug fix
+
+= 1.1.5 - 16.06.2017 =
+* Added option to simplify editor: show only paragraph, h2 and h3. 
 
 
 == Credits ==
