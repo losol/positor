@@ -84,7 +84,7 @@ gulp.task("clean:lib", function (cb) {
 });
 
 gulp.task("clean:temp", function (cb) {
-    rimraf(paths.libDest, cb);
+    rimraf(paths.temp, cb);
 });
 
 gulp.task("clean", ["clean:js", "clean:css", "clean:lib", "clean:temp"]);

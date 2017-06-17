@@ -90,6 +90,7 @@ Edits based on user feedback from @joyously on wordpress.org
 
 = 1.1.5 - 16.06.2017 =
 * Added option to simplify editor: show only paragraph, h2 and h3. 
+* Added sticky footer
 
 
 == Credits ==
