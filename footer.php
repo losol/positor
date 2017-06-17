@@ -9,7 +9,7 @@
 
 ?>
 
-<footer class="mt-5 hidden-print">
+<footer class="footer pt-5 hidden-print">
 
 <div class="container-fluid bg-inverse mt-5 py-3">
 	<div class="container">

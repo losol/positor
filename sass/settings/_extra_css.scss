@@ -4,6 +4,7 @@
 */
 
 body {
+    min-height: 100vh;
     background: rgba(255,255,255,1);
     background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 71%, rgba(219,215,219,1) 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(71%, rgba(246,246,246,1)), color-stop(100%, rgba(219,215,219,1)));
@@ -14,6 +15,13 @@ body {
 }
 h1, h2 {
     padding-top:2rem;
+}
+.flex-grow {
+  flex: 1;
+}
+
+main {
+    flex:1;
 }
 .badge a
 {
@@ -27,10 +35,6 @@ h1, h2 {
 }
 #top_menu {
     flex-wrap: wrap;
-}
-
-.fl-builder #content { 
-    width: auto; 
 }
 
 h1 {
@@ -65,6 +69,7 @@ h1 {
 .bg-cover{
    background-size: cover!important;
 }
+
 
 .footer-contact i {
     background-color: #33383b;
@@ -103,11 +108,11 @@ background-color: rgba(44, 44, 44, 0.2);
 background: rgba(44, 44, 44, 0.2);
 }
 .bg-opa30 {
-background-color: rgba(44, 44, 44, 0.2);
+background-color: rgba(44, 44, 44, 0.3);
 background: rgba(44, 44, 44, 0.3);
 }
 .bg-opa40 {
-background-color: rgba(44, 44, 44, 0.2);
+background-color: rgba(44, 44, 44, 0.4);
 background: rgba(44, 44, 44, 0.4);
 }
 .bg-circle
@@ -145,8 +150,6 @@ background: rgba(44, 44, 44, 0.4);
   outline: none;
   color: #ececec;
 }
-
-
 
 
 .bg-dimmed {

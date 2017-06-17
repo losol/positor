@@ -8,7 +8,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div class="container-fluid bg-lightgray py-3">
+<div class="bg-lightgray py-3">
 			<header class="container page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -16,7 +16,7 @@
 				?>
 			</header>
 </div>
-<div class="container">
+<div class="container flex-grow">
 	<div class="row">
 		<div class="col-md-12">
 			<main id="main" class="site-main" role="main">
