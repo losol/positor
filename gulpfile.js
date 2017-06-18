@@ -52,7 +52,8 @@ var gulp = require("gulp"),
     merge = require('gulp-merge'),
     zip  = require('gulp-zip'),
     wpPot = require('gulp-wp-pot'),
-    notify = require('gulp-notify')
+    notify = require('gulp-notify'),
+    gulpSequence = require('gulp-sequence')
 ;
 
 var webroot = "./";
@@ -200,4 +201,4 @@ gulp.task('build:pot', function () {
  		.pipe(notify({ message: 'Zip task complete', onLast: true }));
  });
 
- gulp.task("build", ["clean:temp", "build:theme", "build:zip"]);
+ gulp.task('build', gulpSequence('clean:temp', 'build:pot', 'build:theme', 'build:zip'));
