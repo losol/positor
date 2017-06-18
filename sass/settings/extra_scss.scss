@@ -1,1 +1,33 @@
-// Extra scss?
+// Extra scss
+.bg {
+    &-white { background-color: $white; }
+    &-black { background-color: $black; }
+    &-red { background-color: $red; }
+    &-orange { background-color: $orange; }
+    &-green { background-color: $green; }
+    &-blue { background-color: $blue; }
+    &-teal { background-color: $teal; }
+    &-pink { background-color: $pink; }
+    &-purple { background-color: $purple; }
+    &-gray-dark { background-color: $gray-dark; }
+    &-gray { background-color: $gray; }
+    &-gray-light { background-color: $gray-light; }
+    &-gray-lighter { background-color: $gray-lighter; }
+    &-gray-lightest { background-color: $gray-lightest; }
+}
+.text {
+    &-white { color: $white; }
+    &-black { color: $black; }
+    &-red { color: $red; }
+    &-orange { color: $orange; }
+    &-green { color: $green; }
+    &-blue { color: $blue; }
+    &-teal { color: $teal; }
+    &-pink { color: $pink; }
+    &-purple { color: $purple; }
+    &-gray-dark { color: $gray-dark; }
+    &-gray { color: $gray; }
+    &-gray-light { color: $gray-light; }
+    &-gray-lighter { color: $gray-lighter; }
+    &-gray-lightest { color: $gray-lightest; }
+}

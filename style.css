@@ -20,6 +20,9 @@ Components is distributed under the terms of the GNU GPL v2 or later.
 
 /* =WordPress Core
 -------------------------------------------------------------- */
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -60,6 +63,9 @@ a img.aligncenter {
     margin-right: auto;
 }
 
+/*--------------------------------------------------------------
+# Captions
+--------------------------------------------------------------*/
 .wp-caption {
     background: #fff;
     border: 1px solid #f0f0f0;
@@ -133,6 +139,114 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+img 
+{ max-width: 100%; 
+height: auto;
+ }
+.sticky {
+	display: block;
+}
+
+.text-inverse {
+    color: #eee;
+}
+.text-inverse a {
+    color: #cee;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+
+
+/*--------------------------------------------------------------
+# Pagination
+--------------------------------------------------------------*/
+
+/* =Index pagination
+----------------------------------------------- */
+
+/* The containing box with a nice white background */
+.paging-navigation {
+	font-family: sans-serif;
+	padding: 1em;
+	background: #fff;
+	background: hsl(0, 0%, 100%);
+}
+
+/* Remove bullets and list indentation */
+.paging-navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Make the list items appear horizontally */
+.paging-navigation li {
+	display: inline;
+}
+
+/* Give each link and the current item some padding to make them easy to click */
+a.page-numbers,
+span.page-numbers {
+	padding: .3em .7em;
+	color: #333;
+	color: hsl(0, 0%, 20%);
+}
+
+/* Link hover state */
+a:hover.page-numbers {
+	color: #000;
+	color: hsl(0, 0%, 0%);
+}
+
+/* Current page bold and dark */
+.paging-navigation .current {
+	font-weight: bold;
+	color: #000;
+	color: hsl(0, 0%, 0%);
+}
+
+
 
 /* Wordpress image galleries. */
 
@@ -166,12 +280,16 @@ a img.aligncenter {
   padding:1rem;
   }
 
-/* Add a bit spacing on tables. */
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
 td {
 	padding:0.5rem;
 }
 
-/* Fix definitions list. */
+/*--------------------------------------------------------------
+# Definition list
+--------------------------------------------------------------*/
 dt  {
     clear:left;
     float:left;

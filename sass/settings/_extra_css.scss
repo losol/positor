@@ -20,9 +20,6 @@ h1, h2 {
   flex: 1;
 }
 
-main {
-    flex:1;
-}
 .badge a
 {
   color: #ececec;
@@ -61,15 +58,12 @@ h1 {
     padding-left:5rem;
 }
 
-.bg-darkgray {background-color:#333;}
-.bg-gray {background-color:#55595c;}
-.bg-lightgray {background-color:#dddddd;}
-.bg-blue {background-color:#9bc4e2;}
 
 .bg-cover{
    background-size: cover!important;
 }
 
+.footer h2{padding-top:0;}
 
 .footer-contact i {
     background-color: #33383b;
@@ -310,134 +304,3 @@ img.authorcard-profilephoto {
 
 .current-menu-item a {color: #ed1c24!important;}
 
-
-/* 
-Wordpress specific styles from understrap
-- consider if more could be removed.... 
-*/
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-img 
-{ max-width: 100%; 
-height: auto;
- }
-.sticky {
-	display: block;
-}
-
-.text-inverse {
-    color: #eee;
-}
-
-.hentry {
-	margin: 0 0 1.5em;
-}
-
-.byline,
-.updated:not(.published) {
-	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
-}
-
-.bypostauthor {
-	display: block;
-}
-
-
-
-
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-.alignleft {
-	float: left;
-	margin-right: 1.5em;
-}
-
-.alignright {
-	float: right;
-	margin-left: 1.5em;
-}
-
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/*--------------------------------------------------------------
-# Pagination
---------------------------------------------------------------*/
-
-/* =Index pagination
------------------------------------------------ */
-
-/* The containing box with a nice white background */
-.paging-navigation {
-	font-family: sans-serif;
-	padding: 1em;
-	background: #fff;
-	background: hsl(0, 0%, 100%);
-}
-
-/* Remove bullets and list indentation */
-.paging-navigation ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-/* Make the list items appear horizontally */
-.paging-navigation li {
-	display: inline;
-}
-
-/* Give each link and the current item some padding to make them easy to click */
-a.page-numbers,
-span.page-numbers {
-	padding: .3em .7em;
-	color: #333;
-	color: hsl(0, 0%, 20%);
-}
-
-/* Link hover state */
-a:hover.page-numbers {
-	color: #000;
-	color: hsl(0, 0%, 0%);
-}
-
-/* Current page bold and dark */
-.paging-navigation .current {
-	font-weight: bold;
-	color: #000;
-	color: hsl(0, 0%, 0%);
-}

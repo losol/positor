@@ -132,18 +132,51 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	 * @link https://d	eveloper.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
 	 */
 	function positor_widgets_init() {
-		register_sidebar( array(
-				'name'          => esc_html__( 'Sidebar', 'positor' ),
-				'id'            => 'sidebar-1',
-				'description'   => '',
-				'before_widget' => '<section id="%1$s" class="widget %2$s my-5">',
-				'after_widget'  => '</section>',
-				'before_title'  => '<h2 class="widget-title">',
-				'after_title'   => '</h2>',
-			) );
+	register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar', 'positor' ),
+			'id'            => 'sidebar-1',
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s my-5">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		));
+		
+		// Three column footer 
+		register_sidebar(array(
+			'name' => 'Footer (Left)',
+			'id'        => 'footer-1',
+			'description' => 'First footer widget area',
+			'before_widget' => '<div id="footer-widget1" class="col-md-4">',
+			'after_widget' => '</div>',
+			'before_title' => '<h2>',
+			'after_title' => '</h2>',
+		));
+
+		register_sidebar(array(
+			'name' => 'Footer (Center)',
+			'id'        => 'footer-2',
+			'description' => 'Second footer widget area',
+			'before_widget' => '<div id="footer-widget2" class="col-md-4">',
+			'after_widget' => '</div>',
+			'before_title' => '<h2>',
+			'after_title' => '</h2>',
+		));
+
+		register_sidebar(array(
+			'name' => 'Footer (Right)',
+			'id'        => 'footer-3',
+			'description' => 'Third footer widget area',
+			'before_widget' => '<div id="footer-widget3" class="col-md-4">',
+			'after_widget' => '</div>',
+			'before_title' => '<h2>',
+			'after_title' => '</h2>',
+		));
 	}
-	add_action( 'widgets_init', 'positor_widgets_init' );
+	add_action( 'widgets_init', 'positor_widgets_init', 1000 );
 	
+
+		
 	
 	/**
 	* Enqueue scripts and styles.
