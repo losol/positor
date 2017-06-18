@@ -12,7 +12,7 @@
 
 <?php get_header(); ?>
 <div class="container-fluid fl-content-full" id="content">
-	<div class="row">
+	<div class="row flex-grow">
 		<main id="main">
 
 			<?php
