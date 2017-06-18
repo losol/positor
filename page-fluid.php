@@ -11,8 +11,8 @@
  ?>
 
 <?php get_header(); ?>
-<div class="container-fluid fl-content-full" id="content">
-	<div class="row flex-grow">
+<div class="container-fluid flex-grow" id="content">
+	<div class="row">
 		<main id="main">
 
 			<?php

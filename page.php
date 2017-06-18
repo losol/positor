@@ -14,8 +14,8 @@
  ?>
 
 <?php get_header(); ?>
-<div id="content" class="container px-0">
-		<div class="row flex-grow">
+<div id="content" class="container flex-grow">
+		<div class="row">
 		
 			<?php
 			if ( is_active_sidebar( 'sidebar-1' ) ) {
