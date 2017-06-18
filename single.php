@@ -12,7 +12,7 @@
 <?php
 	while ( have_posts() ) : the_post(); ?>
 
-<div class="bg-lightgray">
+<div class="bg-gray-light">
 	<div class="container pt-5">
 		<div class="row">
 			<?php get_template_part( 'components/post/content-single-header', get_post_format() ); ?>

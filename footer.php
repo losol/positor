@@ -15,7 +15,7 @@
 
 
 if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') ) :
-	echo '<div class="bg-lightgray mt-5 py-3"><div class="container"><div class="row">';
+	echo '<div class="bg-gray-light mt-5 py-3"><div class="container"><div class="row">';
 	if (is_active_sidebar('footer-1')) :
 		dynamic_sidebar('footer-1');
 	endif;
@@ -29,7 +29,7 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
 endif; // End of if sidebar heck
 ?>
 
-<div class="bg-darkgray py-2">
+<div class="bg-gray-dark py-2">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 text-inverse">

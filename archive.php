@@ -8,7 +8,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div class="bg-lightgray py-3">
+<div class="bg-gray-light py-3">
 			<header class="container page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
