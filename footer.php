@@ -9,7 +9,7 @@
 
 ?>
 
-<footer class="footer pt-5 hidden-print">
+<footer class="footer hidden-print">
 
 <?php
 
