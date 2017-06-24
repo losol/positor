@@ -144,7 +144,7 @@ function positor_the_tags() {
 			echo '<div class="entry-tags"><span class="sr-only">'. esc_html__( 'Tagged with ', 'positor' ) . '</span>';
 			
 			foreach ($tags_list as $tag) {
-				echo '<a href="' . get_category_link($tag->term_id) . '" class="badge badge-warning mr-1">';
+				echo '<a href="' . get_category_link($tag->tag_id) . '" class="badge badge-warning mr-1">';
 				echo $tag->name;
 				echo '</a>';
 			

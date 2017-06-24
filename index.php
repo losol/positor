@@ -17,7 +17,7 @@
 <div class="container">
 	<div class="row">
 
-		<main id="main">
+		<main id="content">
 		
 		<?php
 		

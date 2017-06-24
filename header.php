@@ -19,7 +19,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('flex-column'); ?>>
+<body <?php body_class(''); ?>>
 	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'positor' ); ?></a>
 
 	<header id="header" class="site-header hidden-print">
