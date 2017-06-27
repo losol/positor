@@ -1,10 +1,8 @@
 <?php
-
 /**
 * Positor functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package Positor
  */
 
@@ -13,18 +11,10 @@ if ( ! function_exists( 'positor_setup' ) ) :
 /**
 * Sets up theme defaults and registers support for various WordPress features.
  *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
  */
 function positor_setup() {
 	
-	/*
-	* Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on components, use a find and replace
-	 * to change 'positor' to the name of your theme in all the template files.
-	 */
+	// Make theme available for translation.
 	load_theme_textdomain( 'positor', get_template_directory() . '/languages' );
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -41,8 +31,8 @@ function positor_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'positor-featured-image', 1200, 430, true );
-    set_post_thumbnail_size( 1200, 430, true );
+	add_image_size( 'positor-featured-image', 1920, 1080, true );
+    set_post_thumbnail_size( 1280, 720, true );
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Top', 'positor' ),

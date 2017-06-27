@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row no-gutters">
 <?php
     // WP_Query arguments
     $args = array(
@@ -26,13 +26,13 @@
             $count++;
             if($count == 1)
             { 
-                echo '<div class="col-md-8">';
+                echo '<div class="col-md-8 d-flex align-items-stretch">';
                 get_template_part( 'components/card/card-standard' );
                 echo '</div>';
             }
             if($count >= 2)
             { 
-                echo '<div class="col-md-4">';
+                echo '<div class="col-md-4 d-flex align-items-stretch">';
                 get_template_part( 'components/card/card-standard' );
                 echo '</div>';
             }
