@@ -1,7 +1,7 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-12' ); ?>>
+
 	<header>
             <?php
-                the_title( '<h1 class=" display-2 py-3">', '</h1>' );
+                the_title( '<h1 class=" display-2 pt-5">', '</h1>' );
             ?>
             <?php
             // Post format: video
@@ -29,10 +29,10 @@
             // Post format: other
             else {
             if ( '' != get_the_post_thumbnail() ) : ?>
-                <div class="post-thumbnail py-3 ml-auto">		
-                        <?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'img-fluid' )); ?>
-                        <p><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
-                </div>
+                <figure class="post-thumbnail figure image py-3">
+                        <?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'figure-img img-fluid' )); ?>
+                        <figcaption class="figure-caption text-right text-muted"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></figcaption>
+                </figure>
             <?php endif; ?>
             <?php
             } //end of other post formats

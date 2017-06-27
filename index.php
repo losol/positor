@@ -13,12 +13,8 @@
  */
 ?>
 <?php get_header(); ?>
-
 <div class="container">
-	<div class="row pt-3">
-
 		<main id="content">
-		
 		<?php
 		
 		if ( have_posts() ) :
@@ -48,8 +44,6 @@
 		
 	</div>
 
-
-</div>
 
 </div>
 <?php

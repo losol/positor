@@ -12,25 +12,23 @@
 <?php
 	while ( have_posts() ) : the_post(); ?>
 
+<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
 <div class="bg-gray-light">
-	<div class="container pt-5">
-		<div class="row">
+	<div class="container">
 			<?php get_template_part( 'components/post/content-single-header', get_post_format() ); ?>
-		</div>
 	</div>
 </div>
+
 <div class="container">
-	<div class="row pt-3">
+	<div class="row">
 		<div class="col-md-8">
 		<?php
 
 				get_template_part( 'components/post/content-single-body', get_post_format() );
-
 				get_template_part( 'components/common/issue-published', get_post_format() );
 				get_template_part( 'components/common/related-posts', get_post_format() );
 				get_template_part( 'components/common/social-sharing', get_post_format() );
 ?>
-
 
 			</main>
 		</div>
@@ -51,7 +49,7 @@
 </div>
 
 </div>
-
+</article>
 <?php	
 endwhile; // End of the loop.
 get_footer();

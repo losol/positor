@@ -1,0 +1,1 @@
+<a class="btn btn-outline-primary link-no-decoration m-1" target="_blank" role="button" href="https://twitter.com/share?url=<?php the_permalink();?>"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;Twitter</a>
