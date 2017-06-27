@@ -15,13 +15,15 @@
 <?php get_header(); ?>
 
 <div class="container">
-	<div class="row">
+	<div class="row pt-3">
 
 		<main id="content">
 		
 		<?php
 		
 		if ( have_posts() ) :
+			/* Grid with featured posts */
+			get_template_part( 'components/post/grid' );
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
