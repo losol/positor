@@ -93,6 +93,9 @@ Edits based on user feedback from @joyously on wordpress.org
 * Added sticky footer
 * Added 3 column widget area for footer
 
+= 1.1.6 - 27.06.2017 =
+* Added grid with featured posts on front page
+
 
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
