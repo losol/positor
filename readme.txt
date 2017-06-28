@@ -26,6 +26,10 @@ Custom fields used in this theme:
 
 == Frequently Asked Questions ==
 
+= How do I add posts to the featured post grid on frontpage? =
+
+To show posts on top in the post grid, you just add the tag featured to the post. 
+
 = Where can I find the source code and sass files? =
 
 Positor and it´s full source code is available at [GitHub](https://github.com/losol/positor).
