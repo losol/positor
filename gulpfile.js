@@ -201,4 +201,4 @@ gulp.task('build:pot', function () {
  		.pipe(notify({ message: 'Zip task complete', onLast: true }));
  });
 
- gulp.task('build', gulpSequence('clean:temp', 'build:pot', 'build:theme', 'build:zip'));
+ gulp.task('build', gulpSequence('clean:temp', 'make:css', 'build:pot', 'build:theme', 'build:zip'));

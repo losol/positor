@@ -96,6 +96,7 @@ Edits based on user feedback from @joyously on wordpress.org
 = 1.1.6 - 27.06.2017 =
 * Added grid with featured posts on front page
 * Fixed tag links not working.
+* Better styling of comment form. 
 
 
 == Credits ==
