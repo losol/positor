@@ -227,6 +227,11 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	 */
 	require get_template_directory() . '/inc/customizer.php';
 	
+		
+	/**
+	* Commentform customization.
+	 */
+	require get_template_directory() . '/inc/commentform.php';
 	
 	/**
 	* Load Jetpack compatibility file.
