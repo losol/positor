@@ -1,22 +1,30 @@
 === Positor ===
-Contributors: Ole Kristan Losvik
-Tags: Bootstrap 4
-
+Contributors: losvik
+Tags: one-column, two-columns, right-sidebar, custom-logo, featured-image-header, featured-images, post-formats, theme-options, footer-widgets, translation-ready, blog
+Donate link: https://paypal.me/losvik
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.4.0
 Tested up to: 4.7.0
-Stable tag: 1.0.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 1.1.7
+
+A minimalistic theme with a clean design giving focus to your content. Theme is built on Bootstrap 4.
 
 == Description ==
 
-A minimalistic theme with a clean design giving focus to your content. Theme is built on Bootstrap 4.
+Positor is a theme which focus on content. It suits well for magazines, knowledge communication and blogs.
+
+
+
 
 == Installation ==
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
+
+Restrictions:
+* The menu in the top bar will show only the upper two levels. 
 
 Custom fields used in this theme: 
 * Issue number for showing if the article was published in a printed issue: issue_number
