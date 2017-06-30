@@ -121,7 +121,7 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	register_sidebar( array(
 			'name'          => esc_html__( 'Sidebar', 'positor' ),
 			'id'            => 'sidebar-1',
-			'description'   => '',
+			'description'   => esc_html__('Sidebar widgets'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s my-5">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -130,9 +130,9 @@ add_action( 'after_setup_theme', 'positor_setup' );
 		
 		// Three column footer 
 		register_sidebar(array(
-			'name' => 'Footer (Left)',
+			'name' => esc_html__('Footer (Left)'),
 			'id'        => 'footer-1',
-			'description' => 'First footer widget area',
+			'description' => esc_html__('First footer widget area'),
 			'before_widget' => '<div class="footer-widget left">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2>',
@@ -140,9 +140,9 @@ add_action( 'after_setup_theme', 'positor_setup' );
 		));
 
 		register_sidebar(array(
-			'name' => 'Footer (Center)',
+			'name' => esc_html__('Footer (Center)'),
 			'id'        => 'footer-2',
-			'description' => 'Second footer widget area',
+			'description' => esc_html__('Second footer widget area'),
 			'before_widget' => '<div class="footer-widget center">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2>',
@@ -150,9 +150,9 @@ add_action( 'after_setup_theme', 'positor_setup' );
 		));
 
 		register_sidebar(array(
-			'name' => 'Footer (Right)',
+			'name' => esc_html__('Footer (Right)'),
 			'id'        => 'footer-3',
-			'description' => 'Third footer widget area',
+			'description' => esc_html__('Third footer widget area'),
 			'before_widget' => '<div class="footer-widget right">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2>',

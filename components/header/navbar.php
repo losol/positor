@@ -33,7 +33,7 @@
 <div id="searchform" class="container-fluid collapse">
    <div class="row bg-inverse">
       <div class="container m-0 p-4 text-white">
-       <form role="search" method="get" class="form search-form" action="/index.php">
+       <form role="search" method="get" class="form search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
          <div class="input-group">
            <input name="s" type="text" class="form-control" placeholder="<?php esc_html_e( 'What are you searching for?', 'positor' ); ?>">
            <span class="input-group-btn">

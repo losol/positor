@@ -19,7 +19,10 @@
 		
 		if ( have_posts() ) :
 			/* Grid with featured posts */
+
+			if ( is_home() && is_front_page()){
 			get_template_part( 'components/post/grid' );
+			}
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();

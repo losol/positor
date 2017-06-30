@@ -14,13 +14,16 @@ A minimalistic theme with a clean design giving focus to your content. Theme is 
 
 Positor is a theme which focus on content. It suits well for magazines, knowledge communication and blogs.
 
+Restrictions:
+* The menu in the top bar will show only the upper two levels. 
+* There is no custom more text displayed on the link. 
+* The Read more button will take you to the actual post. 
+
 == Installation ==
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-Restrictions:
-* The menu in the top bar will show only the upper two levels. 
 
 Custom fields used in this theme: 
 * Issue number for showing if the article was published in a printed issue: issue_number
