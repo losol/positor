@@ -130,7 +130,7 @@ add_action( 'after_setup_theme', 'positor_setup' );
 		
 		// Three column footer 
 		register_sidebar(array(
-			'name' => esc_html__('Footer (Left)'),
+			'name' => esc_html__('Footer (Left)', 'positor'),
 			'id'        => 'footer-1',
 			'description' => esc_html__('First footer widget area', 'positor'),
 			'before_widget' => '<div class="footer-widget left">',
@@ -140,7 +140,7 @@ add_action( 'after_setup_theme', 'positor_setup' );
 		));
 
 		register_sidebar(array(
-			'name' => esc_html__('Footer (Center)'),
+			'name' => esc_html__('Footer (Center)', 'positor'),
 			'id'        => 'footer-2',
 			'description' => esc_html__('Second footer widget area', 'positor'),
 			'before_widget' => '<div class="footer-widget center">',
@@ -150,7 +150,7 @@ add_action( 'after_setup_theme', 'positor_setup' );
 		));
 
 		register_sidebar(array(
-			'name' => esc_html__('Footer (Right)'),
+			'name' => esc_html__('Footer (Right)','positor'),
 			'id'        => 'footer-3',
 			'description' => esc_html__('Third footer widget area', 'positor'),
 			'before_widget' => '<div class="footer-widget right">',
