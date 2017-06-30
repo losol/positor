@@ -109,6 +109,9 @@ Edits based on user feedback from @joyously on wordpress.org
 = 1.1.7 - 30.06.2017 =
 * Fixed escaping of some output
 * Live preview of title and description editing in Customizer. 
+* Fixed multiple items in footers, and positioning of elements.
+
+
 
 
 

@@ -15,7 +15,7 @@
     $count = (int)0;
     if ($featured -> found_posts < 3) {
         while ($featured -> have_posts()) : $featured -> the_post();
-            echo '<div class="col-12">';
+            echo '<div class="col-md-12">';
             get_template_part( 'components/card/card-standard' );
             echo '</div>';
         endwhile;

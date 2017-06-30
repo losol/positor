@@ -17,13 +17,19 @@
 if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') ) :
 	echo '<div class="bg-gray-light mt-5 py-3"><div class="container"><div class="row">';
 	if (is_active_sidebar('footer-1')) :
+		echo '<div class="col-md-4 align-self-start">';
 		dynamic_sidebar('footer-1');
+		echo '</div>';
 	endif;
 		if (is_active_sidebar('footer-2')) :
+		echo '<div class="col-md-4 d-block mx-auto">';
 		dynamic_sidebar('footer-2');
+		echo '</div>';
 	endif;
 	if (is_active_sidebar('footer-3')) :
+		echo '<div class="col-md-4 ml-auto">';
 		dynamic_sidebar('footer-3');
+		echo '</div>';
 	endif;
 	echo '</div></div></div>';
 endif; // End of if sidebar heck
