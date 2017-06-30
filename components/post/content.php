@@ -11,14 +11,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'my-5' ); ?>>
 		<?php if (is_sticky() && is_home() && !is_paged()) : ?>
-			<span class="badge badge-info">
+			<span class="badge badge-info m-0">
 				<?php _e('Featured', 'positor'); ?>
 			</span>
 		<?php endif; ?>
 	<?php if ( '' != get_the_post_thumbnail() ) : ?>
-		<div class="post-thumbnail ml-auto">
+		<div class="post-thumbnail m-0">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'mx-auto d-block' )); ?>
+				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'img-fluid w-100' )); ?>
 			</a>
 		</div>
 		<div class="bg-white p-3">
