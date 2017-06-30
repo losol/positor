@@ -8,10 +8,10 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_592f0e12087ae',
-				'label' => esc_html__('Video Url'),
+				'label' => esc_html__('Video Url', 'positor'),
 				'name' => 'video_url',
 				'type' => 'text',
-				'instructions' => esc_html__('Url for the video you want to embed. '),
+				'instructions' => esc_html__('Url for the video you want to embed. ', 'positor'),
 				'default_value' => '',
 				'placeholder' => 'https://youtube.com/...',
 				'prepend' => '',

@@ -19,6 +19,8 @@ Restrictions:
 * There is no custom more text displayed on the link. 
 * The Read more button will take you to the actual post. 
 
+Issues, bugs and feature requests could posted at [GitHub](https://github.com/losol/positor).
+
 == Installation ==
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
@@ -113,6 +115,7 @@ Edits based on user feedback from @joyously on wordpress.org
 * Fixed escaping of some output
 * Live preview of title and description editing in Customizer. 
 * Fixed multiple items in footers, and positioning of elements.
+* Bug fixed: search form in navbar on subfolder installation.
 
 
 
