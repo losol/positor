@@ -63,11 +63,7 @@ function positor_setup() {
 	* @link https://codex.wordpress.org/Post_Formats
 	*/
 	add_theme_support( 'post-formats', array( 'video') );
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'positor_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+
 	
 	/**
 	* Simplify styles in editor 
@@ -174,7 +170,7 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	function positor_scripts() {
 		wp_enqueue_style( 'positor-bootstrap', get_template_directory_uri().'/assets/stylesheets/positor.min.css' );
 		wp_enqueue_style( 'positor-style', get_stylesheet_uri() );
-		wp_enqueue_script( 'positor-scripts', get_template_directory_uri() . '/assets/js/positor.min.js', array( 'jquery' ), '20170529', false );
+		wp_enqueue_script( 'positor-scripts', get_template_directory_uri() . '/assets/js/positor.min.js', array( 'jquery' ), '20170630', false );
 		wp_enqueue_script( 'positor-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 		
 		wp_enqueue_script( 'positor-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );

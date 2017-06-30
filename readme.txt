@@ -14,11 +14,7 @@ A minimalistic theme with a clean design giving focus to your content. Theme is 
 
 Positor is a theme which focus on content. It suits well for magazines, knowledge communication and blogs.
 
-
-
-
 == Installation ==
-
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
@@ -109,6 +105,11 @@ Edits based on user feedback from @joyously on wordpress.org
 * Added grid with featured posts on front page
 * Fixed tag links not working.
 * Better styling of comment form. 
+
+= 1.1.7 - 30.06.2017 =
+* Fixed escaping of some output
+* Live preview of title and description editing in Customizer. 
+
 
 
 == Credits ==

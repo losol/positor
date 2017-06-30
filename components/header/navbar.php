@@ -9,7 +9,7 @@
      <i class="fa fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
    </button>
 
-   <a class="navbar-brand site-title px-1 hidden-sm-down" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+   <a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
    <?php
    wp_nav_menu([
      'menu'            => 'top',
