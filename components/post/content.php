@@ -9,22 +9,23 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'my-5' ); ?>>
-		<?php if (is_sticky() && is_home() && !is_paged()) : ?>
-			<span class="badge badge-info m-0">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card my-5' ); ?>>
+	<?php if (is_sticky() && is_home() && !is_paged()) : ?>
+			<span class="position-absolute badge badge-info">
 				<?php _e('Featured', 'positor'); ?>
 			</span>
-		<?php endif; ?>
+	<?php endif; ?>
 	<?php if ( '' != get_the_post_thumbnail() ) : ?>
 		<div class="post-thumbnail m-0">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'img-fluid w-100' )); ?>
+				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'card-img-top img-fluid w-100' )); ?>
 			</a>
 		</div>
 		<div class="bg-white p-3">
 	<?php endif; ?>
+	<div class="card-block">
 		<?php
-			the_title( '<h2 class="py-1 display-3"><a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="pt-3 display-3"><a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		 ?>
 
 		<a href="<?php the_permalink(); ?>" class="link-no-decoration lead">
@@ -40,5 +41,5 @@
 				the_title();
 			?>
 		</a>
-	<div>
+	</div>
 </article><!-- #post-## -->

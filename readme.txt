@@ -117,8 +117,8 @@ Edits based on user feedback from @joyously on wordpress.org
 * Fixed multiple items in footers, and positioning of elements.
 * Bug fixed: search form in navbar on subfolder installation.
 
-
-
+= 1.1.8 - 03.07.2017 =
+* Fixed card layout on front page
 
 
 == Credits ==
