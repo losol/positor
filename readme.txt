@@ -14,7 +14,7 @@ A minimalistic theme with a clean design giving focus to your content. Theme is 
 
 Positor is a theme which focus on content. It suits well for magazines, knowledge communication and blogs.
 
-Restrictions:
+Limitations:
 * The menu in the top bar will show only the upper two levels. 
 * There is no custom more text displayed on the link. 
 * The Read more button will take you to the actual post. 
