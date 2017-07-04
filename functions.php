@@ -256,6 +256,11 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	 */
 	require_once get_template_directory() . '/inc/plugins.php';
 	
+
+	/**
+	* Add metaboxes
+	 */
+	require_once get_template_directory() . '/inc/metaboxes.php';
 	
 	/**
 	* Add responsive videos

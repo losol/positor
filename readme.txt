@@ -122,6 +122,7 @@ Edits based on user feedback from @joyously on wordpress.org
 
 = 1.1.8 - 03.07.2017 =
 * Fixed card layout on front page
+* Added nicer post archive page navigation
 
 
 == Credits ==
