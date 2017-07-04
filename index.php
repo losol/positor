@@ -20,7 +20,7 @@
 		if ( have_posts() ) :
 			/* Grid with featured posts */
 
-			if ( is_home() && is_front_page()){
+			if ( is_home() && is_front_page() && !is_paged()) {
 			get_template_part( 'components/post/grid' );
 			}
 
@@ -36,7 +36,8 @@
 
 			endwhile;
 
-			the_posts_navigation();
+			// Post navigation for prev/next index page
+			get_template_part( 'components/common/archive-navigation', get_post_format() );
 
 		else :
 
