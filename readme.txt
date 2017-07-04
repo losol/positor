@@ -39,6 +39,9 @@ Custom fields used in this theme:
 
 To show posts on top in the post grid, you just add the tag featured to the post. 
 
+= My post do not show in the featured grid? =
+Most probably it does not have a featured image, as only posts with featured images will show. 
+
 = Where can I find the source code and sass files? =
 
 Positor and it´s full source code is available at [GitHub](https://github.com/losol/positor).
