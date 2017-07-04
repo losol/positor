@@ -2,7 +2,6 @@
 <?php
     // WP_Query arguments
     $args = array(
-        'nopaging'               => true,
         'posts_per_page'         => '5',
         'tag'                    => 'featured',
         'meta_key'               => '_thumbnail_id', //only posts with featured images
