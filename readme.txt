@@ -28,9 +28,8 @@ Issues, bugs and feature requests could posted at [GitHub](https://github.com/lo
 
 
 Custom fields used in this theme: 
-* Issue number for showing if the article was published in a printed issue: issue_number
-* Author alias for showing an author not registed as a user in WordPress: author_alias
-* Author bio for authors not registered as a user: author_bio
+* positor_video_url: Url to embed for using featured video
+* positor_hero_featured: Will make the featured image/video appear large (hero)
 
 
 == Frequently Asked Questions ==
@@ -123,6 +122,8 @@ Edits based on user feedback from @joyously on wordpress.org
 = 1.1.8 - 03.07.2017 =
 * Fixed card layout on front page
 * Added nicer post archive page navigation
+* Exchange Advanced custom fields for Meta-box.
+* Removed Issue published
 
 
 == Credits ==
