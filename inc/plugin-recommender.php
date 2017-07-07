@@ -1,12 +1,5 @@
 <?php
 /**
- * This file represents an example of the code that themes would use to register
- * the required plugins.
- *
- * It is expected that theme authors would copy and paste this code into their
- * functions.php file, and amend to suit.
- *
- * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.
  *
  * @package    TGM-Plugin-Activation
  * @subpackage Example
@@ -15,6 +8,7 @@
  * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
  * @link       https://github.com/TGMPA/TGM-Plugin-Activation
+ * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.
  */
 
 /**
@@ -35,6 +29,10 @@ require_once get_template_directory() . '/inc/tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'positor_register_required_plugins' );
 
+/**
+ * Register the required plugins for this theme.
+ *
+ */
 function positor_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
@@ -42,12 +40,13 @@ function positor_register_required_plugins() {
 	 */
 	$plugins = array(
 
+	
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'      => 'Advanced Custom Fields',
-			'slug'      => 'advanced-custom-fields',
+			'name'      => 'Meta Box',
+			'slug'      => 'meta-box',
 			'required'  => false,
-		),
+		)
 
 	);
 
@@ -70,15 +69,16 @@ function positor_register_required_plugins() {
 		'is_automatic' => true,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
 
-		/*
+		
 		'strings'      => array(
 			'page_title'                      => __( 'Install Required Plugins', 'positor' ),
 			'menu_title'                      => __( 'Install Plugins', 'positor' ),
-			/* translators: %s: plugin name. * /
+			/* translators: %s: plugin name. */
 			'installing'                      => __( 'Installing Plugin: %s', 'positor' ),
-			/* translators: %s: plugin name. * /
+			/* translators: %s: plugin name. */
 			'updating'                        => __( 'Updating Plugin: %s', 'positor' ),
 			'oops'                            => __( 'Something went wrong with the plugin API.', 'positor' ),
+            /*
 			'notice_can_install_required'     => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme requires the following plugin: %1$s.',
@@ -144,8 +144,9 @@ function positor_register_required_plugins() {
 			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'positor' ),
 
 			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
-		),
 		*/
+        ),
+		
 	);
 
 	tgmpa( $plugins, $config );

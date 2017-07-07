@@ -45,12 +45,6 @@ function positor_customize_register( $wp_customize ) {
 	'priority'    => 10
 	) ) );
 
-	/* Hide Advanced Custom Fields? */	
-	$wp_customize->add_setting( 'positor_hide_acf', array(
-		'default'           => true,
-		'sanitize_callback' => 'positor_sanitize_checkbox' 
-	) );
-
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_hide_acf', array(
 	'label'       => esc_html__( 'Hide the Custom Fields menu', 'positor' ),
 	'description' => esc_html__( 'Check this on to hide the Custom Fields menu', 'positor' ),

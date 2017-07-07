@@ -195,18 +195,6 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	
 	
 	/**
-	* Hide Custom fields menu
-	*/
-	if( get_theme_mod( 'positor_hide_acf' ) == true) {
-		if( class_exists('Acf') )
-		{
-			define( 'ACF_LITE' , true );
-		}
-	}
-	
-	
-	
-	/**
 	* Custom template tags for this theme.
 	 */
 	require get_template_directory() . '/inc/template-tags.php';
@@ -234,7 +222,6 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	 */
 	require get_template_directory() . '/inc/jetpack.php';
 	
-	
 	/**
 	* Add Bootstrap 4 nav walker
 	 */
@@ -250,17 +237,15 @@ add_action( 'after_setup_theme', 'positor_setup' );
 	 */
 	require get_template_directory() . '/inc/woocommerce.php';
 	
-	
 	/**
-	* Check for required plugins
+	* Recommend plugins to be used with theme. 
 	 */
-	require_once get_template_directory() . '/inc/plugins.php';
-	
+	require get_template_directory() . '/inc/plugin-recommender.php';
 
 	/**
-	* Add metaboxes
-	 */
-	require_once get_template_directory() . '/inc/metaboxes.php';
+	* Add metaboxes. 
+	*/
+	require get_template_directory() . '/inc/metaboxes.php';
 	
 	/**
 	* Add responsive videos
