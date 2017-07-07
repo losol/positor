@@ -13,11 +13,7 @@
 	while ( have_posts() ) : the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
-<div class="bg-gray-light">
-	<div class="container">
-			<?php get_template_part( 'components/post/content-single-header', get_post_format() ); ?>
-	</div>
-</div>
+<?php get_template_part( 'components/post/content-single-header', get_post_format() ); ?>
 
 <div class="container">
 	<div class="row">
