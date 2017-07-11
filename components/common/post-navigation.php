@@ -1,3 +1,6 @@
+<?php
+// Navigation from single page
+?>
 <h4 class="pt-3"><?php esc_html_e( 'Read more?', 'positor' ) ?></h4>
 <div class="post-navigation d-flex">
     <?php
