@@ -1,7 +1,7 @@
 <?php
 // Archive pages next/previous archive  page
 ?>
-<div class="archive-navigation d-flex">
+<div class="archive-navigation d-flex my-2">
     <?php
     // Previous post
 
