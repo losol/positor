@@ -15,7 +15,7 @@
             $this_video_url = get_post_meta($post->ID, 'positor_featured_video_url', true);
 
             if ($this_video_url) {
-                    echo '<div class="embed-responsive py-3">';
+                    echo '<div class="embed-responsive embed-responsive-16by9">';
                     echo wp_oembed_get( $this_video_url );
                     echo '</div>';
                     
