@@ -26,8 +26,9 @@
         echo '</small></p></div>';
         ?>
     
-    <?php // Show categories
-    if (has_category()) :
+    <?php // Show categories if has_category, and it is not the "uncategorized" category.
+    $categories = wp_get_post_categories( $post->ID );
+    if (has_category() && !( count( $categories ) == 1 && in_array( 1, $categories ))) :
         echo '<div class="pl-4 m-2">';
         echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-bookmark-o" aria-hidden="true"></i></p>';
         echo '<span class="sr-only">' . __( 'Posted in: ', 'positor' ) . '</span>'. positor_the_categories(); 
