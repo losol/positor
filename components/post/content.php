@@ -40,11 +40,10 @@
 			positor_the_excerpt();
 			?>
 		</a>
-		<a href="<?php the_permalink(); ?>" class="btn btn-outline-primary link-no-decoration">
+		<a href="<?php the_permalink(); ?>" class="btn btn-outline-primary link-no-decoration white-space-normal">
 
 			<?php
-				esc_html_e( 'Read ', 'positor' ); 
-				the_title();
+				esc_html_e( 'Read', 'positor' ); 
 			?>
 		</a>
 	</div>
