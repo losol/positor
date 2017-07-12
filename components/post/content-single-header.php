@@ -14,13 +14,20 @@
             // Get the featured video variable. 
             $this_video_url = get_post_meta($post->ID, 'positor_featured_video_url', true);
 
-            if ($this_video_url) {
+            if (strpos($this_video_url, 'facebook.com')) {
+
+                    echo '<div class="embed-responsive py-3">';
+                    echo wp_oembed_get( $this_video_url );
+                    echo '</div>';
+                    
+                }
+            elseif ($this_video_url) {
+
                     echo '<div class="embed-responsive embed-responsive-16by9">';
                     echo wp_oembed_get( $this_video_url );
                     echo '</div>';
                     
                 }
-            
             // No video, any image?
             elseif (get_the_post_thumbnail()) {
                 ?> 
@@ -35,7 +42,7 @@
         </div>
         <div class="container">
             <?php // Show the title
-            the_title( '<h1 class=" display-2">', '</h1>' ); ?>
+            the_title( '<h1 class="py-1 my-1">', '</h1>' ); ?>
 
             <?php // Show the intro text ?>
             <div>
