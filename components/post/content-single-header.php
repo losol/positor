@@ -6,7 +6,7 @@
                     echo '<div class="">';
                 }
                 else {
-                    echo '<div class="container">';
+                    echo '<div class="container py-3">';
                 }
                 ?>
             <?php
