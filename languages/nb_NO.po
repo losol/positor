@@ -99,15 +99,15 @@ msgstr "Vis forenklet stilsett i editor"
 
 #: inc/customizer.php:42, temp/buildtheme/inc/customizer.php:42
 msgid "Check this to show fewer paragraph styles in the post editor"
-msgstr "Merk av for å vise færre stiler når du redigerer poster."
+msgstr "Merk av for å vise færre stiler når du redigerer poster"
 
 #: inc/customizer.php:56, temp/buildtheme/inc/customizer.php:56
 msgid "Hide the Custom Fields menu"
-msgstr ""
+msgstr "Skjul menyen Custom Fields"
 
 #: inc/customizer.php:57, temp/buildtheme/inc/customizer.php:57
 msgid "Check this on to hide the Custom Fields menu"
-msgstr ""
+msgstr "Velg for å skjule menyen for Custom Fields"
 
 #: inc/customizer.php:70, temp/buildtheme/inc/customizer.php:70
 msgid "Social media links"
@@ -176,12 +176,12 @@ msgstr "Emneknagg %1$s"
 #: inc/tgm-plugin-activation.php:294,
 #: temp/buildtheme/inc/tgm-plugin-activation.php:294
 msgid "Install Required Plugins"
-msgstr ""
+msgstr "Installer nødvendige utvidelser"
 
 #: inc/tgm-plugin-activation.php:295,
 #: temp/buildtheme/inc/tgm-plugin-activation.php:295
 msgid "Install Plugins"
-msgstr ""
+msgstr "Installer utvidelser"
 
 #: inc/tgm-plugin-activation.php:297,
 #: temp/buildtheme/inc/tgm-plugin-activation.php:297
@@ -428,11 +428,9 @@ msgstr ""
 
 #: inc/tgm-plugin-activation.php:2309,
 #: temp/buildtheme/inc/tgm-plugin-activation.php:2309
-#, fuzzy
-#| msgid "Theme: %1$s by %2$s."
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
-msgstr "Tema: %1$s by %2$s."
+msgstr "Tema: %1$s by %2$s"
 
 #: inc/tgm-plugin-activation.php:2355,
 #: temp/buildtheme/inc/tgm-plugin-activation.php:2355
