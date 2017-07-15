@@ -72,14 +72,6 @@ a img.aligncenter {
     text-align: center;
 }
 
-.gallery-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
-}
-
 .wp-caption.alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -249,8 +241,7 @@ a:hover.page-numbers {
 /* Wordpress image galleries. */
 
 .gallery-item {
-    background-color: white;
-    padding: 1rem;
+  padding: 0.1rem;
   display: inline-block;
   text-align: center;
   vertical-align: top;
@@ -272,11 +263,19 @@ a:hover.page-numbers {
   .gallery-columns-9 .gallery-item {
     max-width: 11.11%; }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
 .gallery-caption {
   display: block; 
   border:0;
-  padding:1rem;
-  }
+  padding:0.5rem;
+  font-size: 80%;
+  font-weight: lighter;
+  }  
+
+
 
 /*--------------------------------------------------------------
 # Tables
