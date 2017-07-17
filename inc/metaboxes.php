@@ -25,6 +25,12 @@ function positor_metabox( $meta_boxes ) {
 				'placeholder' => esc_html__( 'https://youtube.com/...', 'positor' ),
 			),
 			array(
+				'id' => $prefix . 'hide_navbar',
+				'type' => 'checkbox',
+				'name' => esc_html__( 'Hide navigation bar', 'positor' ),
+				'desc' => esc_html__( 'Will hide the navigation bar from this page/post.', 'positor' ),
+			),
+			array(
 				'id' => $prefix . 'hide_intro_section',
 				'type' => 'checkbox',
 				'name' => esc_html__( 'Hide title, featured image, and intro text', 'positor' ),

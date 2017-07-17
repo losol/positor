@@ -1,6 +1,7 @@
+<?php
+	$this_hide_navbar = get_post_meta($post->ID, 'positor_hide_navbar', true);
+	if ( ! this_hide_navbar ) { ?>
 <nav id="site-navigation" class="navbar navbar-toggleable-sm navbar-inverse bg-primary link-no-decoration">
-   
-
    <div class="hidden-sm-down">
    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
    </div>
@@ -44,3 +45,4 @@
     </div>
    </div>
 </div>
+  <?php } ?>
