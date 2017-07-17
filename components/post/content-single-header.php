@@ -1,4 +1,8 @@
-	<header>
+<?php 
+$this_hide_intro = get_post_meta($post->ID, 'positor_hide_intro_section', true);
+if ( ! this_hide_intro ) { ?>
+
+<header>
     <div class="bg-gray-light">
     <?php 
     $this_featured_hero = get_post_meta($post->ID, 'positor_featured_hero', true);
@@ -51,3 +55,5 @@
     </div>
 </div>
 </header>
+<?php
+} // End of if ! this_hide_intro

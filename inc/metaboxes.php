@@ -24,6 +24,12 @@ function positor_metabox( $meta_boxes ) {
 				'desc' => esc_html__( 'If you want to embed a video and feature it on the top of the article add it here.', 'positor' ),
 				'placeholder' => esc_html__( 'https://youtube.com/...', 'positor' ),
 			),
+			array(
+				'id' => $prefix . 'hide_intro_section',
+				'type' => 'checkbox',
+				'name' => esc_html__( 'Hide title, featured image, and intro text', 'positor' ),
+				'desc' => esc_html__( 'This will hide the title, image and intro text.', 'positor' ),
+			),
 		),
 	);
 

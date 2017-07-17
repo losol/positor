@@ -125,6 +125,9 @@ Edits based on user feedback from @joyously on wordpress.org
 * Exchange Advanced custom fields for Meta-box.
 * Removed Issue published
 
+= 1.1.9 - 17.07.2017 =
+* Added option to hide intro section
+
 
 == Credits ==
 * Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
