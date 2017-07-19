@@ -6,7 +6,9 @@
  *
  * @package Positor
  */
- ?>
+
+?>
+
 <?php get_header(); ?>
 <div class="container-fluid bg-warning">
 	<div class="row py-3"><div class="container">
