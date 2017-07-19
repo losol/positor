@@ -3,17 +3,17 @@
 * Positor functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- * @package Positor
- */
+ * @package Positor  
+ */ 
 
 if ( ! function_exists( 'positor_setup' ) ) :
 
-/**
+/**  
 * Sets up theme defaults and registers support for various WordPress features.
  *
  */
 function positor_setup() {
-	
+	 
 	// Make theme available for translation.
 	load_theme_textdomain( 'positor', get_template_directory() . '/languages' );
 	// Add default posts and comments RSS feed links to head.
@@ -64,7 +64,7 @@ function positor_setup() {
 	*/
 	add_theme_support( 'post-formats', array( 'video') );
 
-	
+
 	/**
 	* Simplify styles in editor 
 	* Accepts only "true" or "false" as possible values.

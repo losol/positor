@@ -10,11 +10,8 @@
 ?>
 
 <footer class="footer hidden-print">
-
 <?php
-
-
-if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') ) :
+if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) :
 	echo '<div class="bg-gray-light mt-5 py-3"><div class="container"><div class="row">';
 	if (is_active_sidebar('footer-1')) :
 		echo '<div class="col-md-4 align-self-start">';

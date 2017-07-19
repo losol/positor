@@ -2,20 +2,18 @@
 /**
  * The template for displaying comments
  *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
+ * This is the template that displays the area of the page that contains both 
+ * the existing comments and the comment form.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package Positor
+ * @category Comments
+ * @package  Positor
+ * @author   Ole Kristian Losvik <ole@losol.io>
+ * @license  GPL2+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link     https://codex.wordpress.org/Template_Hierarchy
  */
 
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
+// Check if the post is protected by a password. 
+if (post_password_required() ) {
 	return;
 }
 ?>
