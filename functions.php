@@ -1,87 +1,90 @@
 <?php
 /**
-* Positor functions and definitions
+ * Positor functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- * @package Positor  
- */ 
-
-if ( ! function_exists( 'positor_setup' ) ) :
-
-/**  
-* Sets up theme defaults and registers support for various WordPress features.
- *
+ * @package Positor
  */
-function positor_setup() {
-	 
-	// Make theme available for translation.
-	load_theme_textdomain( 'positor', get_template_directory() . '/languages' );
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
+
+if ( ! function_exists( 'positor_setup' ) ) {
+
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 */
-	add_theme_support( 'title-tag' );
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
-	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'positor-featured-image', 1920, 1080, true );
-    set_post_thumbnail_size( 1280, 720, true );
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Top', 'positor' ),
+	function positor_setup() {
+
+		// Make theme available for translation.
+		load_theme_textdomain( 'positor', get_template_directory() . '/languages' );
+
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
+
+		// Declares that the theme is using <title> tag from WordPress.
+		add_theme_support( 'title-tag' );
+
+		// Enable support for Post Thumbnails on posts and pages.
+		// @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/.
+		add_theme_support( 'post-thumbnails' );
+
+		// Sets image sizes.
+		add_image_size( 'positor-featured-image', 1920, 1080, true );
+		set_post_thumbnail_size( 1280, 720, true );
+
+		// Registers theme navigation menu.
+		register_nav_menus( array(
+			'menu-1' => esc_html__( 'Top', 'positor' ),
+			)
+		);
+
+		// Declares support for custom logo.
+		add_theme_support( 'custom-logo', array(
+			'height'      => 100,
+			'width'       => 400,
+			'flex-width'  => true,
+			'flex-height' => true,
 		) );
-	/**
-	 * Add support for core custom logo.
-	 */
-	add_theme_support( 'custom-logo', array(
-		'height'      => 100,
-		'width'       => 400,
-		'flex-width'  => true,
-		'flex-height' => true,
-	) );
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
-	/**
-	* Register custom post formats supported.
-	*
-	* @link https://codex.wordpress.org/Post_Formats
-	*/
-	add_theme_support( 'post-formats', array( 'video') );
 
+		/*
+		* Switch default core markup for search form, comment form, and comments
+		* to output valid HTML5.
+		*/
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-	/**
-	* Simplify styles in editor 
-	* Accepts only "true" or "false" as possible values.
-	* Modify TinyMCE editor to remove H1.	
-	*/
-	if( get_theme_mod( 'positor_simplify_editor' ) == true) {
-		add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
+		/**
+		* Register custom post formats supported.
+		*
+		* @link https://codex.wordpress.org/Post_Formats
+		*/
+		add_theme_support( 'post-formats', array( 'video') );
 
-		function tiny_mce_remove_unused_formats($init) {
-			// Add block format elements you want to show in dropdown
-			$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3';
-			return $init;
+		/**
+		* Simplifies styles in editor
+		* Modify TinyMCE editor to remove H1.
+		*/
+		if ( get_theme_mod( 'positor_simplify_editor' ) === true ) {
+			add_filter( 'tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
+
+			/**
+			 * Sets the paragraph styles available in the editor.
+			 *
+			 * @param array $init Array of options.
+			 */
+			function tiny_mce_remove_unused_formats( $init ) {
+				// Add block format elements you want to show in dropdown.
+				$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3';
+				return $init;
+			}
 		}
-	}
 
-}
-endif;
+	}
+} // End if().
+
 add_action( 'after_setup_theme', 'positor_setup' );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

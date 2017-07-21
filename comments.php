@@ -15,7 +15,7 @@
 // Check if the post is protected by a password. 
 if (post_password_required() ) {
 	return;
-}
+} 
 ?>
 
 <div id="comments" class="comments-area mt-5 hidden-print">

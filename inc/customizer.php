@@ -5,8 +5,6 @@
  * @package Positor
  */
 
-
-
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -17,14 +15,13 @@ function positor_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
 	function positor_sanitize_checkbox( $input ){
-            //returns the checkbox as int
-            return filter_var($input, FILTER_SANITIZE_NUMBER_INT);
-        }
-		
-	/**
-	* SECTION: Admin settings
-	*/
+		// Returns the checkbox as int.
+		return filter_var($input, FILTER_SANITIZE_NUMBER_INT);
+	}
 
+	/**
+	* Adds admin settings
+	*/
 	$wp_customize->add_section( 'positor_admin_settings' , array(
 		'title'      => __( 'Admin settings', 'positor' ),
 		'priority'   => 300,
@@ -37,12 +34,12 @@ function positor_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_simplify_editor', array(
-	'label'       => esc_html__( 'Show only common styles in editor', 'positor' ),
-	'description' => esc_html__( 'Check this to show fewer paragraph styles in the post editor', 'positor' ),
-	'section'     => 'positor_admin_settings',
-	'settings'    => 'positor_simplify_editor',
-	'type'        => 'checkbox',
-	'priority'    => 10
+		'label'       => esc_html__( 'Show only common styles in editor', 'positor' ),
+		'description' => esc_html__( 'Check this to show fewer paragraph styles in the post editor', 'positor' ),
+		'section'     => 'positor_admin_settings',
+		'settings'    => 'positor_simplify_editor',
+		'type'        => 'checkbox',
+		'priority'    => 10,
 	) ) );
 
 
@@ -50,7 +47,6 @@ function positor_customize_register( $wp_customize ) {
 	/**
 	* SECTION: Social media pages
 	*/
-
 	$wp_customize->add_section( 'positor_social_media_settings' , array(
 		'title'      => __( 'Social media links', 'positor' ),
 		'priority'   => 300,
