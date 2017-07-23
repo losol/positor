@@ -7,63 +7,91 @@
  * @package Positor
  */
 
-if ( ! function_exists( 'positor_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
-function positor_posted_on() {
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+?>
+<?php
+
+if ( ! function_exists( 'the_post_thumbnail_caption' ) ) :
+	/**
+	 * Gets the post thumbnail caption.
+	 *
+	 * Note that this will be replaced by WordPress Core function,
+	 * which exists in WordPress >= 4.6.0
+	 */
+	function the_post_thumbnail_caption() {
+		global $post;
+
+		$thumbnail_post_id = get_post_thumbnail_id( $post->ID );
+		$thumbnail_image = new WP_Query( array(
+			'p' => $thumbnail_post_id,
+			)
+		);
+
+		if ( $thumbnail_image && isset( $thumbnail_image[0] ) ) {
+			return '<figcaption class="figure-caption">' . $thumbnail_image[0]->post_excerpt . '</figcaption>';
+		} else {
+			return;
+		}
 	}
+endif;
 
-	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
-	);
+if ( ! function_exists( 'positor_posted_on' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function positor_posted_on() {
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		}
 
-	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'positor' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
 
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'positor' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+		$posted_on = sprintf(
+			/* translators: used before the post date */
+			esc_html_x( 'Posted on %s', 'post date', 'positor' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		$byline = sprintf(
+			/* translators: used before the post author */
+			esc_html_x( 'by %s', 'post author', 'positor' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		);
 
-}
+		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+
+	}
 endif;
 
 if ( ! function_exists( 'positor_the_author' ) ) :
-/**
- * Gets author from custom field if exists, otherwise the_author
- */
-function positor_the_author() {
-
-			if ( get_post_meta(get_the_ID(), 'author_alias', true) ) :
-					echo get_post_meta(get_the_ID(), 'author_alias', true);
-			else :
-				the_author();
-			endif;
-		}
+	/**
+	 * Gets author from custom field if exists, otherwise the_author
+	 */
+	function positor_the_author() {
+		if ( get_post_meta( get_the_ID(), 'author_alias', true ) ) :
+				esc_html_e( get_post_meta( get_the_ID(), 'author_alias', true ));
+		else :
+			the_author();
+		endif;
+	}
 endif;
 
 if ( ! function_exists( 'positor_the_author_bio' ) ) :
-/**
- * Gets author bio from custom field if exists, otherwise the_author_meta
- */
-function positor_the_author_bio() {
+	/**
+	 * Gets author bio from custom field if exists, otherwise the_author_meta
+	 */
+	function positor_the_author_bio() {
 
-			if ( get_post_meta(get_the_ID(), 'author_bio', true) ) :
-					echo get_post_meta(get_the_ID(), 'author_bio', true);
-			else :
-				the_author_meta();
-			endif;
+				if ( get_post_meta(get_the_ID(), 'author_bio', true) ) :
+						echo get_post_meta(get_the_ID(), 'author_bio', true);
+				else :
+					the_author_meta();
+				endif;
 		}
 endif;
 

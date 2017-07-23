@@ -61,7 +61,7 @@ if ( ! function_exists( 'positor_setup' ) ) {
 		*
 		* @link https://codex.wordpress.org/Post_Formats
 		*/
-		add_theme_support( 'post-formats', array( 'video') );
+		add_theme_support( 'post-formats', array( 'video' ) );
 
 		/**
 		* Simplifies styles in editor
@@ -88,17 +88,15 @@ if ( ! function_exists( 'positor_setup' ) ) {
 add_action( 'after_setup_theme', 'positor_setup' );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
-	 *
-	 * Priority 0 to make it available to lower priority callbacks.
-	 *
-	 * @global int $content_width
-	 */
-	function positor_content_width() {
-		$GLOBALS['content_width'] = apply_filters( 'positor_content_width', 940 );
-	}
-	add_action( 'after_setup_theme', 'positor_content_width', 0 );
-	
-	
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function positor_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'positor_content_width', 940 );
+}
+add_action( 'after_setup_theme', 'positor_content_width', 0 );
 	/**
 	* Return early if Custom Logos are not available.
 	 *
