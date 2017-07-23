@@ -4,6 +4,6 @@
 	</a>
     <div class="card-block">
         <h4 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-        <p class="card-text"><a class="link-no-decoration" href="<?php the_permalink(); ?>"><?php positor_the_excerpt(); ?></a></p>
+        <p class="card-text"><a class="link-no-decoration" href="<?php the_permalink(); ?>"><?php positor_the_post_intro(); ?></a></p>
     </div>
 </div>

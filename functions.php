@@ -97,22 +97,20 @@ function positor_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'positor_content_width', 940 );
 }
 add_action( 'after_setup_theme', 'positor_content_width', 0 );
-	/**
-	* Return early if Custom Logos are not available.
-	 *
-	 * @todo Remove after WP 4.7
-	 */
-	function positor_the_custom_logo() {
-		if ( ! function_exists( 'the_custom_logo' ) ) {
-			return;
-		}
-		else {
-			the_custom_logo();
-		}
+
+/**
+ * Return early if Custom Logos are not available.
+ *
+ * @todo Remove after WP 4.7
+ */
+function positor_the_custom_logo() {
+	if ( ! function_exists( 'the_custom_logo' ) ) {
+		return;
+	} else {
+		the_custom_logo();
 	}
-	
-	
-	
+}
+
 	/**
 	* Register widget area.
 	 *
@@ -217,12 +215,12 @@ add_action( 'after_setup_theme', 'positor_content_width', 0 );
 	* Commentform customization.
 	 */
 	require get_template_directory() . '/inc/commentform.php';
-	
+
 	/**
 	* Load Jetpack compatibility file.
 	 */
 	require get_template_directory() . '/inc/jetpack.php';
-	
+
 	/**
 	* Add Bootstrap 4 nav walker
 	 */
@@ -231,8 +229,8 @@ add_action( 'after_setup_theme', 'positor_content_width', 0 );
 	/**
 	* Add Bootstrap 4 comment walker
 	 */
-	require get_template_directory() . '/inc/bs4commentwalker.php';
-	
+	require get_template_directory() . '/inc/class-bootstrap-comment-walker.php';
+
 	/**
 	* Add WooCommerce support
 	 */

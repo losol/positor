@@ -28,7 +28,7 @@
 		<a href="<?php the_permalink(); ?>" class="link-no-decoration">
 		
 			<?php
-			positor_the_excerpt();
+			positor_the_post_intro();
 			?>
 		</a>
 		<a href="<?php the_permalink(); ?>" class="link-no-decoration sr-only">

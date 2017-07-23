@@ -37,7 +37,7 @@
 		<a href="<?php the_permalink(); ?>" class="link-no-decoration lead">
 		
 			<?php
-			positor_the_excerpt();
+			positor_the_post_intro();
 			?>
 		</a>
 		<a href="<?php the_permalink(); ?>" class="btn btn-outline-primary link-no-decoration white-space-normal">

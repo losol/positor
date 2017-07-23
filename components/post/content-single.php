@@ -22,7 +22,7 @@
             <?php endif; ?>
                 <div><p class="lead">
 
-                        <?php positor_the_excerpt() ?>
+                        <?php positor_the_post_intro() ?>
 
                 </p></div>
             </div>
