@@ -24,7 +24,7 @@
 	?>
 
 	<?php // Show photographer_alias if assigned.
-	if ( positor_the_photographer() !== '' ) :
+	if ( ! empty( positor_the_photographer() ) ) :
 		echo '<div class="pl-4 m-2 pt-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-camera-retro" aria-hidden="true"></i></p>';
 		echo '<span class="sr-only">' . esc_html_e( 'Image: ', 'positor' ) . '</span>' . positor_the_photographer(); // WPCS: XSS OK.

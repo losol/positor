@@ -56,12 +56,12 @@ if ( ! $this_hide_intro ) {
 		<div class="container">
 
 		<?php // Show the title.
-			the_title( '<h1 class="py-1 my-1">', '</h1>' );
+			the_title( '<h1>', '</h1>' );
 		?>
 
 		<?php // Show the intro text. ?>
 		<div>
-			<p class="lead py-3"><?php positor_the_post_intro();?></p></div>
+			<p class="lead pb-5"><?php positor_the_post_intro();?></p></div>
 		</div>
 	</div>
 </div>
