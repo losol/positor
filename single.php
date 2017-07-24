@@ -21,10 +21,25 @@ while ( have_posts() ) : the_post(); ?>
 		<div class="col-md-8">
 		<?php
 
-				get_template_part( 'components/post/content-single-body', get_post_format() );
-				get_template_part( 'components/common/issue-published', get_post_format() );
-				get_template_part( 'components/common/related-posts', get_post_format() );
-				get_template_part( 'components/common/social-sharing', get_post_format() );
+		get_template_part( 'components/post/content-single-body', get_post_format() );
+
+		$this_hide_footer = get_post_meta( $post->ID, 'positor_hide_footer', true );
+		if ( ! $this_hide_footer ) {
+			get_template_part( 'components/common/related-posts', get_post_format() );
+			get_template_part( 'components/common/social-sharing', get_post_format() );
+
+			// Social sharing.
+			get_template_part( 'components/social/sharebuttons' );
+
+			// Post navigation for prev/next posts.
+			get_template_part( 'components/common/post-navigation', get_post_format() );
+
+			// Comments.
+			get_template_part( 'components/common/comments' );
+
+			// Multipage post pagination.
+			wp_link_pages();
+		}
 ?>
 
 			</main>
