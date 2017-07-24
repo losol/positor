@@ -1,28 +1,30 @@
 <?php
-	$this_hide_navbar = get_post_meta($post->ID, 'positor_hide_navbar', true);
-	if ( ! $this_hide_navbar ) { ?>
+// Checks if the navbar should be hidden for this post/page.
+$this_hide_navbar = get_post_meta( $post->ID, 'positor_hide_navbar', true );
+if ( ! $this_hide_navbar ) { ?>
+
 <nav id="site-navigation" class="navbar navbar-toggleable-sm navbar-inverse bg-primary link-no-decoration">
    <div class="hidden-sm-down">
    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
    </div>
 
    <button class="btn-link text-white text-uppercase hidden-md-up" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-     <i class="fa fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
+		<i class="fa fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
    </button>
 
    <a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
    <?php
-   wp_nav_menu([
-     'menu'            => 'top',
-     'theme_location'  => 'menu-1',
-     'container'       => 'div',
-     'container_id'    => 'bs4navbar',
-     'container_class' => 'collapse navbar-collapse',
-     'menu_id'         => 'top_menu',
-     'menu_class'      => 'navbar-nav mr-auto',
-     'depth'           => 2,
-     'walker'          => new bs4navwalker(),
-    'fallback_cb'     => 'bs4navwalker::fallback',
+	wp_nav_menu([
+		'menu'            => 'top',
+		'theme_location'  => 'menu-1',
+		'container'       => 'div',
+		'container_id'    => 'bs4navbar',
+		'container_class' => 'collapse navbar-collapse',
+		'menu_id'         => 'top_menu',
+		'menu_class'      => 'navbar-nav mr-auto',
+		'depth'           => 2,
+		'walker'          => new bs4navwalker(),
+		'fallback_cb'     => 'bs4navwalker::fallback',
    ]);
    ?>
 
