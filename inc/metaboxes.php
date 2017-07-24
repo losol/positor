@@ -62,7 +62,7 @@ function positor_metabox( $meta_boxes ) {
 				'desc' => esc_html__( 'This will hide the sidebar and meta section from the sidebar for this post.', 'positor' ),
 			),
 			array(
-				'id' => $prefix . 'hide_post_footer',
+				'id' => $prefix . 'hide_footer_section',
 				'type' => 'checkbox',
 				'name' => esc_html__( 'Hide post footer', 'positor' ),
 				'desc' => esc_html__( 'This will hide the post footer.', 'positor' ),

@@ -23,7 +23,7 @@ while ( have_posts() ) : the_post(); ?>
 
 		get_template_part( 'components/post/content-single-body', get_post_format() );
 
-		$this_hide_footer = get_post_meta( $post->ID, 'positor_hide_footer', true );
+		$this_hide_footer = get_post_meta( $post->ID, 'positor_hide_footer_section', true );
 		if ( ! $this_hide_footer ) {
 			get_template_part( 'components/common/related-posts', get_post_format() );
 			get_template_part( 'components/common/social-sharing', get_post_format() );
