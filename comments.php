@@ -15,7 +15,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area mt-5 hidden-print">
+<div id="comments" class="comments-area my-3 hidden-print">
 
 	<?php
 	if ( have_comments() ) : ?>

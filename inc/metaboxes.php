@@ -58,8 +58,14 @@ function positor_metabox( $meta_boxes ) {
 			array(
 				'id' => $prefix . 'hide_sidebar',
 				'type' => 'checkbox',
-				'name' => esc_html__( 'Hide meta section', 'positor' ),
-				'desc' => esc_html__( 'This will hide the meta section from the sidebar for this post.', 'positor' ),
+				'name' => esc_html__( 'Hide sidebar', 'positor' ),
+				'desc' => esc_html__( 'This will hide the sidebar and meta section from the sidebar for this post.', 'positor' ),
+			),
+			array(
+				'id' => $prefix . 'hide_post_footer',
+				'type' => 'checkbox',
+				'name' => esc_html__( 'Hide post footer', 'positor' ),
+				'desc' => esc_html__( 'This will hide the post footer.', 'positor' ),
 			),
 		),
 	);
