@@ -15,7 +15,7 @@
 ?>
 
 <div class="pt-4 pl-2">
-	<?php // Show author_alias if assigned.
+	<?php // Show author info.
 		echo '<div class="pl-4 m-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-pencil" aria-hidden="true"></i></p>';
 		echo '<span class="sr-only">' . esc_html_e( 'Author: ', 'positor' ) . '</span>' . positor_the_author() . '<br>'; // WPCS: XSS OK.

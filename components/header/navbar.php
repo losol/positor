@@ -23,7 +23,7 @@ if ( ! $this_hide_navbar ) { ?>
 
 	<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 	<?php
-	wp_nav_menu([
+	wp_nav_menu( array(
 		'menu'            => 'top',
 		'theme_location'  => 'menu-1',
 		'container'       => 'div',
@@ -34,7 +34,7 @@ if ( ! $this_hide_navbar ) { ?>
 		'depth'           => 2,
 		'walker'          => new Bootstrap_Nav_Walker(),
 		'fallback_cb'     => 'Bootstrap_Nav_Walker::fallback',
-	]);
+	));
 	?>
 
 	<button class="btn-link text-uppercase text-white text-nowrap pull-xs-right" type="button" data-toggle="collapse" data-target="#searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
