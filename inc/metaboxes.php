@@ -1,5 +1,18 @@
 <?php
+/**
+ * Register metaboxes to show when editing posts.
+ *
+ * @package Positor
+ */
 
+?>
+
+<?php
+/**
+ * Register metaboxes.
+ *
+ * @param array $meta_boxes Array of metaboxes.
+ */
 function positor_metabox( $meta_boxes ) {
 	$prefix = 'positor_';
 
