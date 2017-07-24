@@ -180,16 +180,6 @@ function positor_scripts() {
 add_action( 'wp_enqueue_scripts', 'positor_scripts' );
 
 /**
- * Sanitize Checkbox
- * Accepts only "true" or "false" as possible values.
- *
- * @param string $input The checkbox to sanitize.
- */
-function sanitize_checkbox( $input ) {
-	return ( true === $input ) ? true : false;
-}
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

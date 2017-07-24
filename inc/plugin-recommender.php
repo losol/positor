@@ -1,14 +1,13 @@
 <?php
 /**
+ * Plugin recommandations.
  *
- * @package    TGM-Plugin-Activation
- * @subpackage Example
- * @version    2.6.1 for parent theme Positor for publication on WordPress.org
+ * @package    Positor
+ * @subpackage TGM-Plugin-Activation
  * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
- * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
  * @link       https://github.com/TGMPA/TGM-Plugin-Activation
- * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.
+ * @see        http://tgmpluginactivation.com/configuration/ for detailed documentation.
  */
 
 /**
@@ -31,7 +30,6 @@ add_action( 'tgmpa_register', 'positor_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
- *
  */
 function positor_register_required_plugins() {
 	/*
@@ -40,14 +38,12 @@ function positor_register_required_plugins() {
 	 */
 	$plugins = array(
 
-	
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
 			'name'      => 'Meta Box',
 			'slug'      => 'meta-box',
 			'required'  => false,
-		)
-
+		),
 	);
 
 	/*
@@ -69,7 +65,6 @@ function positor_register_required_plugins() {
 		'is_automatic' => true,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
 
-		
 		'strings'      => array(
 			'page_title'                      => __( 'Install Required Plugins', 'positor' ),
 			'menu_title'                      => __( 'Install Plugins', 'positor' ),
@@ -78,7 +73,8 @@ function positor_register_required_plugins() {
 			/* translators: %s: plugin name. */
 			'updating'                        => __( 'Updating Plugin: %s', 'positor' ),
 			'oops'                            => __( 'Something went wrong with the plugin API.', 'positor' ),
-            /*
+
+			/*
 			'notice_can_install_required'     => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme requires the following plugin: %1$s.',
@@ -145,8 +141,7 @@ function positor_register_required_plugins() {
 
 			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		*/
-        ),
-		
+		),
 	);
 
 	tgmpa( $plugins, $config );

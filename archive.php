@@ -6,6 +6,7 @@
  *
  * @package Positor
  */
+
 ?>
 <?php get_header(); ?>
 <div class="bg-gray-light py-3">

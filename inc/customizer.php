@@ -14,9 +14,16 @@ function positor_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
-	function positor_sanitize_checkbox( $input ){
+	/**
+	 * Sanitize Checkbox.
+	 *
+	 * Accepts only "true" or "false" as possible values.
+	 *
+	 * @param string $input The checkbox to sanitize.
+	 */
+	function positor_sanitize_checkbox( $input ) {
 		// Returns the checkbox as int.
-		return filter_var($input, FILTER_SANITIZE_NUMBER_INT);
+		return filter_var( $input, FILTER_SANITIZE_NUMBER_INT );
 	}
 
 	/**
@@ -27,10 +34,10 @@ function positor_customize_register( $wp_customize ) {
 		'priority'   => 300,
 	) );
 
-	/* Simplify editor styles? */	
+	// Simplify editor styles?
 	$wp_customize->add_setting( 'positor_simplify_editor', array(
 		'default'           => false,
-		'sanitize_callback' => 'positor_sanitize_checkbox' 
+		'sanitize_callback' => 'positor_sanitize_checkbox',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_simplify_editor', array(
@@ -42,8 +49,6 @@ function positor_customize_register( $wp_customize ) {
 		'priority'    => 10,
 	) ) );
 
-
-
 	/**
 	* SECTION: Social media pages
 	*/
@@ -52,23 +57,31 @@ function positor_customize_register( $wp_customize ) {
 		'priority'   => 300,
 	) );
 
+	$wp_customize->add_setting( 'positor_social_link[facebook]', array(
+		'default' => '',
+		'sanitize_callback' => 'esc_attr',
+	));
+	$wp_customize->add_setting( 'positor_social_link[twitter]', array(
+		'default' => '',
+		'sanitize_callback' => 'esc_attr',
+	));
+	$wp_customize->add_setting( 'positor_social_link[linkedin]', array(
+		'default' => '#',
+		'sanitize_callback' => 'esc_attr',
+	));
 
-	$wp_customize->add_setting('positor_social_link[facebook]', array(	'default'	=> '#', 	'sanitize_callback'	=> 'esc_attr', ));
-	$wp_customize->add_setting('positor_social_link[twitter]', array(	'default'	=> '#', 	'sanitize_callback'	=> 'esc_attr', ));
-	$wp_customize->add_setting('positor_social_link[linkedin]', array(	'default'	=> '#', 	'sanitize_callback'	=> 'esc_attr', ));
-	
 	$wp_customize->add_control('facebook', array(
-		'label'      => __('Facebook URL', 'positor'),
+		'label'      => esc_html( 'Facebook URL', 'positor' ),
 		'section'    => 'positor_social_media_settings',
 		'settings'   => 'positor_social_link[facebook]',
 	));
 	$wp_customize->add_control('twitter', array(
-		'label'      => __('Twitter URL', 'positor'),
+		'label'      => esc_html( 'Twitter URL', 'positor' ),
 		'section'    => 'positor_social_media_settings',
 		'settings'   => 'positor_social_link[twitter]',
 	));
 	$wp_customize->add_control('linkedin', array(
-		'label'      => __('LinkedIn URL', 'positor'),
+		'label'      => esc_html( 'LinkedIn URL', 'positor' ),
 		'section'    => 'positor_social_media_settings',
 		'settings'   => 'positor_social_link[linkedin]',
 	));

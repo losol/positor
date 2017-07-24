@@ -25,13 +25,13 @@ function positor_wpcom_setup() {
 			'url'    => '',
 		);
 	}
-	
+
 	/* Add WP.com print styles */
 	add_theme_support( 'print-styles' );
 }
 add_action( 'after_setup_theme', 'positor_wpcom_setup' );
 
-/*
+/**
  * WordPress.com-specific styles
  */
 function positor_wpcom_styles() {

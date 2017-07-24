@@ -2,34 +2,40 @@
 /**
  * The template for displaying comments
  *
- * This is the template that displays the area of the page that contains both 
+ * This is the template that displays the area of the page that contains both
  * the existing comments and the comment form.
  *
- * @category Comments
  * @package  Positor
- * @author   Ole Kristian Losvik <ole@losol.io>
- * @license  GPL2+ http://www.gnu.org/licenses/gpl-2.0.txt
  * @link     https://codex.wordpress.org/Template_Hierarchy
  */
 
-// Check if the post is protected by a password. 
-if (post_password_required() ) {
+// Check if the post is protected by a password.
+if ( post_password_required() ) {
 	return;
-} 
+}
 ?>
 
 <div id="comments" class="comments-area mt-5 hidden-print">
 
 	<?php
-	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
 		<h3 class="comments-title py-3">
 			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'positor' ) ),
-					number_format_i18n( get_comments_number() ),
+			$comment_count = get_comments_number();
+			if ( 1 === $comment_count ) {
+				printf(
+					/* translators: 1: title. */
+					esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'positor' ),
 					'<span>' . get_the_title() . '</span>'
 				);
+			} else {
+				printf( // WPCS: XSS OK.
+					/* translators: 1: comment count number, 2: title. */
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'positor' ) ),
+					number_format_i18n( $comment_count ),
+					'<span>' . get_the_title() . '</span>'
+				);
+			}
 			?>
 		</h3>
 
@@ -46,8 +52,7 @@ if (post_password_required() ) {
 		<?php endif; // Check for comment navigation. ?>
 
 		<div class="py-5">
-		<?php 
-
+		<?php
 			wp_list_comments( array(
 				'style'         => 'ol',
 				'max_depth'     => '',
