@@ -63,6 +63,19 @@ if ( ! function_exists( 'positor_the_author_bio' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'positor_the_photographer' ) ) :
+	/**
+	 * Gets author bio from custom field if exists, otherwise the_author_meta
+	 */
+	function positor_the_photographer() {
+
+		if ( get_post_meta( get_the_ID(), 'photographer_alias', true ) ) :
+			$photographer_alias = get_post_meta( get_the_ID(), 'photographer_alias', true );
+			echo esc_html( $photographer_alias );
+		endif;
+	}
+endif;
+
 if ( ! function_exists( 'positor_the_post_intro' ) ) :
 	/**
 	 * Gets excerpt if defined, otherwise the teaser (text over the more tag).
