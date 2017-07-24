@@ -32,8 +32,8 @@ if ( ! $this_hide_navbar ) { ?>
 		'menu_id'         => 'top_menu',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'depth'           => 2,
-		'walker'          => new bs4navwalker(),
-		'fallback_cb'     => 'bs4navwalker::fallback',
+		'walker'          => new Bootstrap_Nav_Walker(),
+		'fallback_cb'     => 'Bootstrap_Nav_Walker::fallback',
 	]);
 	?>
 

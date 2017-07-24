@@ -1,1 +1,0 @@
-<a class="btn btn-outline-primary link-no-decoration m-1" target="_blank" role="button" href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?>"><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;Facebook</a>

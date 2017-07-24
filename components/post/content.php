@@ -11,10 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white my-5' ); ?>>
 	
-	<?php if ( '' != get_the_post_thumbnail() ) : ?>
+	<?php if ( '' !== get_the_post_thumbnail() ) : ?>
 		<div class="post-thumbnail m-0">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'positor-featured-image', array( 'class' => 'card-img-top img-fluid w-100' )); ?>
+				<?php the_post_thumbnail( 'positor-featured-image', array(
+					'class' => 'card-img-top img-fluid w-100',
+					)
+				); ?>
 			</a>
 		</div>
 		<div class="bg-white p-3">
@@ -24,12 +27,12 @@
 
 			<h2 class="pt-3 display-3">
 			<?php
-		    // The title
-			the_title( '<a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>');
-			
-			// Featured badge if sticky
-			if (is_sticky() && is_home() && !is_paged()) {
-				echo ' <small class="text-muted pl-2"><span class="badge badge-info">' . __('Featured', 'positor') . '</span></small>';
+			// The title.
+			the_title( '<a class="link-no-decoration" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' );
+
+			// Featured badge if sticky.
+			if ( is_sticky() && is_home() && ! is_paged() ) {
+				echo ' <small class="text-muted pl-2"><span class="badge badge-info">' . esc_html( 'Featured', 'positor' ) . '</span></small>';
 			}
 			?>	
 			</h2>
@@ -43,7 +46,7 @@
 		<a href="<?php the_permalink(); ?>" class="btn btn-outline-primary link-no-decoration white-space-normal">
 
 			<?php
-				esc_html_e( 'Read', 'positor' ); 
+				esc_html_e( 'Read', 'positor' );
 			?>
 		</a>
 	</div>
