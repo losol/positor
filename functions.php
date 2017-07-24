@@ -217,7 +217,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Add Bootstrap 4 nav walker
  */
-require get_template_directory() . '/inc/Bootstrap_Nav_Walker.php';
+require get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
 
 /**
  * Add Bootstrap 4 comment walker

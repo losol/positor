@@ -47,8 +47,8 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 				<div class="media">
 					<div class="d-flex mr-3">
 						<?php if ( 0 !== $args['avatar_size'] ) : ?>
-							<img class="comment_avatar rounded-circle" src=""
-								<?php echo esc_url(  get_avatar_url( $comment, $args['avatar_size'], 'mm', '', array(
+							<img class="comment_avatar rounded-circle" src="
+								<?php echo esc_url( get_avatar_url( $comment, $args['avatar_size'], 'mm', '', array(
 									'default' => 'avatar_default',
 								) ) );
 								?>">
