@@ -128,7 +128,7 @@ Edits based on user feedback from @joyously on wordpress.org
 * Major clean-up of all code, nearly WPCS compliant
 
 = 1.1.10 - 24.07.2017 =
-* Added option to hide meta.
+* Added option to hide sidebar for posts.
 
 
 == Credits ==

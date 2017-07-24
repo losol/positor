@@ -56,7 +56,7 @@ function positor_metabox( $meta_boxes ) {
 				'desc' => esc_html__( 'This will hide the title, image and intro text.', 'positor' ),
 			),
 			array(
-				'id' => $prefix . 'hide_meta_section',
+				'id' => $prefix . 'hide_sidebar',
 				'type' => 'checkbox',
 				'name' => esc_html__( 'Hide meta section', 'positor' ),
 				'desc' => esc_html__( 'This will hide the meta section from the sidebar for this post.', 'positor' ),

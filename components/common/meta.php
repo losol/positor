@@ -8,8 +8,8 @@
 ?>
 
 <?php
-$this_hide_meta_section = get_post_meta( $post->ID, 'positor_hide_meta_section', true );
-if ( ! $this_hide_meta_section ) {
+$this_hide_sidebar = get_post_meta( $post->ID, 'positor_hide_sidebar', true );
+if ( ! $this_hide_sidebar ) {
 ?>
 
 <div class="pt-4 pl-2">

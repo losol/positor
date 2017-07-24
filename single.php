@@ -29,14 +29,18 @@ while ( have_posts() ) : the_post(); ?>
 
 			</main>
 		</div>
+	<?php
+	$this_hide_sidebar = get_post_meta( $post->ID, 'positor_hide_sidebar', true );
+	if ( ! $this_hide_sidebar ) { ?>
 	<div class="col-md-3 offset-md-1 hidden-print">
 		<aside id="secondary" role="complementary">
 			<?php
-			get_template_part( 'components/common/meta', get_post_format() );
-			get_template_part( 'sidebar', get_post_format() );
+				get_template_part( 'components/common/meta', get_post_format() );
+				get_template_part( 'sidebar', get_post_format() );
 			?>
 		</aside>
 	</div>
+	<?php } ?>
 
 <?php
 
