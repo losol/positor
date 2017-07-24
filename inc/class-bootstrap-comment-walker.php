@@ -47,7 +47,11 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 				<div class="media">
 					<div class="d-flex mr-3">
 						<?php if ( 0 !== $args['avatar_size'] ) : ?>
-							<img class="comment_avatar rounded-circle" src="<?php echo get_avatar_url( $comment, $args['avatar_size'],'mm','', array( 'default'=> 'avatar_default') );?>">
+							<img class="comment_avatar rounded-circle" src=""
+								<?php echo esc_url(  get_avatar_url( $comment, $args['avatar_size'], 'mm', '', array(
+									'default' => 'avatar_default',
+								) ) );
+								?>">
 						<?php endif; ?>
 					</div>
 					<div class="media-body mb-5">
@@ -78,14 +82,14 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 				</div>
 				<div class="text-warning">
 					<?php if ( '0' === $comment->comment_approved ) : ?>
-					<p class="comment-awaiting-moderation label label-info text-muted small"><?php _e( 'Your comment is awaiting moderation.', 'positor' ); ?></p>
+					<p class="comment-awaiting-moderation label label-info text-muted small"><?php esc_html_e( 'Your comment is awaiting moderation.', 'positor' ); ?></p>
 					<?php endif; ?>				
 				</div>
 
 								
 				<!-- </div> -->
 
-			<!-- </div>		 -->
+			<!-- </div>	 -->
 <?php
-	}	
+	}
 }
