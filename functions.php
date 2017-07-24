@@ -111,150 +111,141 @@ function positor_the_custom_logo() {
 	}
 }
 
-	/**
-	* Register widget area.
-	 *
-	 * @link https://d	eveloper.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
-	 */
-	function positor_widgets_init() {
+/**
+ * Registers widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function positor_widgets_init() {
+	// Sidebar.
 	register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar', 'positor' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__('Sidebar widgets', 'positor'),
-			'before_widget' => '<section id="%1$s" class="widget %2$s my-5">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		));
-		
-		// Three column footer 
-		register_sidebar(array(
-			'name' => esc_html__('Footer (Left)', 'positor'),
-			'id'        => 'footer-1',
-			'description' => esc_html__('First footer widget area', 'positor'),
-			'before_widget' => '<div class="footer-widget left">',
-			'after_widget' => '</div>',
-			'before_title' => '<h2>',
-			'after_title' => '</h2>',
-		));
+		'name'          => esc_html__( 'Sidebar', 'positor' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Sidebar widgets', 'positor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s my-5">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
 
-		register_sidebar(array(
-			'name' => esc_html__('Footer (Center)', 'positor'),
-			'id'        => 'footer-2',
-			'description' => esc_html__('Second footer widget area', 'positor'),
-			'before_widget' => '<div class="footer-widget center">',
-			'after_widget' => '</div>',
-			'before_title' => '<h2>',
-			'after_title' => '</h2>',
-		));
+	// Three column footer - left.
+	register_sidebar(array(
+		'name' => esc_html__( 'Footer (Left)', 'positor' ),
+		'id'        => 'footer-1',
+		'description' => esc_html__( 'First footer widget area', 'positor' ),
+		'before_widget' => '<div class="footer-widget left">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	));
 
-		register_sidebar(array(
-			'name' => esc_html__('Footer (Right)','positor'),
-			'id'        => 'footer-3',
-			'description' => esc_html__('Third footer widget area', 'positor'),
-			'before_widget' => '<div class="footer-widget right">',
-			'after_widget' => '</div>',
-			'before_title' => '<h2>',
-			'after_title' => '</h2>',
-		));
+	// Three column footer - center.
+	register_sidebar(array(
+		'name' => esc_html__( 'Footer (Center)', 'positor' ),
+		'id'        => 'footer-2',
+		'description' => esc_html__( 'Second footer widget area', 'positor' ),
+		'before_widget' => '<div class="footer-widget center">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	));
+
+	// Three column footer - right.
+	register_sidebar(array(
+		'name' => esc_html__( 'Footer (Right)','positor' ),
+		'id'        => 'footer-3',
+		'description' => esc_html__( 'Third footer widget area', 'positor' ),
+		'before_widget' => '<div class="footer-widget right">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	));
+}
+add_action( 'widgets_init', 'positor_widgets_init', 1000 );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function positor_scripts() {
+	wp_enqueue_style( 'positor-bootstrap', get_template_directory_uri() . '/assets/stylesheets/positor.min.css' );
+	wp_enqueue_style( 'positor-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'positor-scripts', get_template_directory_uri() . '/assets/js/positor.min.js', array( 'jquery' ), '20170630', false );
+	wp_enqueue_script( 'positor-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'positor-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
 	}
-	add_action( 'widgets_init', 'positor_widgets_init', 1000 );
-	
+}
+add_action( 'wp_enqueue_scripts', 'positor_scripts' );
 
-		
-	
-	/**
-	* Enqueue scripts and styles.
-	 */
-	function positor_scripts() {
-		wp_enqueue_style( 'positor-bootstrap', get_template_directory_uri().'/assets/stylesheets/positor.min.css' );
-		wp_enqueue_style( 'positor-style', get_stylesheet_uri() );
-		wp_enqueue_script( 'positor-scripts', get_template_directory_uri() . '/assets/js/positor.min.js', array( 'jquery' ), '20170630', false );
-		wp_enqueue_script( 'positor-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
-		
-		wp_enqueue_script( 'positor-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
-		
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
-	}
-	add_action( 'wp_enqueue_scripts', 'positor_scripts' );
-	
-	
-	/**
-	* Sanitize Checkbox
-	 * Accepts only "true" or "false" as possible values.
-	
-	*/
-	
-	function sanitize_checkbox( $input ) {
-		return ( $input === true ) ? true : false;
-	}
-	
-	
-	
-	/**
-	* Custom template tags for this theme.
-	 */
-	require get_template_directory() . '/inc/template-tags.php';
-	
-	
-	/**
-	* Custom functions that act independently of the theme templates.
-	 */
-	require get_template_directory() . '/inc/extras.php';
-	
-	
-	/**
-	* Customizer additions.
-	 */
-	require get_template_directory() . '/inc/customizer.php';
-	
-		
-	/**
-	* Commentform customization.
-	 */
-	require get_template_directory() . '/inc/commentform.php';
+/**
+ * Sanitize Checkbox
+ * Accepts only "true" or "false" as possible values.
+ *
+ * @param string $input The checkbox to sanitize.
+ */
+function sanitize_checkbox( $input ) {
+	return ( true === $input ) ? true : false;
+}
 
-	/**
-	* Load Jetpack compatibility file.
-	 */
-	require get_template_directory() . '/inc/jetpack.php';
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
 
-	/**
-	* Add Bootstrap 4 nav walker
-	 */
-	require get_template_directory() . '/inc/bs4navwalker.php';
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
 
-	/**
-	* Add Bootstrap 4 comment walker
-	 */
-	require get_template_directory() . '/inc/class-bootstrap-comment-walker.php';
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
 
-	/**
-	* Add WooCommerce support
-	 */
-	require get_template_directory() . '/inc/woocommerce.php';
-	
-	/**
-	* Recommend plugins to be used with theme. 
-	 */
-	require get_template_directory() . '/inc/plugin-recommender.php';
+/**
+ * Commentform customization.
+ */
+require get_template_directory() . '/inc/commentform.php';
 
-	/**
-	* Add metaboxes. 
-	*/
-	require get_template_directory() . '/inc/metaboxes.php';
-	
-	/**
-	* Add responsive videos
-	 */
-	require get_template_directory() . '/inc/video-embed.php';
-	
-	
-	/**
-	* Add custom fields for post formats
-	 */
-	require get_template_directory() . '/inc/post-formats.php';
-	
-	
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Add Bootstrap 4 nav walker
+ */
+require get_template_directory() . '/inc/bs4navwalker.php';
+
+/**
+ * Add Bootstrap 4 comment walker
+ */
+require get_template_directory() . '/inc/class-bootstrap-comment-walker.php';
+
+/**
+ * Add WooCommerce support
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Recommends plugins to be used with theme.
+ */
+require get_template_directory() . '/inc/plugin-recommender.php';
+
+/**
+ * Add metaboxes.
+ */
+require get_template_directory() . '/inc/metaboxes.php';
+
+/**
+ * Add responsive videos
+ */
+require get_template_directory() . '/inc/video-embed.php';
+
+
+/**
+ * Add custom fields for post formats
+ */
+require get_template_directory() . '/inc/post-formats.php';
