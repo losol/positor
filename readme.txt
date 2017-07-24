@@ -28,6 +28,7 @@ Issues, bugs and feature requests could posted at [GitHub](https://github.com/lo
 
 
 Custom fields used in this theme: 
+* positor_featured_post: If this post should be featured on front page
 * positor_video_url: Url to embed for using featured video
 * positor_hero_featured: Will make the featured image/video appear large (hero)
 
@@ -37,9 +38,6 @@ Custom fields used in this theme:
 = How do I add posts to the featured post grid on frontpage? =
 
 To show posts on top in the post grid, you just add the tag featured to the post. 
-
-= My post do not show in the featured grid? =
-Most probably it does not have a featured image, as only posts with featured images will show. 
 
 = Where can I find the source code and sass files? =
 
