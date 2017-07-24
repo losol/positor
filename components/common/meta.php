@@ -8,10 +8,8 @@
 ?>
 
 <?php
- $post_id = get_the_ID();
- $author_alias = '';
-
- $photographer_alias = get_post_meta( $post_id, 'photographer_alias', true )
+$this_hide_meta_section = get_post_meta( $post->ID, 'positor_hide_meta_section', true );
+if ( ! $this_hide_meta_section ) {
 ?>
 
 <div class="pt-4 pl-2">
@@ -61,3 +59,5 @@
 	?>
 
 </div>
+<?php
+} // End if().
