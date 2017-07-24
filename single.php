@@ -6,11 +6,12 @@
  *
  * @package Positor
  */
+
 ?>
 
 <?php get_header(); ?>
 <?php
-	while ( have_posts() ) : the_post(); ?>
+while ( have_posts() ) : the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
 <?php get_template_part( 'components/post/content-single-header', get_post_format() ); ?>
@@ -30,10 +31,9 @@
 		</div>
 	<div class="col-md-3 offset-md-1 hidden-print">
 		<aside id="secondary" role="complementary">
-			<?php 
+			<?php
 			get_template_part( 'components/common/meta', get_post_format() );
-  			get_template_part( 'sidebar', get_post_format() );
-			
+			get_template_part( 'sidebar', get_post_format() );
 			?>
 		</aside>
 	</div>
@@ -46,7 +46,7 @@
 
 </div>
 </article>
-<?php	
+<?php
 endwhile; // End of the loop.
 get_footer();
 

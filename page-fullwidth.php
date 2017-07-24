@@ -1,6 +1,6 @@
 <?php
  /**
-  * Template Name: Full width
+  * Template Name: No sidebar
   * The template for displaying all pages without sidebar
   *
   * @link https://codex.wordpress.org/Template_Hierarchy
