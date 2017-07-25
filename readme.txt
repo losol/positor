@@ -1,50 +1,72 @@
-=== Positor ===
-Contributors: losvik, losol
-Tags: one-column, two-columns, right-sidebar, custom-logo, featured-image-header, featured-images, post-formats, theme-options, footer-widgets, translation-ready, blog
-Donate link: https://paypal.me/losvik
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Requires at least: 4.4.0
-Tested up to: 4.8.0
-Stable tag: 1.1.9
+# Positor
 
-A minimalistic theme with a clean design giving focus to your content. Theme is built on Bootstrap 4.
+**Contributors:** losvik, losol
+**Requires at least:** 4.4.0
+**Stable tag:** 1.1.10
+**Version:** 1.1.10
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
+**Tags:** one-column, two-columns, right-sidebar, custom-logo, featured-image-header, featured-images, post-formats, theme-options, footer-widgets, translation-ready, blog
 
-== Description ==
+A theme with a clean design giving focus to your content. Theme is built on Bootstrap 4.
 
-Positor is a theme which focus on content. It suits well for magazines, knowledge communication and blogs.
+## Description
+
+Positor is a clean theme which focus on your content. It suits well for magazines, knowledge communication and blogs.
+
+The theme is also built with page builders in mind. Therefore we have included options to hide default content, so that you could use a page builder all over your page/post.
 
 Limitations:
 * The menu in the top bar will show only the upper two levels. 
 * There is no custom more text displayed on the link. 
 * The Read more button will take you to the actual post. 
 
-Issues, bugs and feature requests could posted at [GitHub](https://github.com/losol/positor).
+Issues, bugs and feature requests could also be posted at [GitHub](https://github.com/losol/positor).
 
-== Installation ==
+### Installation
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
 
-Custom fields used in this theme: 
-* positor_featured_post: If this post should be featured on front page
-* positor_video_url: Url to embed for using featured video
-* positor_hero_featured: Will make the featured image/video appear large (hero)
+## Frequently Asked Questions
 
+* How do I add posts to the featured post grid on frontpage?
 
-== Frequently Asked Questions ==
-
-= How do I add posts to the featured post grid on frontpage? =
-
-To show posts on top in the post grid, you just add the tag featured to the post. 
+To show posts on top in the post grid, you just edit the post, and mark the "Featured" option in the metabox below your article. 
 
 = Where can I find the source code and sass files? =
 
 Positor and it´s full source code is available at [GitHub](https://github.com/losol/positor).
 
+## Copyright
+Positor Theme, Copyright 2016 losol.io
+Positor is distributed under the terms of the GNU GPL
 
-== Changelog ==
+Positor bundles the following third-party resources:
+
+Theme components, Copyright 2015-2016 Automattic, Inc.
+**License:** GPLv2 or later
+Source: https://github.com/Automattic/theme-components/
+
+Bootstrap 4, Copyright 2011-2017 the Bootstrap Authors and Twitter, Inc.
+**License:** MIT
+Source: https://github.com/twbs/bootstrap
+
+Font Awesome icons, Copyright Dave Gandy
+**License:** SIL Open Font License, version 1.1.
+Source: http://fontawesome.io/
+
+Bootstrap 4 navwalker, Copyright Dominic Businaro.
+**License:** GPLv2 or later
+Source: https://github.com/dupkey/bs4navwalker
+
+TGM-Plugin-Activation, Copyright Thomas Griffin, Gary Jones, Juliette Reinders Folmer.
+**License:** GPLv2 or later
+Source: https://github.com/TGMPA/TGM-Plugin-Activation. 
+
+
+## Changelog
 
 = 1.0 - 05.05.2017 =
 * Initial release
@@ -131,12 +153,5 @@ Edits based on user feedback from @joyously on wordpress.org
 * Added option to hide sidebar for post.
 * Added option to hide footer for post.
 
-
-== Credits ==
-* Based on https://github.com/Automattic/theme-components/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Bootstrap (http://getbootstrap.com/) licensed under MIT license (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-* normalize.css (http://necolas.github.io/normalize.css/), (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-* bs4navwalker (https://github.com/dominicbusinaro/bs4navwalker) by Dominic Businaro - @dominicbusinaro, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* FontAwesome (http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
-* TGM-Plugin-Activation (https://github.com/TGMPA/TGM-Plugin-Activation) by Thomas Griffin, Gary Jones, Juliette Reinders Folmer,[GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Advanced custom fields (https://www.advancedcustomfields.com/) by Elliot Condon, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+### 1.1.11 - 
+* Released 26.07.2017
