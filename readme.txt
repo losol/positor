@@ -2,8 +2,8 @@
 
 **Contributors:** losvik, losol
 **Requires at least:** 4.4.0
-**Stable tag:** 1.1.10
-**Version:** 1.1.10
+**Stable tag:** 1.2
+**Version:** 1.2
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** one-column, two-columns, right-sidebar, custom-logo, featured-image-header, featured-images, post-formats, theme-options, footer-widgets, translation-ready, blog
@@ -16,10 +16,11 @@ Positor is a clean theme which focus on your content. It suits well for magazine
 
 The theme is also built with page builders in mind. Therefore we have included options to hide default content, so that you could use a page builder all over your page/post.
 
+Theme is ready for translation, and a norwegian translation is provided. 
+
 Limitations:
 * The menu in the top bar will show only the upper two levels. 
 * There is no custom more text displayed on the link. 
-* The Read more button will take you to the actual post. 
 
 Issues, bugs and feature requests could also be posted at [GitHub](https://github.com/losol/positor).
 
@@ -68,90 +69,22 @@ Source: https://github.com/TGMPA/TGM-Plugin-Activation.
 
 ## Changelog
 
-= 1.0 - 05.05.2017 =
-* Initial release
+### 1.2
+* Released: 27 July 2017.
 
-= 1.0.1 - 06.05.2017 =
+* Better security after rewrite of whole theme.
+* More options in Customizer.
+* More options for posts.
+
+### 1.1
+* Released: 31 May 2017.
+
 * Added norwegian translation.
+* Added post meta information and social icons/links. 
+* Added woocommerce support. 
+* Added video post format. 
 
-= 1.0.2 - 07.05.2017 =
-* Better build structure
+### 1.0 
+* Released: 05 May 2017.
 
-= 1.0.3 - 07.05.2017 =
-* Fix of social media link variable giving notice. 
-* Better spacing in sidebar widgets
-* Fixed menu containing way too many or long elements
-
-= 1.0.4 - 09.05.2017 =
-* Showing social icons and related posts if Jetpack is installed and functions enabled.
-* Showing post meta information: author, photographer, tags, categories
-* Showing issue number for articles published in print magazine.
-
-= 1.0.5 - 10.05.2017 =
-* Added woocommerce support
-
-= 1.0.6 - 12.05.2017 =
-* Automatic choose between manual excerpt (first choice), teaser (text before more) and automatic excerpt.
-
-= 1.1.0 - 31.05.2017 =
-* Added video post format
-* Automatic plugin recommandation of Advanced custom fields
-
-= 1.1.1 - 05.06.2017 =
-* Added comments functionality
-* Fix of widgets in sidebar
-
-= 1.1.2 - 05.06.2017 =
-* Added more translated texts
-* Better support for Facebook embeds
-
-= 1.1.3 - 12.06.2017 =
-Edits based on user feedback from @joyously on wordpress.org
-* Changed from required to recommended plugin for Advanced Custom Fields 
-* Added a menu fallback with a button for adding a new menu if no menu is assigned in the top bar
-* Corrected sidebar being way too small on pages. 
-* Comments: Now shows users chosen avatars, reply uses user set comments levels
-* Hide social links if empty
-* Added better styling for wordpress image galleries
-* CSS-fixes: Quotes are now closed, a bit padding on tables, new abbr styling which differs from links.
-* Added clearfix on footer
-* Searchform fix with right action
-* Better print styling
-* Post navigation added, multipage posts now with page links.
-* Meta: Time and date by user preference, added links
-
-= 1.1.4 - 13.06.2017 =
-* Minor bug fix
-
-= 1.1.5 - 16.06.2017 =
-* Added option to simplify editor: show only paragraph, h2 and h3. 
-* Added sticky footer
-* Added 3 column widget area for footer
-
-= 1.1.6 - 27.06.2017 =
-* Added grid with featured posts on front page
-* Fixed tag links not working.
-* Better styling of comment form. 
-
-= 1.1.7 - 30.06.2017 =
-* Fixed escaping of some output
-* Live preview of title and description editing in Customizer. 
-* Fixed multiple items in footers, and positioning of elements.
-* Bug fixed: search form in navbar on subfolder installation.
-
-= 1.1.8 - 03.07.2017 =
-* Fixed card layout on front page
-* Added nicer post archive page navigation
-* Exchange Advanced custom fields for Meta-box.
-* Removed Issue published
-
-= 1.1.9 - 17.07.2017 =
-* Added option to hide intro section
-* Major clean-up of all code, nearly WPCS compliant
-
-= 1.1.10 - 24.07.2017 =
-* Added option to hide sidebar for post.
-* Added option to hide footer for post.
-
-### 1.1.11 - 
-* Released 26.07.2017
+Initial release.
