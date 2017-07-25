@@ -10,12 +10,16 @@
 	<a href="<?php the_permalink(); ?>">
 	<?php
 	the_post_thumbnail( 'positor-featured-image', array(
-		'class' => 'card-img-top img-responsive',
+		'class' => 'card-img-top img-fluid w-100',
 	) );
 	?>
 	</a>
 	<div class="card-block">
-		<h4 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-		<p class="card-text"><a class="link-no-decoration" href="<?php the_permalink(); ?>"><?php positor_the_post_intro(); ?></a></p>
+		<h3 class="card-title display-3"><a class="link-no-decoration" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		<div class="card-text lead">
+			<a class="link-no-decoration" href="<?php the_permalink(); ?>">
+			<?php positor_the_post_intro(); ?>
+			</a>
+		</div>
 	</div>
 </div>

@@ -8,7 +8,7 @@
 ?>
 
 <?php
-$this_hide_sidebar = get_post_meta( $post->ID, 'positor_hide_sidebar', true );
+$this_hide_sidebar = get_post_meta( $post->ID, '_positor_hide_sidebar', true );
 if ( ! $this_hide_sidebar ) {
 ?>
 
@@ -22,10 +22,10 @@ if ( ! $this_hide_sidebar ) {
 	?>
 
 	<?php // Show photographer_alias if assigned.
-	if ( ! empty( positor_the_photographer() ) ) :
+	if ( null !== ( positor_get_the_photographer() ) ) :
 		echo '<div class="pl-4 m-2 pt-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-camera-retro" aria-hidden="true"></i></p>';
-		echo '<span class="sr-only">' . esc_html_e( 'Image: ', 'positor' ) . '</span>' . positor_the_photographer(); // WPCS: XSS OK.
+		echo '<span class="sr-only">' . esc_html_e( 'Image: ', 'positor' ) . '</span>' . positor_the_photographer() . '<br>'; // WPCS: XSS OK.
 		echo '</p></div>';
 	endif;
 	?>

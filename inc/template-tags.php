@@ -76,6 +76,19 @@ if ( ! function_exists( 'positor_the_photographer' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'positor_get_the_photographer' ) ) :
+	/**
+	 * Gets author bio from custom field if exists, otherwise the_author_meta
+	 */
+	function positor_get_the_photographer() {
+
+		if ( get_post_meta( get_the_ID(), 'photographer_alias', true ) ) :
+			$photographer_alias = get_post_meta( get_the_ID(), 'photographer_alias', true );
+			return $photographer_alias;
+		endif;
+	}
+endif;
+
 if ( ! function_exists( 'positor_the_post_intro' ) ) :
 	/**
 	 * Gets excerpt if defined, otherwise the teaser (text over the more tag).
@@ -87,20 +100,15 @@ if ( ! function_exists( 'positor_the_post_intro' ) ) :
 			the_excerpt();
 
 		elseif ( get_the_content( '', false ) !== get_the_content( '', true ) ) :
+
 			// Showing the teaser if the more tag exists.
-			global $more;
-			$more_saved = $more;
-
-			// Sets $more to not showing the content after the more tag.
-			$more = 0;
-			echo esc_html( strip_tags( get_the_content( '', false ) ) );
-
-			// Restores $more.
-			$more = $more_saved;
+			$content = get_post_field( 'post_content', get_the_ID() );
+			$content_parts = get_extended( $content );
+			echo esc_html( strip_tags( $content_parts['main'] ) );
 
 			// Otherwise make an automatic excerpt.
-			else :
-				the_excerpt( 40 );
+		else :
+				echo esc_html( strip_tags( get_the_excerpt() ) );
 
 		endif;
 	}

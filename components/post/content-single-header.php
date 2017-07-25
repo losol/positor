@@ -8,14 +8,14 @@
 ?>
 
 <?php
-$this_hide_intro = get_post_meta( $post->ID, 'positor_hide_intro_section', true );
+$this_hide_intro = get_post_meta( $post->ID, '_positor_hide_intro_section', true );
 if ( ! $this_hide_intro ) {
 ?>
 
 <header>
 	<div class="bg-gray-light">
 	<?php
-	$this_featured_hero = get_post_meta( $post->ID, 'positor_featured_hero', true );
+	$this_featured_hero = get_post_meta( $post->ID, '_positor_featured_hero', true );
 	if ( $this_featured_hero ) {
 		echo '<div class="">';
 	} else {
@@ -24,7 +24,7 @@ if ( ! $this_hide_intro ) {
 	?>
 		<?php
 		// Gets the featured video variable.
-		$this_video_url = get_post_meta( $post->ID, 'positor_featured_video_url', true );
+		$this_video_url = get_post_meta( $post->ID, '_positor_featured_video_url', true );
 
 		if ( strpos( $this_video_url, 'facebook.com' ) ) {
 			// Embed code it this is a Facebook embeds.
@@ -61,7 +61,7 @@ if ( ! $this_hide_intro ) {
 
 		<?php // Show the intro text. ?>
 		<div>
-			<p class="lead pb-5"><?php positor_the_post_intro();?></p></div>
+			<p class="lead pb-5"><?php positor_the_post_intro();?></p>
 		</div>
 	</div>
 </div>

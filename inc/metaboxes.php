@@ -14,7 +14,7 @@
  * @param array $meta_boxes Array of metaboxes.
  */
 function positor_metabox( $meta_boxes ) {
-	$prefix = 'positor_';
+	$prefix = '_positor_';
 
 	$meta_boxes[] = array(
 		'id' => 'positor-metabox-post_and_page',

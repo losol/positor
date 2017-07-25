@@ -79,6 +79,6 @@ Edits based on user feedback from @joyously on wordpress.org
 * Added option to hide intro section
 * Major clean-up of all code, nearly WPCS compliant
 
-= 1.1.10 - 24.07.2017 =
+= 1.2.0 - 26.07.2017 =
 * Added option to hide sidebar for post.
 * Added option to hide footer for post.

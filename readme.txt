@@ -42,7 +42,7 @@ Positor and it´s full source code is available at [GitHub](https://github.com/l
 
 ## Copyright
 Positor Theme, Copyright 2016 losol.io
-Positor is distributed under the terms of the GNU GPL
+Positor is distributed under the terms of the GNU GPL.
 
 Positor bundles the following third-party resources:
 
@@ -66,11 +66,14 @@ TGM-Plugin-Activation, Copyright Thomas Griffin, Gary Jones, Juliette Reinders F
 **License:** GPLv2 or later
 Source: https://github.com/TGMPA/TGM-Plugin-Activation. 
 
+Header image on screenshot, Copyright Ole Kristian Losvik
+**License:** CC0 1.0 Universal (CC0 1.0)
+Source: https://www.flickr.com/photos/losvik/19007169333
 
 ## Changelog
 
 ### 1.2
-* Released: 27 July 2017.
+* Released: 26 July 2017.
 
 * Better security after rewrite of whole theme.
 * More options in Customizer.

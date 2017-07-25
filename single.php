@@ -23,7 +23,7 @@ while ( have_posts() ) : the_post(); ?>
 
 		get_template_part( 'components/post/content-single-body', get_post_format() );
 
-		$this_hide_footer = get_post_meta( $post->ID, 'positor_hide_footer_section', true );
+		$this_hide_footer = get_post_meta( $post->ID, '_positor_hide_footer_section', true );
 		if ( ! $this_hide_footer ) {
 			get_template_part( 'components/common/related-posts', get_post_format() );
 			get_template_part( 'components/common/social-sharing', get_post_format() );
@@ -45,7 +45,7 @@ while ( have_posts() ) : the_post(); ?>
 			</main>
 		</div>
 	<?php
-	$this_hide_sidebar = get_post_meta( $post->ID, 'positor_hide_sidebar', true );
+	$this_hide_sidebar = get_post_meta( $post->ID, '_positor_hide_sidebar', true );
 	if ( ! $this_hide_sidebar ) { ?>
 	<div class="col-md-3 offset-md-1 hidden-print">
 		<aside id="secondary" role="complementary">
