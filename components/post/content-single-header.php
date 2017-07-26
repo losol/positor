@@ -69,10 +69,10 @@ if ( ! $this_hide_intro ) {
 			echo esc_html( strip_tags( $content_parts['main'] ) );
 
 			echo '</p></div>';
-		} // End if().
+		endif;
 		?>
 	</div>
 </div>
 </header>
 <?php
-
+} // End if().
