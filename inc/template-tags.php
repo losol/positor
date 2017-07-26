@@ -97,7 +97,7 @@ if ( ! function_exists( 'positor_the_post_intro' ) ) :
 
 		if ( has_excerpt() ) :
 			// Shows the manual excerpt if defined.
-			the_excerpt();
+			echo esc_html( strip_tags( get_the_excerpt() ) );
 
 		elseif ( get_the_content( '', false ) !== get_the_content( '', true ) ) :
 
@@ -108,7 +108,7 @@ if ( ! function_exists( 'positor_the_post_intro' ) ) :
 
 			// Otherwise make an automatic excerpt.
 		else :
-				echo esc_html( strip_tags( get_the_excerpt() ) );
+			echo esc_html( strip_tags( get_the_excerpt() ) );
 
 		endif;
 	}
