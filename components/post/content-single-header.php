@@ -59,10 +59,17 @@ if ( ! $this_hide_intro ) {
 			the_title( '<h1>', '</h1>' );
 		?>
 
-		<?php // Show the intro text. ?>
-		<div>
-			<p class="lead pb-5"><?php positor_the_post_intro();?></p>
-		</div>
+		<?php // Check if there is a teaser text?
+		if ( get_the_content( '', false ) !== get_the_content( '', true ) ) :
+			echo '<div><p class="lead pb-3">';
+
+			// Get teaser part.
+			$content = get_post_field( 'post_content', get_the_ID() );
+			$content_parts = get_extended( $content );
+			echo esc_html( strip_tags( $content_parts['main'] ) );
+
+			echo '</p></div>';
+			?>
 	</div>
 </div>
 </header>
