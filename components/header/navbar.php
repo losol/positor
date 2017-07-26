@@ -10,7 +10,7 @@
 <?php
 // Checks if the navbar should be hidden for this post/page.
 $this_hide_navbar = get_post_meta( $post->ID, '_positor_hide_navbar', true );
-if ( ! $this_hide_navbar ) { ?>
+if ( ! ( $this_hide_navbar && is_single() ) ) { ?>
 
 <nav id="site-navigation" class="navbar navbar-toggleable-sm navbar-inverse bg-primary link-no-decoration">
 	<div class="hidden-sm-down">

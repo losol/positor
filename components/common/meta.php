@@ -8,7 +8,7 @@
 ?>
 
 <?php
-$this_hide_sidebar = get_post_meta( $post->ID, '_positor_hide_sidebar', true );
+$this_hide_sidebar = (bool) get_post_meta( $post->ID, '_positor_hide_sidebar', true );
 if ( ! $this_hide_sidebar ) {
 ?>
 
