@@ -21,139 +21,146 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:15
+#: 404.php:15, temp/buildtheme/404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Flaut! Vi fant ikke siden."
 
-#: 404.php:26
+#: 404.php:26, temp/buildtheme/404.php:26
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "Vi fant ingenting her. Kanskje du vil forsøke et søk?"
 
-#: comments.php:28
+#: comments.php:28, temp/buildtheme/comments.php:28
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr "En kommentar til &laquo;%s&raquo;"
 
-#: comments.php:34
+#: comments.php:34, temp/buildtheme/comments.php:34
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s kommentar til &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s kommentarer til &ldquo;%2$s&rdquo;"
 
-#: comments.php:44, comments.php:69
+#: comments.php:44, comments.php:69, temp/buildtheme/comments.php:44,
+#: temp/buildtheme/comments.php:69
 msgid "Comment navigation"
 msgstr "Naviger i kommentarer"
 
-#: comments.php:47, comments.php:72
+#: comments.php:47, comments.php:72, temp/buildtheme/comments.php:47,
+#: temp/buildtheme/comments.php:72
 msgid "Older Comments"
 msgstr "Eldre kommentarer"
 
-#: comments.php:48, comments.php:73
+#: comments.php:48, comments.php:73, temp/buildtheme/comments.php:48,
+#: temp/buildtheme/comments.php:73
 msgid "Newer Comments"
 msgstr "Nyere kommentarer"
 
-#: comments.php:86
+#: comments.php:86, temp/buildtheme/comments.php:86
 msgid "Comments are closed."
 msgstr "Kommentarfeltet er stengt."
 
-#: functions.php:35
+#: functions.php:35, temp/buildtheme/functions.php:35
 msgid "Top"
 msgstr "Topp"
 
-#: functions.php:122
+#: functions.php:122, temp/buildtheme/functions.php:122
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:124
+#: functions.php:124, temp/buildtheme/functions.php:124
 msgid "Sidebar widgets"
 msgstr "Sidebar widgets"
 
-#: functions.php:133
+#: functions.php:133, temp/buildtheme/functions.php:133
 msgid "Footer (Left)"
 msgstr "Footer (venstre)"
 
-#: functions.php:135
+#: functions.php:135, temp/buildtheme/functions.php:135
 msgid "First footer widget area"
 msgstr "Første widget-område i footer"
 
-#: functions.php:144
+#: functions.php:144, temp/buildtheme/functions.php:144
 msgid "Footer (Center)"
 msgstr "Footer (midten)"
 
-#: functions.php:146
+#: functions.php:146, temp/buildtheme/functions.php:146
 msgid "Second footer widget area"
 msgstr "Andre widget-område i footer"
 
-#: functions.php:155
+#: functions.php:155, temp/buildtheme/functions.php:155
 msgid "Footer (Right)"
 msgstr "Footer (høyre)"
 
-#: functions.php:157
+#: functions.php:157, temp/buildtheme/functions.php:157
 msgid "Third footer widget area"
 msgstr "Tredje widget-område i footer"
 
-#: header.php:23
+#: header.php:23, temp/buildtheme/header.php:23
 msgid "Skip to content"
 msgstr "Hopp til innholdet"
 
-#: search.php:22
+#: search.php:22, temp/buildtheme/search.php:22
 msgid "Search Results for: %s"
 msgstr "Søkeresultater for: %s"
 
-#: searchform.php:4
+#: searchform.php:4, temp/buildtheme/searchform.php:4
 msgid "Search for?"
 msgstr "Søk etter?"
 
-#: searchform.php:5, components/header/navbar.php:50
+#: searchform.php:5, components/header/navbar.php:50,
+#: temp/buildtheme/searchform.php:5,
+#: temp/buildtheme/components/header/navbar.php:50
 msgid "What are you searching for?"
 msgstr "Hva søker du etter?"
 
-#: inc/class-bootstrap-comment-walker.php:67
+#: inc/class-bootstrap-comment-walker.php:67,
+#: temp/buildtheme/inc/class-bootstrap-comment-walker.php:67
 msgid "Edit"
 msgstr "Rediger"
 
-#: inc/class-bootstrap-comment-walker.php:85
+#: inc/class-bootstrap-comment-walker.php:85,
+#: temp/buildtheme/inc/class-bootstrap-comment-walker.php:85
 msgid "Your comment is awaiting moderation."
 msgstr "Kommentaren venter på godkjenning."
 
-#: inc/commentform.php:46
+#: inc/commentform.php:46, temp/buildtheme/inc/commentform.php:46
 msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: inc/customizer.php:33
+#: inc/customizer.php:33, temp/buildtheme/inc/customizer.php:33
 msgid "Admin settings"
 msgstr "Admin innstillinger"
 
-#: inc/customizer.php:44
+#: inc/customizer.php:44, temp/buildtheme/inc/customizer.php:44
 msgid "Show only common styles in editor"
 msgstr "Vis forenklet stilsett i editor"
 
-#: inc/customizer.php:45
+#: inc/customizer.php:45, temp/buildtheme/inc/customizer.php:45
 msgid "Check this to show fewer paragraph styles in the post editor"
 msgstr "Merk av for å vise færre stiler når du redigerer poster"
 
-#: inc/customizer.php:56
+#: inc/customizer.php:56, temp/buildtheme/inc/customizer.php:56
 msgid "Social media links"
 msgstr "Sosiale media"
 
-#: inc/metaboxes.php:21
+#: inc/metaboxes.php:21, temp/buildtheme/inc/metaboxes.php:21
 msgid "Metainformation"
 msgstr "Metainformasjon"
 
-#: inc/metaboxes.php:29
+#: inc/metaboxes.php:29, temp/buildtheme/inc/metaboxes.php:29
 msgid "Feature this on front page"
 msgstr "Fremhev denne på forsiden"
 
-#: inc/metaboxes.php:31
+#: inc/metaboxes.php:31, temp/buildtheme/inc/metaboxes.php:31
 msgid "Place this on the top of the front page."
 msgstr "Plasser saken blant de som vises øverst på forsiden."
 
-#: inc/metaboxes.php:35
+#: inc/metaboxes.php:35, temp/buildtheme/inc/metaboxes.php:35
 msgid "Large featured image/video"
 msgstr "Vis stort fremhevet bilde/video"
 
-#: inc/metaboxes.php:37
+#: inc/metaboxes.php:37, temp/buildtheme/inc/metaboxes.php:37
 msgid ""
 "Let the featured image/video cover the whole screen when opening this page/"
 "post."
@@ -161,11 +168,11 @@ msgstr ""
 "La det fremhevede bildet dekke helse skjermbredden når man åpner siden/"
 "innlegget."
 
-#: inc/metaboxes.php:42
+#: inc/metaboxes.php:42, temp/buildtheme/inc/metaboxes.php:42
 msgid "Featured video"
 msgstr "Fremhevet video"
 
-#: inc/metaboxes.php:43
+#: inc/metaboxes.php:43, temp/buildtheme/inc/metaboxes.php:43
 msgid ""
 "If you want to embed a video and feature it on the top of the article add it "
 "here."
@@ -173,108 +180,121 @@ msgstr ""
 "Hvis du vil legge til en video og fremheve den på toppen av artikkelen, så "
 "legg det il her."
 
-#: inc/metaboxes.php:44
+#: inc/metaboxes.php:44, temp/buildtheme/inc/metaboxes.php:44
 msgid "https://youtube.com/..."
 msgstr "https://youtube.com/…"
 
-#: inc/metaboxes.php:49
+#: inc/metaboxes.php:49, temp/buildtheme/inc/metaboxes.php:49
 #, fuzzy
 #| msgid "Comment navigation"
 msgid "Hide navigation bar"
 msgstr "Naviger i kommentarer"
 
-#: inc/metaboxes.php:50
+#: inc/metaboxes.php:50, temp/buildtheme/inc/metaboxes.php:50
 msgid "Will hide the navigation bar from this page/post."
 msgstr ""
 
-#: inc/metaboxes.php:55
+#: inc/metaboxes.php:55, temp/buildtheme/inc/metaboxes.php:55
 msgid "Hide title, featured image, and intro text"
 msgstr ""
 
-#: inc/metaboxes.php:56
+#: inc/metaboxes.php:56, temp/buildtheme/inc/metaboxes.php:56
 msgid "This will hide the title, image and intro text."
 msgstr ""
 
-#: inc/metaboxes.php:61
+#: inc/metaboxes.php:61, temp/buildtheme/inc/metaboxes.php:61
 #, fuzzy
 #| msgid "Sidebar"
 msgid "Hide sidebar"
 msgstr "Sidebar"
 
-#: inc/metaboxes.php:62
+#: inc/metaboxes.php:62, temp/buildtheme/inc/metaboxes.php:62
 msgid ""
 "This will hide the sidebar and meta section from the sidebar for this post."
 msgstr ""
 
-#: inc/metaboxes.php:67
+#: inc/metaboxes.php:67, temp/buildtheme/inc/metaboxes.php:67
 msgid "Hide post footer"
 msgstr ""
 
-#: inc/metaboxes.php:68
+#: inc/metaboxes.php:68, temp/buildtheme/inc/metaboxes.php:68
 msgid "This will hide the post footer."
 msgstr ""
 
-#: inc/plugin-recommender.php:69, inc/tgm-plugin-activation.php:327
+#: inc/plugin-recommender.php:69, inc/tgm-plugin-activation.php:327,
+#: temp/buildtheme/inc/plugin-recommender.php:69,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:327
 msgid "Install Required Plugins"
 msgstr "Installer nødvendige utvidelser"
 
-#: inc/plugin-recommender.php:70, inc/tgm-plugin-activation.php:328
+#: inc/plugin-recommender.php:70, inc/tgm-plugin-activation.php:328,
+#: temp/buildtheme/inc/plugin-recommender.php:70,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:328
 msgid "Install Plugins"
 msgstr "Installer utvidelser"
 
-#: inc/plugin-recommender.php:72, inc/tgm-plugin-activation.php:330
+#: inc/plugin-recommender.php:72, inc/tgm-plugin-activation.php:330,
+#: temp/buildtheme/inc/plugin-recommender.php:72,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:330
 msgid "Installing Plugin: %s"
 msgstr "Installerer utvidelse: %s"
 
-#: inc/plugin-recommender.php:74, inc/tgm-plugin-activation.php:332
+#: inc/plugin-recommender.php:74, inc/tgm-plugin-activation.php:332,
+#: temp/buildtheme/inc/plugin-recommender.php:74,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:332
 msgid "Updating Plugin: %s"
 msgstr "Oppdaterer utvidelse: %s"
 
-#: inc/plugin-recommender.php:75, inc/tgm-plugin-activation.php:333
+#: inc/plugin-recommender.php:75, inc/tgm-plugin-activation.php:333,
+#: temp/buildtheme/inc/plugin-recommender.php:75,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:333
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: inc/post-formats.php:20
+#: inc/post-formats.php:20, temp/buildtheme/inc/post-formats.php:20
 msgid "Video Url"
 msgstr "Video Url"
 
-#: inc/post-formats.php:23
+#: inc/post-formats.php:23, temp/buildtheme/inc/post-formats.php:23
 msgid "Url for the video you want to embed. "
 msgstr "Url for videoen du vil framheve. "
 
-#: inc/template-tags.php:124
+#: inc/template-tags.php:124, temp/buildtheme/inc/template-tags.php:124
 msgid "Posted in "
 msgstr "Publisert i %1$s "
 
-#: inc/template-tags.php:144
+#: inc/template-tags.php:144, temp/buildtheme/inc/template-tags.php:144
 msgid "Tagged with "
 msgstr "Emneknagg "
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:164, temp/buildtheme/inc/template-tags.php:164
 msgid "Leave a comment"
 msgstr "Legg igjen en kommentar"
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:164, temp/buildtheme/inc/template-tags.php:164
 msgid "1 Comment"
 msgstr "1 kommentar"
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:164, temp/buildtheme/inc/template-tags.php:164
 msgid "% Comments"
 msgstr "% kommentarer"
 
-#: inc/tgm-plugin-activation.php:334
+#: inc/tgm-plugin-activation.php:334,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:334
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:340
+#: inc/tgm-plugin-activation.php:340,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:340
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:346
+#: inc/tgm-plugin-activation.php:346,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:346
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
 "maximum compatibility with this theme: %1$s."
@@ -284,417 +304,520 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:352
+#: inc/tgm-plugin-activation.php:352,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:352
 msgid "There is an update available for: %1$s."
 msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:358
+#: inc/tgm-plugin-activation.php:358,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:358
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:364
+#: inc/tgm-plugin-activation.php:364,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:364
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:370
+#: inc/tgm-plugin-activation.php:370,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:370
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:375
+#: inc/tgm-plugin-activation.php:375,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:375
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:380
+#: inc/tgm-plugin-activation.php:380,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:380
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:385
+#: inc/tgm-plugin-activation.php:385,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:385
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
 #: inc/tgm-plugin-activation.php:386, inc/tgm-plugin-activation.php:827,
-#: inc/tgm-plugin-activation.php:2533, inc/tgm-plugin-activation.php:3580
+#: inc/tgm-plugin-activation.php:2533, inc/tgm-plugin-activation.php:3580,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:386,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:827,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2533,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3580
 msgid "Return to the Dashboard"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:387, inc/tgm-plugin-activation.php:3159
+#: inc/tgm-plugin-activation.php:387, inc/tgm-plugin-activation.php:3159,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:387,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3159
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:388, inc/tgm-plugin-activation.php:2952
+#: inc/tgm-plugin-activation.php:388, inc/tgm-plugin-activation.php:2952,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:388,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2952
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:390
+#: inc/tgm-plugin-activation.php:390,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:390
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:392
+#: inc/tgm-plugin-activation.php:392,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:392
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:394
+#: inc/tgm-plugin-activation.php:394,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:394
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:395
+#: inc/tgm-plugin-activation.php:395,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:395
 msgid "Dismiss this notice"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:396
+#: inc/tgm-plugin-activation.php:396,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:396
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:397
+#: inc/tgm-plugin-activation.php:397,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:397
 msgid "Please contact the administrator of this site for help."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:522
+#: inc/tgm-plugin-activation.php:522,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:522
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:523
+#: inc/tgm-plugin-activation.php:523,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:523
 msgid "Update Required"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:934
+#: inc/tgm-plugin-activation.php:934,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:934
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:934, inc/tgm-plugin-activation.php:937
+#: inc/tgm-plugin-activation.php:934, inc/tgm-plugin-activation.php:937,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:934,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:937
 msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:937
+#: inc/tgm-plugin-activation.php:937,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:937
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:1121, inc/tgm-plugin-activation.php:2948
+#: inc/tgm-plugin-activation.php:1121, inc/tgm-plugin-activation.php:2948,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:1121,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2948
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:1982
+#: inc/tgm-plugin-activation.php:1982,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:1982
 msgid "TGMPA v%s"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2273
+#: inc/tgm-plugin-activation.php:2273,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2273
 msgid "Required"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2276
+#: inc/tgm-plugin-activation.php:2276,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2276
 msgid "Recommended"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2292
+#: inc/tgm-plugin-activation.php:2292,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2292
 msgid "WordPress Repository"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2295
+#: inc/tgm-plugin-activation.php:2295,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2295
 msgid "External Source"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2298
+#: inc/tgm-plugin-activation.php:2298,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2298
 msgid "Pre-Packaged"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2315
+#: inc/tgm-plugin-activation.php:2315,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2315
 msgid "Not Installed"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2319
+#: inc/tgm-plugin-activation.php:2319,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2319
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2321
+#: inc/tgm-plugin-activation.php:2321,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2321
 msgid "Active"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2327
+#: inc/tgm-plugin-activation.php:2327,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2327
 msgid "Required Update not Available"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2330
+#: inc/tgm-plugin-activation.php:2330,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2330
 msgid "Requires Update"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2333
+#: inc/tgm-plugin-activation.php:2333,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2333
 msgid "Update recommended"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2342
+#: inc/tgm-plugin-activation.php:2342,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2342
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr "Tema: %1$s by %2$s"
 
-#: inc/tgm-plugin-activation.php:2388
+#: inc/tgm-plugin-activation.php:2388,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2388
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
 msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:2392
+#: inc/tgm-plugin-activation.php:2392,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2392
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:2396
+#: inc/tgm-plugin-activation.php:2396,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2396
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:2400
+#: inc/tgm-plugin-activation.php:2400,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2400
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgm-plugin-activation.php:2482
+#: inc/tgm-plugin-activation.php:2482,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2482
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2490
+#: inc/tgm-plugin-activation.php:2490,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2490
 msgid "Installed version:"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2498
+#: inc/tgm-plugin-activation.php:2498,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2498
 msgid "Minimum required version:"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2510
+#: inc/tgm-plugin-activation.php:2510,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2510
 msgid "Available version:"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2533
+#: inc/tgm-plugin-activation.php:2533,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2533
 msgid "No plugins to install, update or activate."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2547
+#: inc/tgm-plugin-activation.php:2547,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2547
 msgid "Plugin"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2548
+#: inc/tgm-plugin-activation.php:2548,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2548
 msgid "Source"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2549
+#: inc/tgm-plugin-activation.php:2549,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2549
 msgid "Type"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2553
+#: inc/tgm-plugin-activation.php:2553,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2553
 msgid "Version"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2554
+#: inc/tgm-plugin-activation.php:2554,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2554
 msgid "Status"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2603
+#: inc/tgm-plugin-activation.php:2603,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2603
 msgid "Install %2$s"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2608
+#: inc/tgm-plugin-activation.php:2608,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2608
 msgid "Update %2$s"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2614
+#: inc/tgm-plugin-activation.php:2614,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2614
 msgid "Activate %2$s"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2684
+#: inc/tgm-plugin-activation.php:2684,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2684
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2717
+#: inc/tgm-plugin-activation.php:2717,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2717
 msgid "Install"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2723
+#: inc/tgm-plugin-activation.php:2723,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2723
 msgid "Update"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2726
+#: inc/tgm-plugin-activation.php:2726,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2726
 msgid "Activate"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2757
+#: inc/tgm-plugin-activation.php:2757,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2757
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2759
+#: inc/tgm-plugin-activation.php:2759,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2759
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2800
+#: inc/tgm-plugin-activation.php:2800,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2800
 msgid "No plugins are available to be installed at this time."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2802
+#: inc/tgm-plugin-activation.php:2802,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2802
 msgid "No plugins are available to be updated at this time."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2908
+#: inc/tgm-plugin-activation.php:2908,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2908
 msgid "No plugins were selected to be activated. No action taken."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:2934
+#: inc/tgm-plugin-activation.php:2934,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:2934
 msgid "No plugins are available to be activated at this time."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3158
+#: inc/tgm-plugin-activation.php:3158,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3158
 msgid "Plugin activation failed."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3498
+#: inc/tgm-plugin-activation.php:3498,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3498
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3501
+#: inc/tgm-plugin-activation.php:3501,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3501
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3503
+#: inc/tgm-plugin-activation.php:3503,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3503
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3507
+#: inc/tgm-plugin-activation.php:3507,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3507
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3509
+#: inc/tgm-plugin-activation.php:3509,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3509
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3509, inc/tgm-plugin-activation.php:3517
+#: inc/tgm-plugin-activation.php:3509, inc/tgm-plugin-activation.php:3517,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3509,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3517
 msgid "Show Details"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3509, inc/tgm-plugin-activation.php:3517
+#: inc/tgm-plugin-activation.php:3509, inc/tgm-plugin-activation.php:3517,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3509,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3517
 msgid "Hide Details"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3510
+#: inc/tgm-plugin-activation.php:3510,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3510
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3512
+#: inc/tgm-plugin-activation.php:3512,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3512
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3515
+#: inc/tgm-plugin-activation.php:3515,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3515
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3517
+#: inc/tgm-plugin-activation.php:3517,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3517
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3518
+#: inc/tgm-plugin-activation.php:3518,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3518
 msgid "All installations have been completed."
 msgstr ""
 
-#: inc/tgm-plugin-activation.php:3520
+#: inc/tgm-plugin-activation.php:3520,
+#: temp/buildtheme/inc/tgm-plugin-activation.php:3520
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: components/common/archive-navigation.php:18
+#: components/common/archive-navigation.php:18,
+#: temp/buildtheme/components/common/archive-navigation.php:18
 msgid "Newer posts"
 msgstr "Nyere kommentarer"
 
-#: components/common/archive-navigation.php:28
+#: components/common/archive-navigation.php:28,
+#: temp/buildtheme/components/common/archive-navigation.php:28
 msgid "Older posts"
 msgstr "Eldre kommentarer"
 
-#: components/common/meta.php:19
+#: components/common/meta.php:19, temp/buildtheme/components/common/meta.php:19
 msgid "Author: "
 msgstr "Skribent: "
 
-#: components/common/meta.php:28
+#: components/common/meta.php:28, temp/buildtheme/components/common/meta.php:28
 msgid "Image: "
 msgstr "Foto: "
 
-#: components/common/meta.php:36
+#: components/common/meta.php:33
+msgid "Published: "
+msgstr "Publisert: "
+
+#: components/common/meta.php:36, temp/buildtheme/components/common/meta.php:36
 msgid ", updated: "
 msgstr ", oppdatert: "
 
-#: components/common/meta.php:47
+#: components/common/meta.php:47, temp/buildtheme/components/common/meta.php:47
 msgid "Posted in: "
 msgstr "Publisert i: "
 
-#: components/common/post-navigation.php:10
+#: components/common/post-navigation.php:10,
+#: temp/buildtheme/components/common/post-navigation.php:10
 msgid "Read more?"
 msgstr "Les mer?"
 
-#: components/header/navbar.php:21
+#: components/header/navbar.php:21,
+#: temp/buildtheme/components/header/navbar.php:21
 msgid "Menu"
 msgstr "Meny"
 
-#: components/header/navbar.php:41
+#: components/header/navbar.php:41,
+#: temp/buildtheme/components/header/navbar.php:41
 msgid "Search"
 msgstr "Søk"
 
-#: components/page/content-page.php:25
+#: components/page/content-page.php:25,
+#: temp/buildtheme/components/page/content-page.php:25
 msgid "Pages:"
 msgstr "Sider:"
 
-#: components/post/content-none.php:14
+#: components/post/content-none.php:14,
+#: temp/buildtheme/components/post/content-none.php:14
 msgid "Nothing Found"
 msgstr "Fant ingenting"
 
-#: components/post/content-none.php:29
+#: components/post/content-none.php:29,
+#: temp/buildtheme/components/post/content-none.php:29
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 "Beklager, men vi fikk ingen treff på søket. Prøv igjen med andre søkeord."
 
-#: components/post/content-none.php:35
+#: components/post/content-none.php:35,
+#: temp/buildtheme/components/post/content-none.php:35
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "Vi kan ikke finne det du leter etter. Kanskje det hjelper å søke."
 
-#: components/post/content-search.php:38, components/post/content-single.php:57
+#: components/post/content-search.php:38,
+#: components/post/content-single.php:57,
+#: temp/buildtheme/components/post/content-search.php:38,
+#: temp/buildtheme/components/post/content-single.php:57
 msgid "Read "
 msgstr "Les "
 
-#: components/post/content.php:49
+#: components/post/content.php:49,
+#: temp/buildtheme/components/post/content.php:49
 msgid "Read"
 msgstr "Les"
 
-#: components/social/sharebuttons.php:9
+#: components/social/sharebuttons.php:9,
+#: temp/buildtheme/components/social/sharebuttons.php:9
 msgid "Share if you like!"
 msgstr "Del gjerne!"
 
@@ -729,9 +852,6 @@ msgstr "Del gjerne!"
 
 #~ msgid "Tagged %1$s"
 #~ msgstr "Emneknagg %1$s"
-
-#~ msgid "Published: "
-#~ msgstr "Publisert: "
 
 #~ msgid ""
 #~ "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
