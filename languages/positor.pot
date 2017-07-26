@@ -177,6 +177,22 @@ msgstr ""
 msgid "This will hide the title, image and intro text."
 msgstr ""
 
+#: inc/metaboxes.php:61
+msgid "Hide sidebar"
+msgstr ""
+
+#: inc/metaboxes.php:62
+msgid "This will hide the sidebar and meta section from the sidebar for this post."
+msgstr ""
+
+#: inc/metaboxes.php:67
+msgid "Hide post footer"
+msgstr ""
+
+#: inc/metaboxes.php:68
+msgid "This will hide the post footer."
+msgstr ""
+
 #: inc/plugin-recommender.php:69, inc/tgm-plugin-activation.php:327
 msgid "Install Required Plugins"
 msgstr ""
@@ -205,23 +221,23 @@ msgstr ""
 msgid "Url for the video you want to embed. "
 msgstr ""
 
-#: inc/template-tags.php:116
+#: inc/template-tags.php:124
 msgid "Posted in "
 msgstr ""
 
-#: inc/template-tags.php:136
+#: inc/template-tags.php:144
 msgid "Tagged with "
 msgstr ""
 
-#: inc/template-tags.php:156
+#: inc/template-tags.php:164
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:156
+#: inc/template-tags.php:164
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:156
+#: inc/template-tags.php:164
 msgid "% Comments"
 msgstr ""
 
@@ -581,19 +597,19 @@ msgstr ""
 msgid "Older posts"
 msgstr ""
 
-#: components/common/meta.php:21
+#: components/common/meta.php:19
 msgid "Author: "
 msgstr ""
 
-#: components/common/meta.php:30
+#: components/common/meta.php:28
 msgid "Image: "
 msgstr ""
 
-#: components/common/meta.php:38
+#: components/common/meta.php:36
 msgid ", updated: "
 msgstr ""
 
-#: components/common/meta.php:49
+#: components/common/meta.php:47
 msgid "Posted in: "
 msgstr ""
 
