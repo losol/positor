@@ -46,7 +46,7 @@
 			echo '</div>';
 		}
 		if ( $count >= 2 ) {
-			echo '<div class="' . esc_html( $level_2_css_class ) . 'col d-flex align-items-stretch story-level-2">';
+			echo '<div class="' . esc_html( $level_2_css_class ) . ' d-flex align-items-stretch story-level-2">';
 			get_template_part( 'components/card/card-standard' );
 			echo '</div>';
 		}
