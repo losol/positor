@@ -17,7 +17,7 @@ if ( ! ( $this_hide_navbar && is_single() ) ) { ?>
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
 	</div>
 
-	<button class="btn-link text-white text-uppercase hidden-md-up" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="btn btn-link text-white text-uppercase hidden-md-up pull-left" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
 		<i class="fa fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 	</button>
 
@@ -37,14 +37,14 @@ if ( ! ( $this_hide_navbar && is_single() ) ) { ?>
 	));
 	?>
 
-	<button class="btn-link text-uppercase text-white text-nowrap pull-xs-right" type="button" data-toggle="collapse" data-target="#searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="btn btn-link text-uppercase text-white text-nowrap pull-right" type="button" data-toggle="collapse" data-target="#searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
 		<i class="fa fa-search" aria-hidden="true"></i>&nbsp;<span class="sr-only"><?php esc_html_e( 'Search', 'positor' ); ?></span>
 	</button>
  </nav>
 
 <div id="searchform" class="container-fluid collapse">
-	<div class="row bg-inverse">
-		<div class="container m-0 p-4 text-white">
+	<div class="row bg-gray-800">
+		<div class="container p-4 w-100">
 		<form role="search" method="get" class="form search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<div class="input-group">
 			<input name="s" type="text" class="form-control" placeholder="<?php esc_html_e( 'What are you searching for?', 'positor' ); ?>">
@@ -52,7 +52,7 @@ if ( ! ( $this_hide_navbar && is_single() ) ) { ?>
 				<button type="submit" value="Search" class="btn btn-danger"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;</button>
 			</span>
 			</div>
-	</form>
+		</form>
 	</div>
 	</div>
 </div>

@@ -13,11 +13,11 @@ if ( ! $this_hide_intro ) {
 ?>
 
 <header>
-	<div class="bg-gray-light">
+	<div class="bg-gray-light py-3">
 	<?php
 	$this_featured_hero = get_post_meta( $post->ID, '_positor_featured_hero', true );
 	if ( $this_featured_hero ) {
-		echo '<div class="">';
+		echo '<div>';
 	} else {
 		echo '<div class="container py-3">';
 	}
