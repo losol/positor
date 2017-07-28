@@ -17,11 +17,16 @@ if ( ! ( $this_hide_navbar && is_single() ) ) { ?>
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
 	</div>
 
-	<button class="btn btn-link text-white text-uppercase hidden-md-up pull-left" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-		<i class="fa fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
+	<button class="btn btn-link d-flex align-middle nav-item pull-left text-white text-uppercase hidden-md-up" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+		<i class="fa fa-fw fa-1_2x fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 	</button>
 
-	<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+	<button class="btn btn-link nav-item pull-right navbar-toggler-right text-uppercase text-white text-nowrap" type="button" data-toggle="collapse" data-target="#searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
+		<i class="fa fa-fw fa-1_2x fa-search" aria-hidden="true"></i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
+	</button>
+
+	
+<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 	<?php
 	wp_nav_menu( array(
 		'menu'            => 'top',
@@ -37,11 +42,7 @@ if ( ! ( $this_hide_navbar && is_single() ) ) { ?>
 	));
 	?>
 
-	<button class="btn btn-link text-uppercase text-white text-nowrap pull-right" type="button" data-toggle="collapse" data-target="#searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
-		<i class="fa fa-search" aria-hidden="true"></i>&nbsp;<span class="sr-only"><?php esc_html_e( 'Search', 'positor' ); ?></span>
-	</button>
  </nav>
-
 <div id="searchform" class="container-fluid collapse">
 	<div class="row bg-gray-800">
 		<div class="container p-4 w-100">

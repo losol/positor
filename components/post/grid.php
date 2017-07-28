@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="row no-gutters d-flex align-items-stretch">
+<div class="row no-gutters">
 <?php
 
 	/**
@@ -50,12 +50,12 @@
 			$query->the_post();
 			$count++;
 			if ( 1 === $count ) {
-				echo '<div class="bg-white col-md-12 d-flex align-items-stretch story-level-1">';
+				echo '<div class="bg-white col-md-12 d-flex align-items-stretch grid story-level-1">';
 				get_template_part( 'components/card/card-standard' );
 				echo '</div>';
 			}
 			if ( $count >= 2 ) {
-				echo '<div class="' . esc_html( $level_2_css_class ) . ' d-flex align-items-stretch story-level-2">';
+				echo '<div class="' . esc_html( $level_2_css_class ) . ' d-flex align-items-stretch grid story-level-2">';
 				get_template_part( 'components/card/card-standard' );
 				echo '</div>';
 			}
