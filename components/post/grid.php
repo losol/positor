@@ -34,7 +34,7 @@
 			echo '</div>';
 		}
 		if ( $count >= 2 ) {
-			echo '<div class="col-md-4 d-flex align-items-stretch">';
+			echo '<div class="col d-flex align-items-stretch">';
 			get_template_part( 'components/card/card-standard' );
 			echo '</div>';
 		}
