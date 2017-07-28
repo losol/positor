@@ -24,17 +24,29 @@
 
 	// Sets counter, and start the post loop.
 	$count = (int) 0;
+	$posts_count = $featured_query -> found_posts();
+
+	$level_2_css_class = 'col-md-12';
+	switch ( $posts_count ) {
+		case 3:
+			$level_2_css_class = 'col-md-6';
+			break;
+		case 4:
+			$level_2_css_class = 'col-md-4';
+			break;
+	}
 
 	while ( $featured_query -> have_posts() ) :
 		$featured_query -> the_post();
 		$count++;
+
 		if ( 1 === $count ) {
-			echo '<div class="col-md-12 d-flex align-items-stretch">';
+			echo '<div class="col-md-12 d-flex align-items-stretch story-level-1">';
 			get_template_part( 'components/card/card-standard' );
 			echo '</div>';
 		}
 		if ( $count >= 2 ) {
-			echo '<div class="col d-flex align-items-stretch">';
+			echo '<div class="' . esc_html( $level_2_css_class ) . 'col d-flex align-items-stretch story-level-2">';
 			get_template_part( 'components/card/card-standard' );
 			echo '</div>';
 		}
