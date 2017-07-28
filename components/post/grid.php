@@ -15,7 +15,6 @@
 	// WP_Query arguments.
 	$featured = array(
 		'posts_per_page' => '5',
-		'cat'            => '1',
 		'meta_key'       => '_positor_featured_post',
 		'meta_value'     => '1',
 	);
