@@ -737,12 +737,12 @@ msgstr ""
 #: components/common/archive-navigation.php:18,
 #: temp/buildtheme/components/common/archive-navigation.php:18
 msgid "Newer posts"
-msgstr "Nyere kommentarer"
+msgstr "Nyere innlegg"
 
 #: components/common/archive-navigation.php:28,
 #: temp/buildtheme/components/common/archive-navigation.php:28
 msgid "Older posts"
-msgstr "Eldre kommentarer"
+msgstr "Eldre innlegg"
 
 #: components/common/meta.php:19, temp/buildtheme/components/common/meta.php:19
 msgid "Author: "

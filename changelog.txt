@@ -82,3 +82,6 @@ Edits based on user feedback from @joyously on wordpress.org
 = 1.2.0 - 26.07.2017 =
 * Added option to hide sidebar for post.
 * Added option to hide footer for post.
+
+= 1.2.1 - 2017-07-28 =
+* Some CSS and spacing issues fixed. 
