@@ -50,7 +50,7 @@
 			$query->the_post();
 			$count++;
 			if ( 1 === $count ) {
-				echo '<div class="col-md-12 d-flex align-items-stretch story-level-1">';
+				echo '<div class="bg-white col-md-12 d-flex align-items-stretch story-level-1">';
 				get_template_part( 'components/card/card-standard' );
 				echo '</div>';
 			}
