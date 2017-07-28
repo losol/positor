@@ -16,7 +16,7 @@ if ( ! $this_hide_sidebar ) {
 	<?php // Show author info.
 		echo '<div class="pl-4 m-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-pencil" aria-hidden="true"></i></p>';
-		echo '<span class="sr-only">' . esc_html_e( 'Author: ', 'positor' ) . '</span>' . positor_the_author() . '<br>'; // WPCS: XSS OK.
+		echo '<span class="sr-only">' . esc_html( 'Author: ', 'positor' ) . '</span>' . positor_the_author() . '<br>'; // WPCS: XSS OK.
 		echo '<span class="text-muted"> ' . positor_the_author_bio() . '</span>'; // WPCS: XSS OK.
 		echo '</p></div>';
 	?>
@@ -25,7 +25,7 @@ if ( ! $this_hide_sidebar ) {
 	if ( null !== ( positor_get_the_photographer() ) ) :
 		echo '<div class="pl-4 m-2 pt-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-camera-retro" aria-hidden="true"></i></p>';
-		echo '<span class="sr-only">' . esc_html_e( 'Image: ', 'positor' ) . '</span>' . positor_the_photographer() . '<br>'; // WPCS: XSS OK.
+		echo '<span class="sr-only">' . esc_html( 'Image: ', 'positor' ) . '</span>' . positor_the_photographer() . '<br>'; // WPCS: XSS OK.
 		echo '</p></div>';
 	endif;
 	?>
@@ -44,7 +44,7 @@ if ( ! $this_hide_sidebar ) {
 	if ( has_category() && ! ( count( $categories ) === 1 && in_array( 1, $categories, true )) ) :
 		echo '<div class="pl-4 m-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-bookmark-o" aria-hidden="true"></i></p>';
-		echo '<span class="sr-only">' . esc_html_e( 'Posted in: ', 'positor' ) . '</span>' . positor_the_categories(); // WPCS: XSS OK.
+		echo '<span class="sr-only">' . esc_html_e( 'Category: ', 'positor' ) . '</span>' . positor_the_categories(); // WPCS: XSS OK.
 		echo '</p></div>';
 	endif;
 	?>
