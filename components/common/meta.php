@@ -33,7 +33,7 @@ if ( ! $this_hide_sidebar ) {
 	echo '<div class="pl-4 m-2"><p class="position-absolute left"><i class="fa fa-2x fa-fw fa-calendar" aria-hidden="true"></i></p>' . esc_html_e( 'Published: ', 'positor' ) . esc_html( get_the_date( '' ) );
 	// If updated date is different, show this as well.
 	if ( get_the_date( '' ) !== get_the_modified_date( '' ) ) {
-		echo esc_html_e( ', updated: ', 'positor' ) . get_the_modified_date( '' ); // WPCS: XSS OK.
+		echo esc_html( ', updated: ', 'positor' ) . get_the_modified_date( '' ); // WPCS: XSS OK.
 	}
 
 	echo '</small></p></div>';
