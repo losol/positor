@@ -1,5 +1,11 @@
 <?php
 /**
+ * Bootstrap menu builder
+ *
+ * @package positor
+ */
+
+/**
  * Class Name: Bootstrap_Nav_Walker
  * GitHub URI: https://github.com/dupkey/Bootstrap_Nav_Walker
  * Description: A custom WordPress nav walker class for Bootstrap 4 (v4.0.0-alpha.1) nav menus in a custom theme using the WordPress built in menu manager
@@ -8,21 +14,20 @@
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
-class Bootstrap_Nav_Walker extends Walker_Nav_Menu
-{
+class Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 	/**
-	* Starts the list before the elements are added.
-	*
-	* @see Walker::start_lvl()
-	*
-	* @since 3.0.0
-	*
-	* @param string $output Passed by reference. Used to append additional content.
-	* @param int    $depth  Depth of menu item. Used for padding.
-	* @param array  $args   An array of arguments. @see wp_nav_menu()
-	*/
+	 * Starts the list before the elements are added.
+	 *
+	 * @see Walker::start_lvl()
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   An array of arguments. @see wp_nav_menu().
+	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat("\t", $depth);
+		$indent = str_repeat( "\t", $depth );
 		$output .= "\n$indent<div class=\"dropdown-menu\">\n";
 	}
 	/**
