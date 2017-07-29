@@ -12,12 +12,22 @@
 ?>
 <?php get_header(); ?>
 
-		
-		<?php /* Grid with featured posts */
-		if ( is_home() && is_front_page() && ! is_paged() ) {
-			get_template_part( 'components/post/grid' );
-		}
-		?>
+<!-- Featured grid -->
+<div class="bg-featured-grid">
+	<div class="container">
+			<?php
+			/**
+			 * Grid with featured posts.
+			 * Show only if it is a non-paged front page
+			 */
+			if ( is_home() && is_front_page() && ! is_paged() ) {
+				get_template_part( 'components/frontpage/featured-grid' );
+			}
+?>
+		</div>
+	</div>
+</div>
+<!-- End of featured grid -->
 		<?php
 
 		if ( have_posts() ) :
