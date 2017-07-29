@@ -1,6 +1,6 @@
 # Positor
 
-**Contributors:** losvik, losol
+**Contributors:** losol, losvik
 **Requires at least:** 4.4.0
 **Stable tag:** 1.2.1
 **Version:** 1.2.1

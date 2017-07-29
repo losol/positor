@@ -117,12 +117,23 @@ function positor_the_custom_logo() {
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function positor_widgets_init() {
-	// Sidebar.
+	// Sidebar for most pages.
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'positor' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Sidebar widgets', 'positor' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s my-5">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s py-3">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+
+	// Sidebar for front page, categories and archive pages.
+	register_sidebar( array(
+		'name'          => esc_html__( 'Front page sidebar', 'positor' ),
+		'id'            => 'sidebar-frontpage',
+		'description'   => esc_html__( 'Widgets for sidebars on frontpage, category and archive pages', 'positor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s py-3">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',

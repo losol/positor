@@ -11,7 +11,7 @@
 
 ?>
 <?php get_header(); ?>
-<div class="container">
+
 		
 		<?php /* Grid with featured posts */
 		if ( is_home() && is_front_page() && ! is_paged() ) {
@@ -21,7 +21,7 @@
 		<?php
 
 		if ( have_posts() ) :
-
+			echo '<div class="container">';
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
@@ -34,6 +34,8 @@
 
 			endwhile;
 
+			echo '</div>';
+
 
 			// Post navigation for prev/next index page.
 			get_template_part( 'components/common/archive-navigation', get_post_format() );
@@ -45,7 +47,6 @@
 		endif; ?>
 		</main>
 		
-	</div>
 
 
 </div>
