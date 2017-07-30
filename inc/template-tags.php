@@ -159,6 +159,7 @@ if ( ! function_exists( 'positor_the_footer_bottom_text' ) ) :
 	 * Prints HTML with the categories, formatted as Bootstrap 4 badges.
 	 */
 	function positor_the_footer_bottom_text() {
+		echo 'he';
 		$bottom_line = get_theme_mod( 'positor_footer_bottom_text' );
 
 		if ( '' === $bottom_line ) {
