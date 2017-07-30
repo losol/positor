@@ -28,11 +28,20 @@
 	</div>
 </div>
 <!-- End of featured grid -->
+<div class="container">
+	<div class="row">
+<!-- Loop -->
 		<?php
 
 		if ( have_posts() ) :
+			// Check if there should be place for a sidebar
+			if ( is_active_sidebar( 'sidebar-frontpage' ) ) {
+				echo '<div class="col-md-8">'; 
+			} else {
+				echo '<div class="col">';
+			}
+
 			/* Start the Loop */
-			echo '<div class="container">';
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -45,6 +54,12 @@
 			endwhile;
 			echo '</div>';
 
+			// Show sidebar.
+			if ( is_active_sidebar( 'sidebar-frontpage' ) ) {
+				echo '<div class="col-md-4 py-5">';
+				dynamic_sidebar( 'sidebar-frontpage' );
+				echo '</div>';
+			}
 
 			// Post navigation for prev/next index page.
 			echo '<div class="container">';
@@ -54,11 +69,10 @@
 
 			get_template_part( 'components/post/content', 'none' );
 
-		endif; ?>
-		</main>
-		
-
-
+endif; ?>
+	</div>
 </div>
+<!-- End of Loop -->
+
 <?php
 get_footer();
