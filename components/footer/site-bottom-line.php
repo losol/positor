@@ -5,4 +5,5 @@
  * @package positor
  */
 
+echo '.';
 positor_the_footer_bottom_text();
