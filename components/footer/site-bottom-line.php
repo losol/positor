@@ -5,5 +5,9 @@
  * @package positor
  */
 
-echo '.';
-positor_the_footer_bottom_text();
+?>
+
+<p class="text-inverse text-muted text-center ">
+	<?php positor_the_footer_bottom_text(); ?>
+</p>
+
