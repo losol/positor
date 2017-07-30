@@ -8,7 +8,7 @@
  */
 
 ?>
-	<div class="entry-content py-5">		
+	<div class="entry-content">		
 			<?php
 			// The content without the teaser.
 			the_content( '', true );
