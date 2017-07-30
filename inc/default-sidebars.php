@@ -4,38 +4,25 @@
  *
  * @package Positor
  */
+
 add_action( 'widgets_init', 'positor_default_widgets' );
 
-function positor_default_widgets()
-{
-    // Register our own widget.
-    register_widget( 'T5_Demo_Widget' );
+/**
+ * Sets up default widgets in sidebars and footer.
+ */
+function positor_default_widgets() {
+	// Register our own widget.
+	register_widget( 'T5_Demo_Widget' );
 
-    // Register two sidebars.
-    $sidebars = array ( 'a' => 'top-widget', 'b' => 'bottom-widget' );
-    foreach ( $sidebars as $sidebar )
-    {
-        register_sidebar(
-            array (
-                'name'          => $sidebar,
-                'id'            => $sidebar,
-                'before_widget' => '',
-                'after_widget'  => ''
-            )
-        );
-    }
+	// We don't want to undo user changes, so we look for changes first.
+	$active_widgets = get_option( 'sidebars_widgets' );
 
-    // Okay, now the funny part.
-
-    // We don't want to undo user changes, so we look for changes first.
-    $active_widgets = get_option( 'sidebars_widgets' );
-
-    if ( ! empty ( $active_widgets[ $sidebars['a'] ] )
-        or ! empty ( $active_widgets[ $sidebars['b'] ] )
-    )
-    {   // Okay, no fun anymore. There is already some content.
-        return;
-    }
+	if ( ! empty( $active_widgets['footer-1'] )
+		|| ! empty( $active_widgets['footer-2'] )
+		|| ! empty( $active_widgets['footer-3'] )
+	) {
+		return;
+	}
 
     // The sidebars are empty, let's put something into them.
     // How about a RSS widget and two instances of our demo widget?
@@ -75,4 +62,32 @@ function positor_default_widgets()
 
     // Now save the $active_widgets array.
     update_option( 'sidebars_widgets', $active_widgets );
+}
+
+/**
+ * Super simple widget.
+ */
+class T5_Demo_Widget extends WP_Widget
+{
+    public function __construct()
+    {                      // id_base        ,  visible name
+        parent::__construct( 't5_demo_widget', 'T5 Demo Widget' );
+    }
+
+    public function widget( $args, $instance )
+    {
+        echo $args['before_widget'], wpautop( $instance['text'] ), $args['after_widget'];
+    }
+
+    public function form( $instance )
+    {
+        $text = isset ( $instance['text'] )
+            ? esc_textarea( $instance['text'] ) : '';
+        printf(
+            '<textarea class="widefat" rows="7" cols="20" id="%1$s" name="%2$s">%3$s</textarea>',
+            $this->get_field_id( 'text' ),
+            $this->get_field_name( 'text' ),
+            $text
+        );
+    }
 }

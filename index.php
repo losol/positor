@@ -31,8 +31,8 @@
 		<?php
 
 		if ( have_posts() ) :
-			echo '<div class="container">';
 			/* Start the Loop */
+			echo '<div class="container">';
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -43,13 +43,13 @@
 				get_template_part( 'components/post/content', get_post_format() );
 
 			endwhile;
-
 			echo '</div>';
 
 
 			// Post navigation for prev/next index page.
+			echo '<div class="container">';
 			get_template_part( 'components/common/archive-navigation', get_post_format() );
-
+			echo '</div>';
 		else :
 
 			get_template_part( 'components/post/content', 'none' );

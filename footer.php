@@ -45,6 +45,14 @@ endif;
 	</div>
 </div>
 
+<div class="bg-gray-dark py-2">
+	<div class="container">
+			<p class="text-inverse text-muted text-center ">
+				<?php get_template_part( 'components/footer/site', 'bottom-line' ); ?>
+			</p>
+	</div>
+</div>
+
 </footer>
 
 <?php wp_footer(); ?>

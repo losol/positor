@@ -27,25 +27,45 @@ function positor_customize_register( $wp_customize ) {
 	}
 
 	/**
-	* Adds admin settings
+	 * Sanitize strict html.
+	 *
+	 * @param string $input The html to sanitize.
+	 */
+	function positor_sanitize_strict_html( $input ) {
+		$allowed_html = array(
+			'a' => array(
+				'href' => array(),
+				'title' => array(),
+			),
+			'br' => array(),
+			'em' => array(),
+			'strong' => array(),
+		);
+
+		// Returns stripped html.
+		return wp_kses( $input, $allowed_html );
+	}
+
+	/**
+	* Adds footer settings
 	*/
-	$wp_customize->add_section( 'positor_admin_settings' , array(
-		'title'      => __( 'Admin settings', 'positor' ),
-		'priority'   => 300,
+	$wp_customize->add_section( 'positor_footer_settings' , array(
+		'title'      => __( 'Footer', 'positor' ),
+		'priority'   => 100,
 	) );
 
-	// Simplify editor styles?
-	$wp_customize->add_setting( 'positor_simplify_editor', array(
-		'default'           => false,
-		'sanitize_callback' => 'positor_sanitize_checkbox',
+	// Footer bottom text line.
+	$wp_customize->add_setting( 'positor_footer_bottom_text', array(
+		'default'           => '',
+		'sanitize_callback' => 'positor_sanitize_strict_html',
 	) );
 
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_simplify_editor', array(
-		'label'       => esc_html__( 'Show only common styles in editor', 'positor' ),
-		'description' => esc_html__( 'Check this to show fewer paragraph styles in the post editor', 'positor' ),
-		'section'     => 'positor_admin_settings',
-		'settings'    => 'positor_simplify_editor',
-		'type'        => 'checkbox',
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_footer_bottom_text', array(
+		'label'       => esc_html__( 'Text to show at the bottom line', 'positor' ),
+		'description' => esc_html__( 'Html tags allowed: <a>, <strong>', 'positor' ),
+		'section'     => 'positor_footer_settings',
+		'settings'    => 'positor_footer_bottom_text',
+		'type'        => 'textarea',
 		'priority'    => 10,
 	) ) );
 

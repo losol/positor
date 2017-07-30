@@ -154,6 +154,34 @@ if ( ! function_exists( 'positor_the_tags' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'positor_the_footer_bottom_text' ) ) :
+	/**
+	 * Prints HTML with the categories, formatted as Bootstrap 4 badges.
+	 */
+	function positor_the_footer_bottom_text() {
+		$bottom_line = get_theme_mod( 'positor_footer_bottom_text' );
+
+		if ( '' === $bottom_line ) {
+			$bottom_line = 'Copyright <a href="' . get_bloginfo( 'url' ) . '">' . get_bloginfo( '' ) . '</a>';
+			$bottom_line .= ' &nbsp;&nbsp;&#124;&nbsp;&nbsp; Design <a href="https://losol.io">losol.io</a>';
+		}
+
+		$allowed_html = array(
+			'a' => array(
+				'href' => array(),
+				'title' => array(),
+			),
+			'br' => array(),
+			'em' => array(),
+			'strong' => array(),
+		);
+
+		// Returns stripped html.
+		echo wp_kses( $bottom_line, $allowed_html ) ;
+	}
+endif;
+
+
 if ( ! function_exists( 'positor_the_comments' ) ) :
 	/**
 	 * Prints HTML with the categories, formatted as Bootstrap 4 badges.

@@ -17,11 +17,12 @@ if ( ! $this_hide_intro ) {
 	<?php
 	$this_featured_hero = get_post_meta( $post->ID, '_positor_featured_hero', true );
 	if ( $this_featured_hero ) {
-		echo '<div>';
+		echo '<div class="">';
 	} else {
 		echo '<div class="container py-3">';
 	}
-	?>
+?>
+
 		<?php
 		// Gets the featured video variable.
 		$this_video_url = get_post_meta( $post->ID, '_positor_featured_video_url', true );
@@ -53,7 +54,7 @@ if ( ! $this_hide_intro ) {
 		} // End if().
 		?>
 		</div>
-		<div class="container">
+		<div class="container py-3">
 
 		<?php // Show the title.
 			the_title( '<h1>', '</h1>' );
