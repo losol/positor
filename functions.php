@@ -111,7 +111,7 @@ function positor_widgets_init() {
 
 	// Sidebar for front page, categories and archive pages.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Front page sidebar', 'positor' ),
+		'name'          => esc_html__( 'Sidebar on frontpage', 'positor' ),
 		'id'            => 'sidebar-frontpage',
 		'description'   => esc_html__( 'Widgets for sidebars on frontpage, category and archive pages', 'positor' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s py-3">',
