@@ -226,6 +226,11 @@ require get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
 require get_template_directory() . '/inc/class-bootstrap-comment-walker.php';
 
 /**
+ * Add Bootstrap 4 page menu walker
+ */
+require get_template_directory() . '/inc/class-bootstrap-page-walker.php';
+
+/**
  * Add WooCommerce support
  */
 require get_template_directory() . '/inc/woocommerce.php';

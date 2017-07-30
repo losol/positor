@@ -204,47 +204,25 @@ class Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 	}
 
 	/**
-		* Menu Fallback
-		* =============
-		* If this function is assigned to the wp_nav_menu's fallback_cb variable
-		* and a menu has not been assigned to the theme location in the WordPress
-		* menu manager the function with display nothing to a non-logged in user,
-		* and will add a link to the WordPress menu manager if logged in as an admin.
-		*
-		* This part of the code is from the code made by
-			* Author: Edward McIntyre - @twittem, WP Bootstrap
-			* Version: 2.0.5
-			* Author URI: https://github.com/wp-bootstrap
-			* GitHub Plugin URI: https://github.com/wp-bootstrap/wp-bootstrap-navwalker
-		* @param array $args passed from the wp_nav_menu function.
-		*/
-		public static function fallback( $args ) {
-			if ( current_user_can( 'edit_theme_options' ) ) {
-				/* Get Arguments. */
-				$container = $args['container'];
-				$container_id = $args['container_id'];
-				$container_class = $args['container_class'];
-				$menu_class = $args['menu_class'];
-				$menu_id = $args['menu_id'];
-				if ( $container ) {
-					echo '<' . esc_attr( $container );
-					if ( $container_id ) {
-						echo ' id="' . esc_attr( $container_id ) . '"';
-					}
-					if ( $container_class ) {
-						echo ' class="btn btn-success' . sanitize_html_class( $container_class ) . '"'; }
-					echo '>';
-				}
-				echo '<ul';
-				if ( $menu_id ) {
-					echo ' id="' . esc_attr( $menu_id ) . '"'; }
-				if ( $menu_class ) {
-					echo ' class="navbar-nav mr-auto' . esc_attr( $menu_class ) . '"'; }
-				echo '>';
-				echo '<li class="btn btn-warning nav-item"><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', '' ) . '</a></li>';
-				echo '</ul>';
-				if ( $container ) {
-					echo '</' . esc_attr( $container ) . '>'; }
-			}
-		}
+	 * Menu Fallback
+	 * If this function is assigned to the wp_nav_menu's fallback_cb variable
+	 * and a menu has not been assigned to the theme location in the WordPress
+	 * menu manager the function with display nothing to a non-logged in user,
+	 * and will add a link to the WordPress menu manager if logged in as an admin.
+	 *
+	 * @param array $args passed from the wp_nav_menu function.
+	 */
+	public static function fallback( $args ) {		
+		$fallback_args = array(
+		'menu'            => $args['menu'],
+		'theme_location'  => $args['theme_location'],
+		'before' 		  => '<ul class="navbar-nav">',
+		'container'       => 'div',
+		'menu_id'         => $args['container_id'],
+		'menu_class'      => 'collapse navbar-collapse',
+		'depth'           => 2,
+		'walker'          => new Bootstrap_Page_Walker(),
+		);
+		wp_page_menu( $fallback_args );
+	}
 }

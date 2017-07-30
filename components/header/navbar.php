@@ -17,7 +17,7 @@ if ( ! ( $this_hide_navbar && is_single() ) ) { ?>
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
 	</div>
 
-	<button class="btn btn-link d-flex align-middle nav-item pull-left text-white text-uppercase hidden-md-up" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="btn btn-link d-flex align-middle nav-item pull-left text-white text-uppercase hidden-md-up" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
 		<i class="fa fa-fw fa-1_2x fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 	</button>
 
@@ -28,18 +28,21 @@ if ( ! ( $this_hide_navbar && is_single() ) ) { ?>
 	
 <a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 	<?php
+
 	wp_nav_menu( array(
 		'menu'            => 'top',
 		'theme_location'  => 'menu-1',
 		'container'       => 'div',
-		'container_id'    => 'bs4navbar',
+		'container_id'    => 'navbar-menu',
 		'container_class' => 'collapse navbar-collapse',
 		'menu_id'         => 'top_menu',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'depth'           => 2,
 		'walker'          => new Bootstrap_Nav_Walker(),
 		'fallback_cb'     => 'Bootstrap_Nav_Walker::fallback',
-	));
+		)
+	);
+
 	?>
 
  </nav>

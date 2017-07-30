@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="row no-gutters">
+<div class="row grid no-gutters">
 	<?php
 
 		/**
