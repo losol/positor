@@ -85,12 +85,13 @@ Edits based on user feedback from @joyously on wordpress.org
 
 = 1.2.1 - 2017-07-28 =
 * Some CSS and spacing issues fixed. 
-* Added title to page
+* Added title to pages.
 
 = 1.2.2 - 2017-07-30 =
 * Added bottom line text. 
 * Added extra widget area for side bar front page.
 * Fallback to page menu if no menu assigned to navbar.
+* Fallback to sticky posts on featured grid. 
 
 Removed
 * The function "Simplify editor" was removed. Will be introduced in "Ratio. Site Control" plugin.
