@@ -162,8 +162,8 @@ if ( ! function_exists( 'positor_the_footer_bottom_text' ) ) :
 		$bottom_line = get_theme_mod( 'positor_footer_bottom_text' );
 
 		if ( '' === $bottom_line ) {
-			$bottom_line = 'Copyright <a href="' . get_bloginfo( 'url' ) . '">' . get_bloginfo( '' ) . '</a>';
-			$bottom_line .= ' &nbsp;&nbsp;&#124;&nbsp;&nbsp; Design <a href="https://losol.io">losol.io</a>';
+			$bottom_line = 'Copyright <a href="' . esc_url( home_url() ) . '">' . get_bloginfo( 'name' ) . '</a>';
+			$bottom_line .= ' &nbsp;&nbsp;&#124;&nbsp;&nbsp; Design <a href="https://losol.io/projects/positor/">losol.io</a>';
 		}
 
 		$allowed_html = array(
