@@ -177,7 +177,7 @@ if ( ! function_exists( 'positor_the_footer_bottom_text' ) ) :
 		);
 
 		// Returns stripped html.
-		echo wp_kses( $bottom_line, $allowed_html ) ;
+		echo wp_kses( $bottom_line, $allowed_html );
 	}
 endif;
 
