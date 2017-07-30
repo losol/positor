@@ -159,10 +159,10 @@ if ( ! function_exists( 'positor_the_footer_bottom_text' ) ) :
 	 * Prints HTML with the categories, formatted as Bootstrap 4 badges.
 	 */
 	function positor_the_footer_bottom_text() {
-		echo 'he';
+
 		$bottom_line = get_theme_mod( 'positor_footer_bottom_text' );
 
-		if ( '' === $bottom_line ) {
+		if ( empty( $bottom_line ) ) {
 			$bottom_line = 'Copyright <a href="' . esc_url( home_url() ) . '">' . get_bloginfo( 'name' ) . '</a>';
 			$bottom_line .= ' &nbsp;&nbsp;&#124;&nbsp;&nbsp; Design <a href="https://losol.io/projects/positor/">losol.io</a>';
 		}
