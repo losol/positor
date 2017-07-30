@@ -29,12 +29,24 @@
 					),
 			);
 
+		// If no posts found, take the stickies 6. 
+		$fallback_args = array(
+			'posts_per_page' => '6',
+			'orderby' => 'modified',
+			'order' => 'desc',
+			'post__in'   => get_option( 'sticky_posts' ),
+			);
+
 		// The Query.
 		$query = new WP_Query( $args );
 
 		// Sets counter, and start the post loop.
 		$count = (int) 0;
 		$posts_count = $query -> post_count;
+
+		if ( 0 === $posts_count ) {
+			$query = new WP_Query( $fallback_args );
+		}
 
 		$level_2_css_class = 'col-md-3';
 		if ( 3 === $posts_count ) {
@@ -52,7 +64,7 @@
 				$query->the_post();
 				$count++;
 				if ( 1 === $count ) {
-					echo '<div class="grid-item level-1 col-md-9">';
+					echo '<div class="grid-item level-1 col-md-9 d-flex">';
 					get_template_part( 'components/card/card-standard' );
 					echo '</div>';
 				}
