@@ -4,6 +4,7 @@
 2. Enable your repository to Travis. 
 3. Add a Travis file to your repository. https://github.com/WordPress/twentyseventeen/blob/master/.travis.yml. Add this to your themes root folder. 
 4. In .travis.yml change the PHP Codesniffer version to 2.9.1 by editing to: https://github.com/squizlabs/PHP_CodeSniffer/archive/2.9.1.tar.gz
+5. Add .jscsrc and .jshintignore, sample files in Twenty Seventeen. 
 4. Push to update the repository. Travis will only run builds after it is enabled. 
 
 2. Add a ruleset for automatic sniffing: https://github.com/WordPress/twentyseventeen/blob/master/codesniffer.ruleset.xml 
