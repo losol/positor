@@ -25,20 +25,25 @@ while ( have_posts() ) : the_post(); ?>
 
 		$this_hide_footer = (bool) get_post_meta( $post->ID, '_positor_hide_footer_section', true );
 		if ( ! $this_hide_footer ) {
-			get_template_part( 'components/common/related-posts', get_post_format() );
+			// Multipage post pagination.
+			wp_link_pages();
+
+			// Comments.
+			get_template_part( 'components/common/comments' );
+
+			// Social sharing.
 			get_template_part( 'components/common/social-sharing', get_post_format() );
 
 			// Social sharing.
 			get_template_part( 'components/social/sharebuttons' );
 
+			// Related posts.
+			get_template_part( 'components/common/related-posts', get_post_format() );
+
 			// Post navigation for prev/next posts.
 			get_template_part( 'components/common/post-navigation', get_post_format() );
 
-			// Comments.
-			get_template_part( 'components/common/comments' );
 
-			// Multipage post pagination.
-			wp_link_pages();
 		}
 ?>
 
