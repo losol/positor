@@ -28,14 +28,14 @@ while ( have_posts() ) : the_post(); ?>
 			// Multipage post pagination.
 			wp_link_pages();
 
+			// Social sharing.
+			get_template_part( 'components/social/sharebuttons' );
+
 			// Comments.
 			get_template_part( 'components/common/comments' );
 
 			// Social sharing.
 			get_template_part( 'components/common/social-sharing', get_post_format() );
-
-			// Social sharing.
-			get_template_part( 'components/social/sharebuttons' );
 
 			// Related posts.
 			get_template_part( 'components/common/related-posts', get_post_format() );

@@ -171,6 +171,18 @@ function positor_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'positor_scripts' );
 
+/** 
+ * Disable automatic adding of Jetpack related posts.
+ */
+function positor_jetpackme_remove_rp() {
+    if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+        $jprp = Jetpack_RelatedPosts::init();
+        $callback = array( $jprp, 'filter_add_target_to_dom' );
+        remove_filter( 'the_content', $callback, 40 );
+    }
+}
+add_filter( 'wp', 'positor_jetpackme_remove_rp', 20 );
+
 /**
  * Custom template tags for this theme.
  */
