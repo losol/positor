@@ -26,7 +26,7 @@ if ( ! $hide_navbar ) { ?>
 
 	<div id="site-branding" class="d-none d-md-block text-light justify-content-md-center">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
-			<?php positor_the_custom_logo(); ?></a>
+			<?php positor_the_custom_logo(); ?>
 			<span id="navbar-site-title"><?php bloginfo( 'name' ); ?></span>
 		</a>
 	</div>
