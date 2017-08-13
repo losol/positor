@@ -95,3 +95,6 @@ Edits based on user feedback from @joyously on wordpress.org
 
 Removed
 * The function "Simplify editor" was removed. Will be introduced in "Ratio. Site Control" plugin.
+
+= 1.3.0 - 2017-08-13 =
+* Upgraded to Bootstrap 4 beta 1

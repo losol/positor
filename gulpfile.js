@@ -139,24 +139,23 @@ gulp.task('make:css', function () {
 // gulp make:js - Uglifies and concat all JS files into one
 gulp.task('make:js', function () {
     gulp.src([
-        paths.libSrc + 'tether/dist/js/tether.min.js',
-        //paths.libSrc + 'jquery/dist/jquery.min.js',
+        paths.libSrc + 'jquery/dist/jquery.min.js',
+        paths.libSrc + 'popper.js/dist/popper.min.js',
         paths.libSrc + 'bootstrap/dist/js/bootstrap.min.js',
-        paths.libSrc + 'moment/moment.js',
+        paths.libSrc + 'moment/min/moment.min.js',
         paths.libSrc + 'moment/locale/nb.js',
         paths.jsSrc + 'skip-link-focus-fix.js',
         paths.jsSrc + 'comment-reply.min.js',
         paths.jsSrc + 'wp-embed.min.js'
 
-
     ])
         .pipe(concat('positor.min.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(paths.jsDest));
 
     gulp.src([
-        paths.libSrc + 'tether/dist/js/tether.js',
         paths.libSrc + 'jquery/dist/jquery.js',
+        paths.libSrc + 'popper.js/dist/umd/popper.js',
         paths.libSrc + 'bootstrap/dist/js/bootstrap.js',
         paths.libSrc + 'moment/moment.js',
         paths.libSrc + 'moment/locale/nb.js',

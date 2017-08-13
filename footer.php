@@ -9,10 +9,10 @@
 
 ?>
 
-<footer class="footer hidden-print">
+<footer class="footer d-print-none">
 <?php
 if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) :
-	echo '<div class="bg-gray-light mt-5 py-3"><div class="container"><div class="row">';
+	echo '<div class="bg-gray-300 mt-5 py-3"><div class="container"><div class="row">';
 	if ( is_active_sidebar( 'footer-1' ) ) :
 		echo '<div class="col-md-4 align-self-start">';
 		dynamic_sidebar( 'footer-1' );
@@ -32,20 +32,20 @@ if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_ac
 endif;
 ?>
 
-<div class="bg-gray-dark py-2">
+<div class="bg-gray-900 text-light py-2">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 text-inverse">
+			<div class="col-md-8 text-light">
 				<?php get_template_part( 'components/footer/site', 'info' ); ?>
 			</div>
-			<div class="col-md-4 text-inverse text-right">
+			<div class="col-md-4 text-light text-right">
 				<?php get_template_part( 'components/footer/site', 'social-links' ); ?>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="bg-gray-dark py-2">
+<div class="bg-gray-900 text-light py-2">
 	<div class="container">
 		<?php get_template_part( 'components/footer/site', 'bottom-line' ); ?>
 	</div>

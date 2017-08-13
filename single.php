@@ -52,7 +52,7 @@ while ( have_posts() ) : the_post(); ?>
 	<?php
 	$this_hide_sidebar = (bool) get_post_meta( $post->ID, '_positor_hide_sidebar', true );
 	if ( ! $this_hide_sidebar ) { ?>
-	<div class="col-md-3 offset-md-1 hidden-print">
+	<div class="col-md-3 offset-md-1 d-print-none">
 		<aside id="secondary" role="complementary">
 			<?php
 				get_template_part( 'components/common/meta', get_post_format() );

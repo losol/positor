@@ -16,21 +16,24 @@ if ( is_single() || is_page() ) {
 
 if ( ! $hide_navbar ) { ?>
 
-<nav id="site-navigation" class="navbar navbar-toggleable-sm navbar-inverse bg-primary link-no-decoration">
-	<div class="hidden-sm-down">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
+<nav id="site-navigation" class="navbar navbar-dark bg-dark link-no-decoration">
+	<div id="site-branding" class="d-none d-md-block text-light">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
+			<?php positor_the_custom_logo(); ?></a>
+			<span id="navbar-site-title"><?php bloginfo( 'name' ); ?></span>
+		</a>
+	</div>
+	<div class="navbar-nav mr-auto mx-3">
+	<button class="btn btn-link pull-left text-light text-uppercase font-weight-200" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+		<i class="fa fa-fw fa-1_2x fa-bars " aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
+	</button>
 	</div>
 
-	<button class="btn btn-link d-flex align-middle nav-item pull-left text-white text-uppercase hidden-md-up" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-		<i class="fa fa-fw fa-1_2x fa-bars" aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
-	</button>
-
-	<button class="btn btn-link nav-item pull-right navbar-toggler-right text-uppercase text-white text-nowrap" type="button" data-toggle="collapse" data-target="#searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="btn btn-link pull-right text-uppercase text-light" type="button" data-toggle="collapse" data-target="#navbar-searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
 		<i class="fa fa-fw fa-1_2x fa-search" aria-hidden="true"></i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
 	</button>
 
 	
-<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 	<?php
 
 	wp_nav_menu( array(
@@ -50,8 +53,8 @@ if ( ! $hide_navbar ) { ?>
 	?>
 
  </nav>
-<div id="searchform" class="container-fluid collapse">
-	<div class="row bg-gray-800">
+<div id="navbar-searchform" class="container-fluid collapse">
+	<div class="row bg-dark">
 		<div class="container p-4 w-100">
 		<form role="search" method="get" class="form search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<div class="input-group">

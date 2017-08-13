@@ -1,4 +1,6 @@
 // Extra scss
+
+// Background colors
 .bg {
     &-white { background-color: $white; }
     &-black { background-color: $black; }
@@ -9,11 +11,7 @@
     &-teal { background-color: $teal; }
     &-pink { background-color: $pink; }
     &-purple { background-color: $purple; }
-    &-gray-dark { background-color: $gray-dark; }
     &-gray { background-color: $gray; }
-    &-gray-light { background-color: $gray-light; }
-    &-gray-lighter { background-color: $gray-lighter; }
-    &-gray-lightest { background-color: $gray-lightest; }
 }
 
 .bg-gray{
@@ -26,8 +24,19 @@
     &-600 { background-color: #757575; }
     &-700 { background-color: #616161; }
     &-800 { background-color: #424242; }
-    &-900 { background-color: #212121; }
-    &-950 { background-color: #121212; }
+    &-900 { background-color: #121212; }
+}
+
+.font-weight{
+    &-100 { font-weight: 100; }
+    &-200 { font-weight: 200; }
+    &-300 { font-weight: 300; }
+    &-400 { font-weight: 400; }
+    &-500 { font-weight: 500; }
+    &-600 { font-weight: 600; }
+    &-700 { font-weight: 700; }
+    &-800 { font-weight: 800; }
+    &-900 { font-weight: 900; }
 }
 
 .text {
@@ -40,9 +49,5 @@
     &-teal { color: $teal; }
     &-pink { color: $pink; }
     &-purple { color: $purple; }
-    &-gray-dark { color: $gray-dark; }
     &-gray { color: $gray; }
-    &-gray-light { color: $gray-light; }
-    &-gray-lighter { color: $gray-lighter; }
-    &-gray-lightest { color: $gray-lightest; }
 }

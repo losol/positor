@@ -1,18 +1,18 @@
 /* Some extra straight forward css here? */
 
-.navbar {
-    font-weight: 200;
+/* HEADER */
+#navbar-site-title{
+    font-weight: 100;
 }
 
-.navbar button {
-    font-weight: 200;
-}
-
-.navitem {
-    font-weight: 200;
-}
+/* FRONT PAGE */
 /* Top stories
 */
+
+h1, h2, h3 {
+    word-break: normal;
+    hyphens: auto;
+}
 
 .level-2 h3 {
     font-size:1.7rem;
@@ -64,11 +64,8 @@ h1, h2 {
 .font-weight-normal b, .font-weight-normal strong {
     font-weight: normal!important;
 }
-#top_menu {
-    flex-wrap: wrap;
-}
 
-h1 {
+h1,h2 {
     word-break: break-word;
 }
 
@@ -216,11 +213,6 @@ background: rgba(44, 44, 44, 0.4);
     text-shadow: 1px 1px 0 #fff;
 }
 
-
-/* button hack to get green success buttons */
-.btn {
-    -webkit-appearance: inherit;
-    }
     
 /* Some links should not have any decoration */
 h1 a, h2 a, h3 a, h4 a {
@@ -248,10 +240,6 @@ ul.breadcrumb {
 
 .breadcrumb > li + li::before {
     content: ">";
-}
-
-.post-navigation a{
-  white-space: normal;
 }
 
 .white-space-normal {

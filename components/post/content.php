@@ -22,7 +22,7 @@
 		</div>
 		<div class="bg-white p-3">
 	<?php endif; ?>
-	<div class="card-block">
+	<div class="card-body">
 		
 
 			<h2 class="pt-3 display-3">

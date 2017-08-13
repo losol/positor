@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="row grid no-gutters">
+<div class="row grid no-gutters py-2">
 	<?php
 
 		/**
@@ -29,7 +29,7 @@
 					),
 			);
 
-		// If no posts found, take the stickies 6. 
+		// If no posts found, take the stickies 6.
 		$fallback_args = array(
 			'posts_per_page' => '6',
 			'orderby' => 'modified',
