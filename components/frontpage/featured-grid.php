@@ -64,17 +64,17 @@
 				$query->the_post();
 				$count++;
 				if ( 1 === $count ) {
-					echo '<div class="grid-item level-1 col-md-9 d-flex">';
+					echo '<div class="grid-item level-1 col-md-9 d-flex p-1">';
 					get_template_part( 'components/card/card-standard' );
 					echo '</div>';
 				}
 				if ( 2 === $count ) {
-					echo '<div class="grid-item level-2 col-md-3 d-flex">';
+					echo '<div class="grid-item level-2 col-md-3 d-flex p-1">';
 					get_template_part( 'components/card/card-standard' );
 					echo '</div>';
 				}
 				if ( $count > 2 ) {
-					echo '<div class="grid-item level-2 d-flex ' . esc_html( $level_2_css_class ) . '">';
+					echo '<div class="grid-item level-2 d-flex p-1 ' . esc_html( $level_2_css_class ) . '">';
 					get_template_part( 'components/card/card-standard' );
 					echo '</div>';
 				}
