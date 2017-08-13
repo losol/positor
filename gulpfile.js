@@ -1,6 +1,7 @@
 "use strict";
 // Project configuration
 var project 	    = 'positor', // Project name, used for build zip.
+    version         = '1.3.0', // Version for stylesheets and scripts
 	url 		    = 'local.wordpress.dev', // Local Development URL for BrowserSync. Change as-needed.
 	build 		    = './temp/buildtheme/', // Files that you want to package into a zip go here
 	buildInclude    = [
