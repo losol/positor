@@ -164,7 +164,7 @@ if ( ! function_exists( 'positor_the_footer_bottom_text' ) ) :
 
 		if ( empty( $bottom_line ) ) {
 			$bottom_line = 'Copyright <a href="' . esc_url( home_url() ) . '">' . get_bloginfo( 'name' ) . '</a>';
-			$bottom_line .= ' &nbsp;&nbsp;&#124;&nbsp;&nbsp; Design <a href="https://losol.io/projects/positor/">losol.io</a>';
+			$bottom_line .= ' &nbsp;&nbsp;&#124;&nbsp;&nbsp; Design <a href="https://losol.no/">losol.no</a>';
 		}
 
 		$allowed_html = array(
