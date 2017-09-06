@@ -20,7 +20,13 @@ if ( ! $hide_navbar ) { ?>
 <nav id="site-navigation" class="navbar navbar-expand-sm navbar-inverse bg-primary link-no-decoration">
 
 	<div class="container">
-	<?php positor_the_custom_logo(); ?>
+	<?php 
+	if ( ! isempy( positor_the_custom_logo() ) {
+		echo "logo";
+	} else {
+		echo "no logo";
+	}
+	}  ?>
 	<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
 
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
