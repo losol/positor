@@ -21,12 +21,12 @@ if ( ! $hide_navbar ) { ?>
 
 	<div class="container">
 	<?php 
-	if ( ! isempy( positor_the_custom_logo() ) {
+	if ( ! isempty( positor_the_custom_logo() ) ) {
 		echo "logo";
 	} else {
 		echo "no logo";
 	}
-	}  ?>
+	?>
 	<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
 
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
