@@ -21,12 +21,12 @@ if ( ! $hide_navbar ) { ?>
 
 	<?php 
 	if ( ! isempty( positor_the_custom_logo() ) ) {
-		echo "logo";
+		// echo "logo";
 	} else {
-		echo "no logo";
+		echo "<a id='site-title class='navbar-brand px-1 hidden-sm-down site-title' href='" . esc_url( home_url( '/' ) ) . '></a>';
 	}
 	?>
-	<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
+	
 
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
 	</div>
