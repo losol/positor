@@ -16,8 +16,12 @@ if ( is_single() || is_page() ) {
 
 if ( ! $hide_navbar ) { ?>
 
+
 <nav id="site-navigation" class="navbar navbar-expand-sm navbar-inverse bg-primary link-no-decoration">
-	<div class="hidden-sm-down">
+
+	<div class="container">
+	<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
+
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="pull-xs-left"><?php positor_the_custom_logo(); ?></a>
 	</div>
 
@@ -30,7 +34,6 @@ if ( ! $hide_navbar ) { ?>
 	</button>
 
 	
-<a id="site-title" class="navbar-brand px-1 hidden-sm-down site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 	<?php
 
 	wp_nav_menu( array(
