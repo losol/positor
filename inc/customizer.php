@@ -47,11 +47,28 @@ function positor_customize_register( $wp_customize ) {
 	}
 
 	/**
+	* Adds header settings
+	*/
+	$wp_customize->add_section( 'positor_header_settings' , array(
+		'title'      => __( 'Header', 'positor' ),
+		'priority'   => 100,
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_header_large_on_front', array(
+		'label'       => esc_html__( 'Large header on frontpage?', 'positor' ),
+		'description' => esc_html__( 'Remember to add a large logo.' ),
+		'section'     => 'positor_header_settings',
+		'settings'    => 'positor_header_large_on_front',
+		'type'        => 'checkbox',
+		'priority'    => 10,
+	) ) );
+
+	/**
 	* Adds footer settings
 	*/
 	$wp_customize->add_section( 'positor_footer_settings' , array(
 		'title'      => __( 'Footer', 'positor' ),
-		'priority'   => 100,
+		'priority'   => 101,
 	) );
 
 	// Footer bottom text line.

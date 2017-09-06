@@ -23,5 +23,17 @@
 	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'positor' ); ?></a>
 
 	<header id="header" class="site-header d-print-none">
-		<?php get_template_part( 'components/header/navbar' ); ?> 
+
+	<?php
+	/**
+	 * Choose large or compact header.
+	 * Shows large header on front page if enabled.
+	 */
+	if ( is_home() && is_front_page() ) {
+		get_template_part( 'components/header/navbar-large' );
+	} else {
+		get_template_part( 'components/header/navbar' );
+	}
+	?>
+	
 	</header>
