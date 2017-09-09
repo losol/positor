@@ -16,7 +16,7 @@ if ( is_single() || is_page() ) {
 
 if ( ! $hide_navbar ) { ?>
 
-<nav id="site-navigation" class="navbar navbar-dark bg-dark link-no-decoration">
+<nav id="site-navigation" class="header-compact navbar navbar-dark bg-dark link-no-decoration">
 
 	<div class="navbar-nav">
 	<button class="btn btn-link pull-left text-light text-uppercase font-weight-200" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">

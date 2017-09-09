@@ -15,7 +15,7 @@ if ( is_single() || is_page() ) {
 }
 
 if ( ! $hide_navbar ) { ?>
-<div class="bg-dark bg-inverse">
+<div class="header-large bg-dark bg-inverse">
 	<div class="container">
 		<div class="row py-2">
 			<div class="col-12 text-inverse">
