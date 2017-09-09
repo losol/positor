@@ -18,7 +18,7 @@ if ( ! $hide_navbar ) { ?>
 <div class="header-large bg-dark bg-navbar bg-inverse">
 	<div class="container">
 		<div class="row py-2">
-			<div class="col-12 text-inverse">
+			<div class="col-12 text-inverse text-center">
 				<?php
 					positor_the_custom_logo();
 				?>
