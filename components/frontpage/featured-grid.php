@@ -17,7 +17,7 @@
 		 * @link https://codex.wordpress.org/Class_Reference/WP_Query
 		 */
 		$args = array(
-			'posts_per_page' => '6',
+			'posts_per_page' => '5',
 			'orderby' => 'modified',
 			'order' => 'desc',
 			'post__not_in'   => get_option( 'sticky_posts' ),
@@ -31,7 +31,7 @@
 
 		// If no posts found, take the stickies 6.
 		$fallback_args = array(
-			'posts_per_page' => '6',
+			'posts_per_page' => '5',
 			'orderby' => 'modified',
 			'order' => 'desc',
 			'post__in'   => get_option( 'sticky_posts' ),
