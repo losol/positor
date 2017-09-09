@@ -21,7 +21,7 @@ if ( ! function_exists( 'positor_the_custom_logo' ) ) :
 		$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		if ( has_custom_logo() ) {
 			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
-				echo '<img src="' . esc_url( $logo[0] ) . '" alt="Logo ' . $blog_title . '">';
+				echo '<img src="' . esc_url( $logo[0] ) . '" alt="Logo ' . $blog_title . '" class="large-logo">';
 				echo '</a>';
 		} else {
 			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
