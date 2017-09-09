@@ -10,6 +10,48 @@
 ?>
 <?php
 
+
+if ( ! function_exists( 'positor_the_custom_logo' ) ) :
+	/**
+	 * Return the custom Logo, or the blogname if no logo is found.
+	 */
+		function positor_the_custom_logo() {
+		$blog_title = get_bloginfo( 'name' );
+		$custom_logo_id = get_theme_mod( 'custom_logo' );
+		$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+		if ( has_custom_logo() ) {
+			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
+				echo '<img src="' . esc_url( $logo[0] ) . '" alt="Logo ' . $blog_title . '">';
+				echo '</a>';
+		} else {
+			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
+			echo '<h1 class="display-1">' . $blog_title . '</h1>';
+			echo '</a>';
+		}
+	}
+endif;
+
+if ( ! function_exists( 'positor_the_small_custom_logo' ) ) :
+	/**
+	 * Return the custom Logo, or the blogname if no logo is found.
+	 */
+		function positor_the_small_custom_logo() {
+		$blog_title = get_bloginfo( 'name' );
+		$custom_logo_id = get_theme_mod( 'custom_logo' );
+		$logo = wp_get_attachment_image_src( $custom_logo_id , 'small' );
+		if ( has_custom_logo() ) {
+			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
+				echo '<img src="' . esc_url( $logo[0] ) . '" alt="Logo ' . $blog_title . '" class="d-inline-block align-top" width="150">';
+				echo '</a>';
+		} else {
+			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
+			echo '<span id="navbar-site-title"> $blog_title </span>';
+			echo '</a>';
+		}
+	}
+endif;
+
+
 if ( ! function_exists( 'the_post_thumbnail_caption' ) ) :
 	/**
 	 * Gets the post thumbnail caption.
@@ -238,7 +280,6 @@ function positor_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
-	// Like, beat it. Dig?
 	delete_transient( 'positor_categories' );
 }
 add_action( 'edit_category', 'positor_category_transient_flusher' );

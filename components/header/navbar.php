@@ -25,10 +25,7 @@ if ( ! $hide_navbar ) { ?>
 	</div>
 
 	<div id="site-branding" class="d-none d-md-block text-light justify-content-md-center">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
-			<?php positor_the_custom_logo(); ?>
-			<span id="navbar-site-title"><?php bloginfo( 'name' ); ?></span>
-		</a>
+			<?php positor_the_small_custom_logo(); ?>
 	</div>
 
 	<button class="btn btn-link pull-right text-uppercase text-light" type="button" data-toggle="collapse" data-target="#navbar-searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">

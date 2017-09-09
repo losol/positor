@@ -29,7 +29,7 @@
 	 * Choose large or compact header.
 	 * Shows large header on front page if enabled.
 	 */
-	if ( is_home() && is_front_page() ) {
+	if ( is_home() && is_front_page() && get_theme_mod( 'positor_header_large_on_front' )) {
 		get_template_part( 'components/header/navbar-large' );
 	} else {
 		get_template_part( 'components/header/navbar' );

@@ -38,8 +38,8 @@ if ( ! function_exists( 'positor_setup' ) ) {
 
 		// Declares support for custom logo.
 		add_theme_support( 'custom-logo', array(
-			'height'      => 100,
-			'width'       => 400,
+			'height'      => 300,
+			'width'       => 1200,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -79,18 +79,7 @@ function positor_content_width() {
 }
 add_action( 'after_setup_theme', 'positor_content_width', 0 );
 
-/**
- * Return early if Custom Logos are not available.
- *
- * @todo Remove after WP 4.7
- */
-function positor_the_custom_logo() {
-	if ( ! function_exists( 'the_custom_logo' ) ) {
-		return;
-	} else {
-		the_custom_logo();
-	}
-}
+
 
 /**
  * Registers widget area.

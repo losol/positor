@@ -54,6 +54,11 @@ function positor_customize_register( $wp_customize ) {
 		'priority'   => 100,
 	) );
 
+	$wp_customize->add_setting( 'positor_header_large_on_front', array(
+		'default'           => '',
+		'sanitize_callback' => 'positor_sanitize_checkbox',
+	) );
+
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'positor_header_large_on_front', array(
 		'label'       => esc_html__( 'Large header on frontpage?', 'positor' ),
 		'description' => esc_html__( 'Remember to add a large logo.' ),
