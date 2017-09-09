@@ -43,7 +43,7 @@
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
-				echo '<div class="py-1">';
+				echo '<div class="py-3">';
 				get_template_part( 'components/card/card-standard', get_post_format() );
 				echo '</div>';
 			endwhile;
