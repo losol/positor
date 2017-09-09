@@ -41,10 +41,16 @@
 		$query = new WP_Query( $args );
 
 
+		// Sets counter, and start the post loop.
+		$count = (int) 0;
+		$posts_count = $query -> post_count;
 
 		if ( 0 === $posts_count ) {
 			$query = new WP_Query( $fallback_args );
 		}
+
+
+		$posts_count = $query -> post_count;
 
 		// Sets counter, and start the post loop.
 		$count = (int) 0;
