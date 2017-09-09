@@ -15,7 +15,7 @@ if ( is_single() || is_page() ) {
 }
 
 if ( ! $hide_navbar ) { ?>
-<div class="header-large bg-dark bg-inverse">
+<div class="header-large bg-dark bg-navbar bg-inverse">
 	<div class="container">
 		<div class="row py-2">
 			<div class="col-12 text-inverse">
@@ -27,7 +27,7 @@ if ( ! $hide_navbar ) { ?>
 		<div class="row">
 			<div class="col-12">
 			
-			<nav id="site-navigation" class="navbar navbar-expand-lg bg-dark bg-navbar navbar-dark link-no-decoration">			
+			<nav id="site-navigation" class="navbar navbar-expand-lg navbar-dark link-no-decoration">			
 				<button class="d-lg-none btn btn-link pull-left text-light text-uppercase font-weight-200" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="fa fa-fw fa-1_2x fa-bars " aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 				</button>
