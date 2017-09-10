@@ -42,7 +42,7 @@ if ( ! $hide_navbar ) { ?>
 						'container_id'    => 'navbar-menu',
 						'container_class' => 'navbar-collapse collapse text-light',
 						'menu_id'         => 'top_menu',
-						'menu_class'      => 'navbar-nav mr-auto',
+						'menu_class'      => 'navbar-nav nav-fill w-100 mr-5',
 						'depth'           => 2,
 						'walker'          => new Bootstrap_Nav_Walker(),
 						'fallback_cb'     => 'Bootstrap_Nav_Walker::fallback',
