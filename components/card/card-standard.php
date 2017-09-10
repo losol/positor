@@ -23,7 +23,7 @@
 			</a>
 		</div>
 
-		<a href="<?php the_permalink(); ?>" class="btn btn-outline-primary py-3 link-no-decoration white-space-normal">
+		<a href="<?php the_permalink(); ?>" class="btn btn-outline-primary my-2 link-no-decoration white-space-normal">
 			<?php
 				esc_html_e( 'Read', 'positor' );
 			?>
