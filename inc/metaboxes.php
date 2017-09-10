@@ -25,12 +25,6 @@ function positor_metabox( $meta_boxes ) {
 		'autosave' => true,
 		'fields' => array(
 			array(
-				'id' => $prefix . 'featured_post',
-				'name' => esc_html__( 'Feature this on front page', 'positor' ),
-				'type' => 'checkbox',
-				'desc' => esc_html__( 'Place this on the top of the front page.', 'positor' ),
-			),
-			array(
 				'id' => $prefix . 'featured_hero',
 				'name' => esc_html__( 'Large featured image/video', 'positor' ),
 				'type' => 'checkbox',
