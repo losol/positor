@@ -49,7 +49,6 @@
 			$query = new WP_Query( $fallback_args );
 		}
 
-
 		$posts_count = $query -> post_count;
 
 		// Sets counter, and start the post loop.

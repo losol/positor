@@ -32,7 +32,7 @@ if ( ! $hide_navbar ) { ?>
 					<i class="fa fa-fw fa-1_2x fa-bars " aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 				</button>
 			
-				<div id="nav-centered" class="d-none d-lg-block mr-auto text-light">
+				<div id="nav-centered" class="d-none d-lg-block mx-auto text-light">
 				<?php
 					wp_nav_menu( array(
 						'menu'            => 'top',
