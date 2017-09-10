@@ -40,7 +40,7 @@ if ( ! $hide_navbar ) { ?>
 						'theme_location'  => 'menu-1',
 						'container'       => 'div',
 						'container_id'    => 'navbar-menu',
-						'container_class' => 'navbar-collapse d-none d-lg-block mx-auto text-light',
+						'container_class' => 'navbar-collapse collapse mx-auto text-light',
 						'menu_id'         => 'top_menu',
 						'menu_class'      => 'navbar-nav mr-auto',
 						'depth'           => 2,
@@ -48,7 +48,7 @@ if ( ! $hide_navbar ) { ?>
 						'fallback_cb'     => 'Bootstrap_Nav_Walker::fallback',
 						)
 					);
-				
+
 					?>
 			
 				<button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#navbar-searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
