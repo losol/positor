@@ -20,41 +20,15 @@
 			'posts_per_page' => '5',
 			'orderby' => 'modified',
 			'order' => 'desc',
-			'post__not_in'   => get_option( 'sticky_posts' ),
-			'meta_query' => array(
-				array(
-					'key'     => '_positor_featured_post',
-					'value'   => '1',
-					),
-					),
-			);
-
-		// If no posts found, take the stickies 6.
-		$fallback_args = array(
-			'posts_per_page' => '5',
-			'orderby' => 'modified',
-			'order' => 'desc',
 			'post__in'   => get_option( 'sticky_posts' ),
 			);
 
 		// The Query.
 		$query = new WP_Query( $args );
 
-
 		// Sets counter, and start the post loop.
 		$count = (int) 0;
 		$posts_count = $query -> post_count;
-
-		if ( 0 === $posts_count ) {
-			$query = new WP_Query( $fallback_args );
-		}
-
-		$posts_count = $query -> post_count;
-
-		// Sets counter, and start the post loop.
-		$count = (int) 0;
-		$posts_count = $query -> post_count;
-
 		$level_2_css_class = 'col-md-4';
 		if ( 3 === $posts_count ) {
 				$level_2_css_class = 'col-md-12';
@@ -64,16 +38,23 @@
 				$level_2_css_class = 'col-md-4';
 		}
 
-
 		if ( $query->have_posts() ) {
 
 			while ( $query->have_posts() ) :
 				$query->the_post();
 				$count++;
 				if ( 1 === $count ) {
-					echo '<div class="grid-item level-1 col-md-9 d-flex p-1">';
-					get_template_part( 'components/card/card-standard' );
-					echo '</div>';
+					if ( 1 === $posts_count ) {
+						// Large post if only one sticky.
+						echo '<div class="grid-item col-12 level-1 d-flex p-1">';
+						get_template_part( 'components/card/card-standard' );
+						echo '</div>';
+					} else {
+						// 3/4 column if more than one stickies.
+						echo '<div class="grid-item level-1 col-md-9 d-flex p-1">';
+						get_template_part( 'components/card/card-standard' );
+						echo '</div>';
+					}
 				}
 				if ( 2 === $count ) {
 					echo '<div class="grid-item level-2 col-md-3 d-flex p-1">';
