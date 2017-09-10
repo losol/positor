@@ -152,10 +152,10 @@ add_action( 'widgets_init', 'positor_widgets_init', 1000 );
 	wp_enqueue_style( 'positor-style', get_stylesheet_uri() );
 
 }
-add_action( 'wp_enqueue_styles', 'positor_styles' );
+add_action( 'wp_enqueue_style', 'positor_styles' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue scripts.
  */
 function positor_scripts() {
 	wp_enqueue_script( 'positor-scripts', get_template_directory_uri() . '/assets/js/positor.js' );
