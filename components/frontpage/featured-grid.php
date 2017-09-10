@@ -54,9 +54,10 @@
 		// Sets counter, and start the post loop.
 		$count = (int) 0;
 		$posts_count = $query -> post_count;
-		
 
-		$level_2_css_class = 'col-md-3';
+		echo $posts_count;
+
+		$level_2_css_class = 'col-md-4';
 		if ( 3 === $posts_count ) {
 				$level_2_css_class = 'col-md-12';
 		} elseif ( 4 === $posts_count ) {
