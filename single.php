@@ -28,6 +28,9 @@ while ( have_posts() ) : the_post(); ?>
 			// Multipage post pagination.
 			wp_link_pages();
 
+			// Facebook like page.
+			get_template_part( 'components/social/facebook-like-page' );
+
 			// Social sharing.
 			get_template_part( 'components/social/sharebuttons' );
 
