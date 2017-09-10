@@ -45,7 +45,7 @@ if ( ! function_exists( 'positor_the_small_custom_logo' ) ) :
 				echo '</a>';
 		} else {
 			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
-			echo '<span id="navbar-site-title"> $blog_title </span>';
+			echo '<span id="navbar-site-title">' . $blog_title . '</span>';
 			echo '</a>';
 		}
 	}
