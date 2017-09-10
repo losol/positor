@@ -24,7 +24,7 @@ if ( ! $hide_navbar ) { ?>
 	</button>
 	</div>
 
-	<div id="site-branding" class="d-none d-md-block text-light justify-content-md-center">
+	<div id="site-branding" class="d-block text-light justify-content-md-center">
 			<?php positor_the_small_custom_logo(); ?>
 	</div>
 
