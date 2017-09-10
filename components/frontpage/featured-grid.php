@@ -55,8 +55,6 @@
 		$count = (int) 0;
 		$posts_count = $query -> post_count;
 
-		echo $posts_count;
-
 		$level_2_css_class = 'col-md-4';
 		if ( 3 === $posts_count ) {
 				$level_2_css_class = 'col-md-12';
