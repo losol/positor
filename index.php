@@ -32,7 +32,7 @@
 	<div class="row">
 <!-- Loop -->
 		<?php
-
+		
 		if ( have_posts() ) :
 			// Check if there should be place for a sidebar.
 			if ( is_active_sidebar( 'sidebar-frontpage' ) ) {

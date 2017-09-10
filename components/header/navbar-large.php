@@ -34,7 +34,6 @@ if ( ! $hide_navbar ) { ?>
 					<i class="fa fa-fw fa-1_2x fa-bars " aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 				</button>
 			
-				<div class="mx-auto d-flex">
 				<?php
 					wp_nav_menu( array(
 						'menu'            => 'top',
@@ -55,7 +54,8 @@ if ( ! $hide_navbar ) { ?>
 				<button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#navbar-searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="fa fa-fw fa-1_2x fa-search" aria-hidden="true"></i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
 				</button>
-				</div>
+		
+				
 				
 			
 			</div>

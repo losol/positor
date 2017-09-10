@@ -172,6 +172,19 @@ function positor_jetpackme_remove_rp() {
 }
 add_filter( 'wp', 'positor_jetpackme_remove_rp', 20 );
 
+
+/**
+ * Hide sticky posts from loop as they are shown in featured grid.
+ */
+function positor_exclude_sticky_posts( $query ) {
+
+	if ( $query->is_home() && $query->is_main_query() ) {
+		$query->set( 'ignore_sticky_posts', 1 );
+		$query->set( 'post__not_in', get_option( 'sticky_posts' ) );
+	}
+}
+add_action( 'pre_get_posts', 'positor_exclude_sticky_posts' );
+
 /**
  * Custom template tags for this theme.
  */
