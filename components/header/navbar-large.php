@@ -49,11 +49,12 @@ if ( ! $hide_navbar ) { ?>
 					);
 				
 					?>
-				</div>
-			
 				<button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#navbar-searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="fa fa-fw fa-1_2x fa-search" aria-hidden="true"></i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
 				</button>
+				</div>
+			
+
 			
 				
 			
