@@ -152,7 +152,7 @@ add_action( 'widgets_init', 'positor_widgets_init', 1000 );
 	wp_enqueue_style( 'positor-style', get_stylesheet_uri() );
 
 }
-add_action( 'wp_enqueue_style', 'positor_styles' );
+add_action( 'wp_enqueue_scripts', 'positor_styles' );
 
 /**
  * Enqueue scripts.
