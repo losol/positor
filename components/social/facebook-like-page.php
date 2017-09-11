@@ -1,1 +1,1 @@
-<div class="fb-like" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+<div class="fb-like my-3" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
