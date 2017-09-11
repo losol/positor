@@ -31,7 +31,7 @@ if ( ! $hide_navbar ) { ?>
 			
 			<nav id="site-navigation" class="navbar navbar-expand-lg navbar-dark link-no-decoration">			
 				<button class="d-lg-none btn btn-link pull-left text-light text-uppercase font-weight-200" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-				<i class="material-icons">menu</i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
+				<i class="material-icons align-middle">menu</i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 				</button>
 			
 				<?php
@@ -52,7 +52,7 @@ if ( ! $hide_navbar ) { ?>
 					?>
 			
 				<button class="btn btn-link text-light text-uppercase" type="button" data-toggle="collapse" data-target="#navbar-searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="material-icons">search</i></i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
+					<i class="material-icons align-middle">search</i></i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
 				</button>
 		
 				

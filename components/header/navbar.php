@@ -20,7 +20,7 @@ if ( ! $hide_navbar ) { ?>
 
 	<div class="navbar-nav">
 	<button class="btn btn-link pull-left text-light text-uppercase font-weight-200" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-		<i class="fa fa-fw fa-1_2x fa-bars " aria-hidden="true"></i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
+	<i class="material-icons align-middle">menu</i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 	</button>
 	</div>
 
@@ -29,7 +29,7 @@ if ( ! $hide_navbar ) { ?>
 	</div>
 
 	<button class="btn btn-link pull-right text-uppercase text-light" type="button" data-toggle="collapse" data-target="#navbar-searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
-		<i class="fa fa-fw fa-1_2x fa-search" aria-hidden="true"></i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
+	<i class="material-icons align-middle">search</i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
 	</button>
 
 	

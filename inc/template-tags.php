@@ -41,7 +41,7 @@ if ( ! function_exists( 'positor_the_small_custom_logo' ) ) :
 		$logo = wp_get_attachment_image_src( $custom_logo_id , 'small' );
 		if ( has_custom_logo() ) {
 			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
-				echo '<img src="' . esc_url( $logo[0] ) . '" alt="Logo ' . $blog_title . '" class="d-inline-block align-top" width="150">';
+				echo '<img src="' . esc_url( $logo[0] ) . '" alt="Logo ' . $blog_title . '" class="d-inline-block align-top" width="120">';
 				echo '</a>';
 		} else {
 			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
