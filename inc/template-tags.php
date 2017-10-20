@@ -163,10 +163,10 @@ if ( ! function_exists( 'positor_the_categories' ) ) :
 	function positor_the_categories() {
 		$categories_list = get_the_category();
 		if ( $categories_list && positor_categorized_blog() ) {
-			echo '<div class="entry-categories"><span class="sr-only">' . esc_html__( 'Posted in ', 'positor' ) . '</span>';
+			echo '<div class="entry-categories category-badges"><span class="sr-only">' . esc_html__( 'Posted in ', 'positor' ) . '</span>';
 
 			foreach ( $categories_list as $category ) {
-				echo '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" class="badge badge-primary mr-1">';
+				echo '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" class="badge badge-primary badge-category mr-1">';
 				echo esc_html( $category->name );
 				echo '</a>';
 
