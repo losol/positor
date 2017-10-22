@@ -72,6 +72,12 @@ Source: https://www.flickr.com/photos/losvik/19007169333
 
 ## Changelog
 
+### 1.3
+* Released: 22 October 2017.
+
+* Switched from font awesome to google material icons
+* Upgraded Bootstrap to version 4.0.0 beta 2.
+
 ### 1.2
 * Released: 26 July 2017.
 
