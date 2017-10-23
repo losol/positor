@@ -6,10 +6,6 @@
 // Then import boostrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-// Font awesome
-$fa-font-path: "../fonts";
-@import "../node_modules/font-awesome/scss/font-awesome";
-
 // Adding scss extra
 @import "settings/extra_scss";
 
