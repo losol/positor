@@ -176,6 +176,22 @@ if ( ! function_exists( 'positor_the_categories' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'positor_the_categories_inline' ) ) :
+	/**
+	 * Prints HTML with the categories, formatted as Bootstrap 4 badges.
+	 */
+	function positor_the_categories_inline() {
+		$categories_list = get_the_category();
+		if ( $categories_list && positor_categorized_blog() ) {
+			foreach ( $categories_list as $category ) {
+				echo '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" class="badge badge-primary badge-category mr-1">';
+				echo esc_html( $category->name );
+				echo '</a>';
+			}
+		}
+	}
+endif;
+
 if ( ! function_exists( 'positor_the_tags' ) ) :
 	/**
 	 * Prints HTML with the categories, formatted as Bootstrap 4 badges.
