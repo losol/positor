@@ -184,7 +184,7 @@ if ( ! function_exists( 'positor_the_categories_inline' ) ) :
 		$categories_list = get_the_category();
 		if ( $categories_list && positor_categorized_blog() ) {
 			foreach ( $categories_list as $category ) {
-				echo '<span class="badge badge-primary badge-category mr-1 link-no-decoration link-decoration-none">';
+				echo '<span class="badge badge-light badge-category mr-1 link-no-decoration link-decoration-none">';
 				echo esc_html( $category->name );
 				echo '</span>';
 			}
