@@ -40,7 +40,7 @@
 
 		if ( $query->have_posts() ) {
 
-			while ( $query->have_posts() && $count < 6 ) :
+			while ( $query->have_posts() && $count < 5 ) :
 				$query->the_post();
 				$count++;
 				if ( 1 === $count ) {
