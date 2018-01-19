@@ -40,7 +40,7 @@
 
 		if ( $query->have_posts() ) {
 
-			while ( $query->have_posts() ) :
+			while ( $query->have_posts() && count < 6 ) :
 				$query->the_post();
 				$count++;
 				if ( 1 === $count ) {
@@ -61,7 +61,7 @@
 					get_template_part( 'components/card/card-standard' );
 					echo '</div>';
 				}
-				if ( $count > 2 ) {
+				if ( $count > 2  ) {
 					echo '<div class="grid-item level-2 d-flex p-1 ' . esc_html( $level_2_css_class ) . '">';
 					get_template_part( 'components/card/card-standard' );
 					echo '</div>';
