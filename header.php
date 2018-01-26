@@ -22,6 +22,12 @@
 <body <?php body_class(); ?>>
 	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'positor' ); ?></a>
 
+	<div class="container ad top-banner py-1">
+		<?php 
+		if( function_exists('the_ad_placement') ) { the_ad_placement('top-banner'); }
+		?>
+	</div>
+	
 	<header id="header" class="site-header d-print-none">
 
 	<?php
@@ -35,10 +41,6 @@
 		get_template_part( 'components/header/navbar' );
 	}
 	?>
-	<div class="container ad top-banner">
-		<?php 
-		if( function_exists('the_ad_placement') ) { the_ad_placement('top-banner'); }
-		?>
-	</div>
+
 	
 	</header>
