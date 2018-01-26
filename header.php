@@ -35,5 +35,10 @@
 		get_template_part( 'components/header/navbar' );
 	}
 	?>
+	<div class="container ad top-banner">
+		<?php 
+		if( function_exists('the_ad_placement') ) { the_ad_placement('top-banner'); }
+		?>
+	</div>
 	
 	</header>
