@@ -6,7 +6,7 @@
   "license": "GPL-2.0",
   "dependencies": {
     "jquery":"^3.3.1",
-    "bootstrap": "^4.1,1",
+    "bootstrap": "^4.1.1",
     "font-awesome": "^4.7.0",
     "popper.js": "^1.14.3",
     "moment": "^2.22.1",

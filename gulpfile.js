@@ -1,8 +1,7 @@
 "use strict";
 // Project configuration
 var project 	    = 'positor', // Project name, used for build zip.
-    version         = '1.3.0', // Version for stylesheets and scripts
-	url 		    = 'local.wordpress.dev', // Local Development URL for BrowserSync. Change as-needed.
+    version         = '1.4.0', // Version for stylesheets and scripts
 	build 		    = './temp/buildtheme/', // Files that you want to package into a zip go here
 	buildInclude    = [
 				// include common file types
@@ -201,4 +200,6 @@ gulp.task('build:pot', function () {
  		.pipe(notify({ message: 'Zip task complete', onLast: true }));
  });
 
- gulp.task('build', gulpSequence('clean:temp', 'make:css', 'build:pot', 'build:theme', 'build:zip'));
+gulp.task('build', gulpSequence('clean:temp', 'make:css', 'build:pot', 'build:theme', 'build:zip'));
+
+gulp.task('default', ['clean', 'copy:lib', 'make:css', 'make:js']);
