@@ -30,6 +30,13 @@ Issues, bugs and feature requests could also be posted at [GitHub](https://githu
 3. Click Activate to use your new theme right away.
 
 
+To test locally started, just clone this repository and run: 
+
+```bash
+docker-compose up -d
+```
+
+
 ## Frequently Asked Questions
 
 * How do I add posts to the featured post grid on frontpage?
