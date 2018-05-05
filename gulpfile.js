@@ -52,11 +52,8 @@ var gulp = require("gulp"),
     merge = require('gulp-merge'),
     zip  = require('gulp-zip'),
     wpPot = require('gulp-wp-pot'),
-    notify = require('gulp-notify'),
     gulpSequence = require('gulp-sequence')
 ;
-
-var webroot = "./";
 
 var paths = {
     js: "js/**/*.js",
@@ -77,7 +74,7 @@ gulp.task("clean:js", function (cb) {
 });
 
 gulp.task("clean:css", function (cb) {
-    rimraf(paths.CssDest, cb);
+    rimraf(paths.cssDest, cb);
 });
 
 gulp.task("clean:lib", function (cb) {
@@ -107,7 +104,6 @@ gulp.task("copy:lib", () => {
     })
         .pipe(gulp.dest(paths.libDest));
 });
-
 
 // gulp sass - Compiles SCSS files in CSS
 gulp.task('sass', function () {
