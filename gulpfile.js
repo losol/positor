@@ -41,8 +41,6 @@ var gulp = require("gulp"),
     concat = require("gulp-concat"),
     cssmin = require("gulp-cssmin"),
     uglify = require("gulp-uglify"),
-    gulp = require('gulp'),
-    clean = require('gulp-clean'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     plumber = require('gulp-plumber'),
@@ -87,12 +85,7 @@ gulp.task("clean:temp", function (cb) {
 
 gulp.task("clean", ["clean:js", "clean:css", "clean:lib", "clean:temp"]);
 
-gulp.task("minify:js", function () {
-    return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
-        .pipe(concat(paths.concatJsDest))
-        .pipe(uglify())
-        .pipe(gulp.dest("."));
-});
+
 
 // Copy libs to wwwroot/lib folder
 gulp.task("copy:lib", () => {
@@ -198,4 +191,4 @@ gulp.task('build:pot', function () {
 
 gulp.task('build', gulpSequence('clean:temp', 'make:css', 'build:pot', 'build:theme', 'build:zip'));
 
-gulp.task('default', ['clean', 'copy:lib', 'make:css', 'make:js']);
+gulp.task('default', gulpSequence('clean', 'copy:lib', 'make:css', 'make:js'));
