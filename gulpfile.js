@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 // Project configuration
 var project 	    = 'positor', // Project name, used for build zip.
-    version         = '1.4.0', // Version for stylesheets and scripts
+    version         = '1.5.0', // Version for stylesheets and scripts
 	build 		    = './temp/buildtheme/', // Files that you want to package into a zip go here
 	buildInclude    = [
 				// include common file types
@@ -36,11 +36,11 @@ var project 	    = 'positor', // Project name, used for build zip.
 			];
 
 
-var gulp = require("gulp"),
-    rimraf = require("rimraf"),
-    concat = require("gulp-concat"),
-    cssmin = require("gulp-cssmin"),
-    uglify = require("gulp-uglify"),
+var gulp = require('gulp'),
+    rimraf = require('rimraf'),
+    concat = require('gulp-concat'),
+    cssmin = require('gulp-cssmin'),
+    uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     plumber = require('gulp-plumber'),
@@ -54,46 +54,46 @@ var gulp = require("gulp"),
 ;
 
 var paths = {
-    js: "js/**/*.js",
-    minJs: "js/**/*.min.js",
-    jsSrc: "js/source/",
-    jsDest: "assets/js/",
-    css:  "css/**/*.css",
-    cssDest: "assets/stylesheets/",
-    minCss: "css/**/*.min.css",
-    libSrc: "node_modules/",
-    libDest: "assets/libs/",
-    bootstrapSassSrc: "node_modules/bootstrap/scss/",
-    temp: "./temp/"
+    js: 'js/**/*.js',
+    minJs: 'js/**/*.min.js',
+    jsSrc: 'js/source/',
+    jsDest: 'assets/js/',
+    css:  'css/**/*.css',
+    cssDest: 'assets/stylesheets/',
+    minCss: 'css/**/*.min.css',
+    libSrc: 'node_modules/',
+    libDest: 'assets/libs/',
+    bootstrapSassSrc: 'node_modules/bootstrap/scss/',
+    temp: './temp/'
 };
 
-gulp.task("clean:js", function (cb) {
+gulp.task('clean:js', function (cb) {
     rimraf(paths.jsDest, cb);
 });
 
-gulp.task("clean:css", function (cb) {
+gulp.task('clean:css', function (cb) {
     rimraf(paths.cssDest, cb);
 });
 
-gulp.task("clean:lib", function (cb) {
+gulp.task('clean:lib', function (cb) {
     rimraf(paths.libDest, cb);
 });
 
-gulp.task("clean:temp", function (cb) {
+gulp.task('clean:temp', function (cb) {
     rimraf(paths.temp, cb);
 });
 
-gulp.task("clean", ["clean:js", "clean:css", "clean:lib", "clean:temp"]);
+gulp.task('clean', ['clean:js', 'clean:css', 'clean:lib', 'clean:temp']);
 
 
 
 // Copy libs to wwwroot/lib folder
-gulp.task("copy:lib", () => {
+gulp.task('copy:lib', () => {
     gulp.src([
         'moment/min/*.js',
         'font-awesome/fonts'
     ], {
-        cwd: paths.libSrc + "/**"
+        cwd: paths.libSrc + '/**'
     })
         .pipe(gulp.dest(paths.libDest));
 });
