@@ -1,39 +1,41 @@
 'use strict';
+/* jshint node: true*/
+
 // Project configuration
-var project 	    = 'positor', // Project name, used for build zip.
-    version         = '1.5.0', // Version for stylesheets and scripts
-	build 		    = './temp/buildtheme/', // Files that you want to package into a zip go here
-	buildInclude    = [
-				// include common file types
-				'**/*.php',
-				'**/*.html',
-				'**/*.css',
-				'**/*.js',
-				'**/*.svg',
-				'**/*.ttf',
-				'**/*.otf',
-				'**/*.eot',
-				'**/*.woff',
-				'**/*.woff2',
-                '**/*.pot',
-                '**/*.mo',
-                '**/*.po',
-                '**/*.txt',
+var project = 'positor', // Project name, used for build zip.
+    version = '1.5.0', // Version for stylesheets and scripts
+    build = './temp/buildtheme/', // Files that you want to package into a zip go here
+    buildInclude = [
+        // include common file types
+        '**/*.php',
+        '**/*.html',
+        '**/*.css',
+        '**/*.js',
+        '**/*.svg',
+        '**/*.ttf',
+        '**/*.otf',
+        '**/*.eot',
+        '**/*.woff',
+        '**/*.woff2',
+        '**/*.pot',
+        '**/*.mo',
+        '**/*.po',
+        '**/*.txt',
 
-				// include specific files and folders
-				'screenshot.png',
+        // include specific files and folders
+        'screenshot.png',
 
-				// exclude files and folders
-				'!temp/**/*',
-                '!node_modules/**/*',
-				'!assets/bower_components/**/*',
-				'!style.css.map',
-				'!assets/js/custom/*',
-				'!assets/css/patrials/*',
-                '!gulpfile.js'
+        // exclude files and folders
+        '!temp/**/*',
+        '!node_modules/**/*',
+        '!assets/bower_components/**/*',
+        '!style.css.map',
+        '!assets/js/custom/*',
+        '!assets/css/patrials/*',
+        '!gulpfile.js'
 
 
-			];
+    ];
 
 
 var gulp = require('gulp'),
@@ -48,17 +50,16 @@ var gulp = require('gulp'),
     clone = require('gulp-clone'),
     cssnano = require('gulp-cssnano'),
     merge = require('gulp-merge'),
-    zip  = require('gulp-zip'),
+    zip = require('gulp-zip'),
     wpPot = require('gulp-wp-pot'),
-    gulpSequence = require('gulp-sequence')
-;
+    gulpSequence = require('gulp-sequence');
 
 var paths = {
     js: 'js/**/*.js',
     minJs: 'js/**/*.min.js',
     jsSrc: 'js/source/',
     jsDest: 'assets/js/',
-    css:  'css/**/*.css',
+    css: 'css/**/*.css',
     cssDest: 'assets/stylesheets/',
     minCss: 'css/**/*.min.css',
     libSrc: 'node_modules/',
@@ -88,13 +89,13 @@ gulp.task('clean', ['clean:js', 'clean:css', 'clean:lib', 'clean:temp']);
 
 
 // Copy libs to wwwroot/lib folder
-gulp.task('copy:lib', () => {
+gulp.task('copy:lib', function () {
     gulp.src([
-        'moment/min/*.js',
-        'font-awesome/fonts'
-    ], {
-        cwd: paths.libSrc + '/**'
-    })
+            'moment/min/*.js',
+            'font-awesome/fonts'
+        ], {
+            cwd: paths.libSrc + '/**'
+        })
         .pipe(gulp.dest(paths.libDest));
 });
 
@@ -110,16 +111,22 @@ gulp.task('sass', function () {
 gulp.task('make:css', function () {
     var source = gulp.src('./sass/*.scss')
         .pipe(plumber())
-        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(sourcemaps.init({
+            loadMaps: true
+        }))
         .pipe(sass());
 
     var pipe1 = source.pipe(clone())
-        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+        .pipe(sourcemaps.write(undefined, {
+            sourceRoot: null
+        }))
         .pipe(gulp.dest(paths.cssDest));
 
     var pipe2 = source.pipe(clone())
         .pipe(cssnano())
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest(paths.cssDest));
 
     return merge(pipe1, pipe2);
@@ -128,30 +135,30 @@ gulp.task('make:css', function () {
 // gulp make:js - Uglifies and concat all JS files into one
 gulp.task('make:js', function () {
     gulp.src([
-        paths.libSrc + 'jquery/dist/jquery.min.js',
-        paths.libSrc + 'popper.js/dist/popper.min.js',
-        paths.libSrc + 'bootstrap/dist/js/bootstrap.min.js',
-        paths.libSrc + 'moment/min/moment.min.js',
-        paths.libSrc + 'moment/locale/nb.js',
-        paths.jsSrc + 'skip-link-focus-fix.js',
-        paths.jsSrc + 'comment-reply.min.js',
-        paths.jsSrc + 'wp-embed.min.js'
+            paths.libSrc + 'jquery/dist/jquery.min.js',
+            paths.libSrc + 'popper.js/dist/popper.min.js',
+            paths.libSrc + 'bootstrap/dist/js/bootstrap.min.js',
+            paths.libSrc + 'moment/min/moment.min.js',
+            paths.libSrc + 'moment/locale/nb.js',
+            paths.jsSrc + 'skip-link-focus-fix.js',
+            paths.jsSrc + 'comment-reply.min.js',
+            paths.jsSrc + 'wp-embed.min.js'
 
-    ])
+        ])
         .pipe(concat('positor.min.js'))
         //.pipe(uglify())
         .pipe(gulp.dest(paths.jsDest));
 
     gulp.src([
-        paths.libSrc + 'jquery/dist/jquery.js',
-        paths.libSrc + 'popper.js/dist/umd/popper.js',
-        paths.libSrc + 'bootstrap/dist/js/bootstrap.js',
-        paths.libSrc + 'moment/moment.js',
-        paths.libSrc + 'moment/locale/nb.js',
-        paths.jsSrc + 'skip-link-focus-fix.js',
-        paths.jsSrc + 'comment-reply.min.js',
-        paths.jsSrc + 'wp-embed.min.js'
-    ])
+            paths.libSrc + 'jquery/dist/jquery.js',
+            paths.libSrc + 'popper.js/dist/umd/popper.js',
+            paths.libSrc + 'bootstrap/dist/js/bootstrap.js',
+            paths.libSrc + 'moment/moment.js',
+            paths.libSrc + 'moment/locale/nb.js',
+            paths.jsSrc + 'skip-link-focus-fix.js',
+            paths.jsSrc + 'comment-reply.min.js',
+            paths.jsSrc + 'wp-embed.min.js'
+        ])
         .pipe(concat('positor.js'))
         .pipe(gulp.dest(paths.jsDest));
 });
@@ -159,35 +166,33 @@ gulp.task('make:js', function () {
 // gulp build:pot - Make .pot file for translation
 gulp.task('build:pot', function () {
     return gulp.src('**/*.php')
-        .pipe(wpPot( {
+        .pipe(wpPot({
             domain: 'positor'
-        } ))
+        }))
         .pipe(gulp.dest('languages/positor.pot'));
 });
 
- /**
-  * Build task that moves essential theme files for production-ready sites
-  *
-  * build:theme copies all the files in buildInclude to build folder - check variable values at the top
-  */
-
-  gulp.task('build:theme', function() {
-  	return 	gulp.src(buildInclude)
-  		.pipe(gulp.dest(build))
-  		.pipe(notify({ message: 'Copy from buildFiles complete', onLast: true }));
-  });
-
-   /**
-  * Zipping build directory for distribution
-  *
-  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
+/**
+ * Build task that moves essential theme files for production-ready sites
+ *
+ * build:theme copies all the files in buildInclude to build folder - check variable values at the top
  */
- gulp.task('build:zip', function () {
- 	return 	gulp.src(build+'/**/')
- 		.pipe(zip(project+'.zip'))
- 		.pipe(gulp.dest(paths.temp))
- 		.pipe(notify({ message: 'Zip task complete', onLast: true }));
- });
+
+gulp.task('build:theme', function () {
+    return gulp.src(buildInclude)
+        .pipe(gulp.dest(build));
+});
+
+/**
+ * Zipping build directory for distribution
+ *
+ * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
+ */
+gulp.task('build:zip', function () {
+    return gulp.src(build + '/**/')
+        .pipe(zip(project + '.zip'))
+        .pipe(gulp.dest(paths.temp));
+});
 
 gulp.task('build', gulpSequence('clean:temp', 'make:css', 'build:pot', 'build:theme', 'build:zip'));
 
