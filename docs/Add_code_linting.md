@@ -1,4 +1,8 @@
-# Add code linting
+# Add code linting in VS Code
+
+Add javascript linting: 
+1. Install the jshint library 'sudo npm install -g jshint'
+2. Install 'jshint' in VS Code extensions
 
 Adding the WordPress Coding Standards WPCS when working in VS Code (on mac)
 * Install [https://getcomposer.org/doc/00-intro.md](Composer)
