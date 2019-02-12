@@ -1,3 +1,13 @@
+<?php
+/**
+ * The search form for searching the website.
+ *
+ * @package Positor
+ * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * @since   1.0.0
+ */
+?>
+
 <div>
 	<form role="search" method="get" class="form search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<div class="input-group">
