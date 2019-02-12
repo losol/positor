@@ -1,11 +1,11 @@
 <?php
- /**
-  * Template Name: No sidebar
-  * The template for displaying all pages without sidebar
-  *
-  * @link https://codex.wordpress.org/Template_Hierarchy
-  * @package Positor
-  */
+/**
+ * Template Name: No sidebar
+ * The template for displaying all pages without sidebar
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ * @package Positor
+ */
 
 ?> 
 
@@ -16,7 +16,8 @@
 		<main id="main">
 
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				get_template_part( 'components/page/content', 'page' );
 				get_template_part( 'components/common/comments' );

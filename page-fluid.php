@@ -16,7 +16,8 @@
 		<main id="main">
 
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				get_template_part( 'components/page/content', 'page' );
 				get_template_part( 'components/common/comments' );

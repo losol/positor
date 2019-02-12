@@ -31,30 +31,37 @@ if ( ! function_exists( 'positor_setup' ) ) {
 		set_post_thumbnail_size( 1280, 720, true );
 
 		// Registers theme navigation menu.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Top', 'positor' ),
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Top', 'positor' ),
 			)
 		);
 
 		// Declares support for custom logo.
-		add_theme_support( 'custom-logo', array(
-			'height'      => 300,
-			'width'       => 1200,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 300,
+				'width'       => 1200,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 
 		/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
 		*/
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		/**
 		* Register custom post formats supported.
@@ -88,66 +95,76 @@ add_action( 'after_setup_theme', 'positor_content_width', 0 );
  */
 function positor_widgets_init() {
 	// Sidebar for most pages.
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'positor' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Sidebar widgets', 'positor' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s py-3">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	));
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'positor' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Sidebar widgets', 'positor' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s py-3">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 
 	// Sidebar for front page, categories and archive pages.
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar on frontpage', 'positor' ),
-		'id'            => 'sidebar-frontpage',
-		'description'   => esc_html__( 'Widgets for sidebars on frontpage, category and archive pages', 'positor' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s py-3">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	));
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar on frontpage', 'positor' ),
+			'id'            => 'sidebar-frontpage',
+			'description'   => esc_html__( 'Widgets for sidebars on frontpage, category and archive pages', 'positor' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s py-3">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 
 	// Three column footer - left.
-	register_sidebar(array(
-		'name' => esc_html__( 'Footer (Left)', 'positor' ),
-		'id'        => 'footer-1',
-		'description' => esc_html__( 'First footer widget area', 'positor' ),
-		'before_widget' => '<div class="footer-widget left">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-	));
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer (Left)', 'positor' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'First footer widget area', 'positor' ),
+			'before_widget' => '<div class="footer-widget left">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2>',
+			'after_title'   => '</h2>',
+		)
+	);
 
 	// Three column footer - center.
-	register_sidebar(array(
-		'name' => esc_html__( 'Footer (Center)', 'positor' ),
-		'id'        => 'footer-2',
-		'description' => esc_html__( 'Second footer widget area', 'positor' ),
-		'before_widget' => '<div class="footer-widget center">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-	));
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer (Center)', 'positor' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Second footer widget area', 'positor' ),
+			'before_widget' => '<div class="footer-widget center">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2>',
+			'after_title'   => '</h2>',
+		)
+	);
 
 	// Three column footer - right.
-	register_sidebar(array(
-		'name' => esc_html__( 'Footer (Right)','positor' ),
-		'id'        => 'footer-3',
-		'description' => esc_html__( 'Third footer widget area', 'positor' ),
-		'before_widget' => '<div class="footer-widget right">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-	));
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer (Right)', 'positor' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Third footer widget area', 'positor' ),
+			'before_widget' => '<div class="footer-widget right">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2>',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'positor_widgets_init', 1000 );
 
 /**
  * Enqueue  styles.
  */
- function positor_styles() {
+function positor_styles() {
 	wp_enqueue_style( 'positor-bootstrap', get_template_directory_uri() . '/assets/stylesheets/positor.min.css' );
 	wp_enqueue_style( 'positor-style', get_stylesheet_uri() );
 
@@ -173,7 +190,7 @@ add_action( 'wp_enqueue_scripts', 'positor_scripts' );
  */
 function positor_jetpackme_remove_rp() {
 	if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
-		$jprp = Jetpack_RelatedPosts::init();
+		$jprp     = Jetpack_RelatedPosts::init();
 		$callback = array( $jprp, 'filter_add_target_to_dom' );
 		remove_filter( 'the_content', $callback, 40 );
 	}
