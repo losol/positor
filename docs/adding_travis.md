@@ -12,4 +12,4 @@
 
 
 ## Sources
-* https://shubhampandey.in/integrating-travis-ci-wordpress-theme/
+* https://shubhampandey.in/integrating-travis-ci-wordpress-theme/c

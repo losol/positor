@@ -9,7 +9,7 @@
 
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); ?> 
 <div class="container-fluid bg-warning">
 	<div class="row py-3"><div class="container">
 	<p class="pt-5 display-1 text-white">404 - <?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'positor' ); ?></span></p>
@@ -24,11 +24,9 @@
 			<section class="error-404 not-found">
 				<div class="page-content">
 					<p class="lead pt-5"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'positor' ); ?></p>
-					
 					<?php
 						get_search_form();
 						?>
-					
 				</div>
 			</section>
 		</main>

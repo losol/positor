@@ -11,36 +11,36 @@
 
 <?php get_header(); ?>
 <div id="content" class="container flex-grow">
-		<div class="row">
-		
-			<?php
-			if ( is_active_sidebar( 'sidebar-1' ) ) {
-				echo '<div class="col-md-9">';
-			} else {
-				echo '<div class="col-md-12">';
-			};
-			?>
-			<main id="main">
+        <div class="row">
+        
+    <?php
+    if (is_active_sidebar('sidebar-1') ) {
+        echo '<div class="col-md-9">';
+    } else {
+        echo '<div class="col-md-12">';
+    };
+    ?>
+            <main id="main">
 
-				<?php
-				while ( have_posts() ) : the_post();
+                <?php
+                while ( have_posts() ) : the_post();
 
-					get_template_part( 'components/page/content', 'page' );
-					get_template_part( 'components/common/comments' );
+                    get_template_part('components/page/content', 'page');
+                    get_template_part('components/common/comments');
 
-				endwhile; // End of the loop.
-				?>
+                endwhile; // End of the loop.
+                ?>
 
-			</main>
-			</div>
-			<?php
-			if ( is_active_sidebar( 'sidebar-1' ) ) :
-				echo '<div class="col-md-3 d-print-none">';
-				get_sidebar();
-			endif;
-			echo '</div>';
-			?>
-		</div>
+            </main>
+            </div>
+    <?php
+    if (is_active_sidebar('sidebar-1') ) :
+        echo '<div class="col-md-3 d-print-none">';
+        get_sidebar();
+    endif;
+    echo '</div>';
+    ?>
+        </div>
 </div>
 
 <?php
