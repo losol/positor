@@ -11,4 +11,5 @@ Adding the WordPress Coding Standards WPCS when working in VS Code (on mac)
 * Add the latest WordPress Coding Standard (WPCS)  `composer global require wp-coding-standards/wpcs`
 * Install the phpcs extension in VS Code: 'phpcs'
 * Right click the wpcs folder in your node_Modules foler, replace /path/to/wpcs and run: `~/.composer/vendor/bin/phpcs --config-set installed_paths /Users/ole/.composer/vendor/wp-coding-standards/wpcs`
+* Add the phpcs executable path to vs code settings
 * Add this line to your VS Code settings: "phpcbf.standard": "WordPress"
