@@ -18,8 +18,11 @@
 	<?php if ( '' !== get_the_post_thumbnail() ) : ?>
 		<div class="post-thumbnail py-1 ml-auto">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'positor-featured-image', array(
-					'class' => 'mx-auto d-block',
+				<?php
+				the_post_thumbnail(
+					'positor-featured-image',
+					array(
+						'class' => 'mx-auto d-block',
 					)
 				);
 				?>

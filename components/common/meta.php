@@ -10,10 +10,11 @@
 <?php
 $this_hide_sidebar = (bool) get_post_meta( $post->ID, '_positor_hide_sidebar', true );
 if ( ! $this_hide_sidebar ) {
-?>
+	?>
 
 <div class="pt-4 pl-2">
-	<?php // Show author info.
+	<?php
+	// Show author info.
 		echo '<div class="pl-4 m-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-pencil" aria-hidden="true"></i></p>';
 		echo '<span class="sr-only">' . esc_html( 'Author: ', 'positor' ) . '</span>' . positor_the_author() . '<br>'; // WPCS: XSS OK.
@@ -21,7 +22,8 @@ if ( ! $this_hide_sidebar ) {
 		echo '</p></div>';
 	?>
 
-	<?php // Show photographer_alias if assigned.
+	<?php
+	// Show photographer_alias if assigned.
 	if ( null !== ( positor_get_the_photographer() ) ) :
 		echo '<div class="pl-4 m-2 pt-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-camera-retro" aria-hidden="true"></i></p>';
@@ -29,7 +31,8 @@ if ( ! $this_hide_sidebar ) {
 		echo '</p></div>';
 	endif;
 	?>
-	<?php // Show published date.
+	<?php
+	// Show published date.
 	echo '<div class="pl-4 m-2"><p class="position-absolute left"><i class="fa fa-2x fa-fw fa-calendar" aria-hidden="true"></i></p>' . esc_html( 'Published: ', 'positor' ) . esc_html( get_the_date( '' ) );
 	// If updated date is different, show this as well.
 	if ( get_the_date( '' ) !== get_the_modified_date( '' ) ) {
@@ -37,11 +40,12 @@ if ( ! $this_hide_sidebar ) {
 	}
 
 	echo '</small></p></div>';
-		?>
-	
-	<?php // Show categories if has_category, and it is not the "uncategorized" category.
+	?>
+
+	<?php
+	// Show categories if has_category, and it is not the "uncategorized" category.
 	$categories = wp_get_post_categories( $post->ID );
-	if ( has_category() && ! ( count( $categories ) === 1 && in_array( 1, $categories, true )) ) :
+	if ( has_category() && ! ( count( $categories ) === 1 && in_array( 1, $categories, true ) ) ) :
 		echo '<div class="pl-4 m-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-bookmark-o" aria-hidden="true"></i></p>';
 		echo '<span class="sr-only">' . esc_html_e( 'Category: ', 'positor' ) . '</span>' . positor_the_categories(); // WPCS: XSS OK.
@@ -49,7 +53,8 @@ if ( ! $this_hide_sidebar ) {
 	endif;
 	?>
 
-	<?php // Show categories.
+	<?php
+	// Show categories.
 	if ( has_tag() ) :
 		echo '<div class="pl-4 m-2">';
 		echo '<p class="position-absolute left"><i class="fa fa-2x fa-fw fa-tag" aria-hidden="true"></i></p>';
@@ -59,5 +64,5 @@ if ( ! $this_hide_sidebar ) {
 	?>
 
 </div>
-<?php
+	<?php
 } // End if().

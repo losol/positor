@@ -10,7 +10,7 @@
 <?php
 $this_hide_intro = get_post_meta( $post->ID, '_positor_hide_intro_section', true );
 if ( ! $this_hide_intro ) {
-?>
+	?>
 
 <header>
 	<div class="bg-gray-light">
@@ -21,7 +21,7 @@ if ( ! $this_hide_intro ) {
 	} else {
 		echo '<div class="container py-3">';
 	}
-?>
+	?>
 
 		<?php
 		// Gets the featured video variable.
@@ -39,11 +39,17 @@ if ( ! $this_hide_intro ) {
 			echo '</div>';
 		} elseif ( get_the_post_thumbnail() ) {
 			// If we are here, we found no video. This checks for a featured image.
-			?> 
+			?>
+
 			<figure class="post-thumbnail figure image w-100">
-				<?php the_post_thumbnail( 'positor-featured-image', array(
+				<?php
+				the_post_thumbnail(
+					'positor-featured-image',
+					array(
 						'class' => 'figure-img img-responsive w-100',
-				) );?>
+					)
+				);
+				?>
 				<figcaption class="figure-caption text-right text-muted px-3">
 					<?php
 					the_post_thumbnail_caption();
@@ -56,16 +62,18 @@ if ( ! $this_hide_intro ) {
 		</div>
 		<div class="container py-3">
 
-		<?php // Show the title.
+		<?php
+		// Show the title.
 			the_title( '<h1>', '</h1>' );
 		?>
 
-		<?php // Check if there is a teaser text?
+		<?php
+		// Check if there is a teaser text?
 		if ( get_the_content( '', false ) !== get_the_content( '', true ) ) :
 			echo '<div><p class="lead pb-3">';
 
 			// Get teaser part.
-			$content = get_post_field( 'post_content', get_the_ID() );
+			$content       = get_post_field( 'post_content', get_the_ID() );
 			$content_parts = get_extended( $content );
 			echo esc_html( strip_tags( $content_parts['main'] ) );
 
@@ -75,5 +83,5 @@ if ( ! $this_hide_intro ) {
 	</div>
 </div>
 </header>
-<?php
+	<?php
 } // End if().
