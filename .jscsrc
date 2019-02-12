@@ -5,6 +5,7 @@
         "assets/js/positor.js",
         "assets/js/positor.min.js",
         "assets/js/html5.js",
-        "assets/js/jquery.scrollTo.js"
+        "assets/js/jquery.scrollTo.js",
+        "assets/libs/**/*.js"
     ]
 }
