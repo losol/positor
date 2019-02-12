@@ -26,17 +26,17 @@ if ( ! class_exists( 'Bootstrap_Page_Walker' ) ) {
 	class Bootstrap_Page_Walker extends Walker_Page {
 
 		/**
-		* Outputs the beginning of the current level in the tree before elements are output.
-		*
-		* @since 2.1.0
-		*
-		* @see Walker::start_lvl()
-		*
-		* @param string $output Passed by reference. Used to append additional content.
-		* @param int    $depth  Optional. Depth of page. Used for padding. Default 0.
-		* @param array  $args   Optional. Arguments for outputting the next level.
-		*                       Default empty array.
-		*/
+		 * Outputs the beginning of the current level in the tree before elements are output.
+		 *
+		 * @since 2.1.0
+		 *
+		 * @see Walker::start_lvl()
+		 *
+		 * @param string $output Passed by reference. Used to append additional content.
+		 * @param int    $depth  Optional. Depth of page. Used for padding. Default 0.
+		 * @param array  $args   Optional. Arguments for outputting the next level.
+		 *                       Default empty array.
+		 */
 		public function start_lvl( &$output, $depth = 0, $args = array() ) {
 			if ( isset( $args['item_spacing'] ) && 'preserve' === $args['item_spacing'] ) {
 				$t = "\t";
@@ -45,22 +45,22 @@ if ( ! class_exists( 'Bootstrap_Page_Walker' ) ) {
 				$t = '';
 				$n = '';
 			}
-			$indent = str_repeat( $t, $depth );
+			$indent  = str_repeat( $t, $depth );
 			$output .= "{$n}{$indent}<ul class='dropdown-menu children'>{$n}";
 		}
 
 		/**
-		* Outputs the end of the current level in the tree after elements are output.
-		*
-		* @since 2.1.0
-		*
-		* @see Walker::end_lvl()
-		*
-		* @param string $output Passed by reference. Used to append additional content.
-		* @param int    $depth  Optional. Depth of page. Used for padding. Default 0.
-		* @param array  $args   Optional. Arguments for outputting the end of the current level.
-		*                       Default empty array.
-		*/
+		 * Outputs the end of the current level in the tree after elements are output.
+		 *
+		 * @since 2.1.0
+		 *
+		 * @see Walker::end_lvl()
+		 *
+		 * @param string $output Passed by reference. Used to append additional content.
+		 * @param int    $depth  Optional. Depth of page. Used for padding. Default 0.
+		 * @param array  $args   Optional. Arguments for outputting the end of the current level.
+		 *                       Default empty array.
+		 */
 		public function end_lvl( &$output, $depth = 0, $args = array() ) {
 			if ( isset( $args['item_spacing'] ) && 'preserve' === $args['item_spacing'] ) {
 				$t = "\t";
@@ -69,22 +69,22 @@ if ( ! class_exists( 'Bootstrap_Page_Walker' ) ) {
 				$t = '';
 				$n = '';
 			}
-			$indent = str_repeat( $t, $depth );
+			$indent  = str_repeat( $t, $depth );
 			$output .= "{$indent}</ul>{$n}";
 		}
 
 		/**
-		* Outputs the beginning of the current element in the tree.
-		*
-		* @see Walker::start_el()
-		* @since 2.1.0
-		*
-		* @param string  $output       Used to append additional content. Passed by reference.
-		* @param WP_Post $page         Page data object.
-		* @param int     $depth        Optional. Depth of page. Used for padding. Default 0.
-		* @param array   $args         Optional. Array of arguments. Default empty array.
-		* @param int     $current_page Optional. Page ID. Default 0.
-		*/
+		 * Outputs the beginning of the current element in the tree.
+		 *
+		 * @see Walker::start_el()
+		 * @since 2.1.0
+		 *
+		 * @param string  $output       Used to append additional content. Passed by reference.
+		 * @param WP_Post $page         Page data object.
+		 * @param int     $depth        Optional. Depth of page. Used for padding. Default 0.
+		 * @param array   $args         Optional. Array of arguments. Default empty array.
+		 * @param int     $current_page Optional. Page ID. Default 0.
+		 */
 		public function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0 ) {
 			if ( isset( $args['item_spacing'] ) && 'preserve' === $args['item_spacing'] ) {
 				$t = "\t";
@@ -100,9 +100,8 @@ if ( ! class_exists( 'Bootstrap_Page_Walker' ) ) {
 			}
 
 			$css_class = array( 'nav-item', 'nav-item-' . $page->ID );
-				
 
-			if ( isset( $args['pages_with_children'][ $page->ID ] ) && $depth === 0 ) {
+			if ( isset( $args['pages_with_children'][ $page->ID ] ) && 0 === $depth ) {
 				$css_class[] = 'dropdown nav-item_has_children';
 			}
 
@@ -142,21 +141,21 @@ if ( ! class_exists( 'Bootstrap_Page_Walker' ) ) {
 			}
 
 			$args['link_before'] = empty( $args['link_before'] ) ? '' : $args['link_before'];
-			$args['link_after'] = empty( $args['link_after'] ) ? '' : $args['link_after'];
+			$args['link_after']  = empty( $args['link_after'] ) ? '' : $args['link_after'];
 
-			$atts = array();
-			$atts['href'] = get_permalink( $page->ID );
+			$atts          = array();
+			$atts['href']  = get_permalink( $page->ID );
 			$atts['class'] = 'nav-link';
 
 			if ( $depth >= 1 ) {
 				$atts['class'] = 'dropdown-item';
 			}
 
-			$atts['id'] = 'nav-link-' . $page->ID ;
+			$atts['id'] = 'nav-link-' . $page->ID;
 
-			if ( isset( $args['pages_with_children'][ $page->ID ] ) && $depth === 0 ) {
-				$atts['class'] = 'nav-link dropdown-toggle';
-				$atts['data-toggle'] = 'dropdown';
+			if ( isset( $args['pages_with_children'][ $page->ID ] ) && ( 0 === $depth ) ) {
+				$atts['class']         = 'nav-link dropdown-toggle';
+				$atts['data-toggle']   = 'dropdown';
 				$atts['aria-haspopup'] = 'true';
 				$atts['aria-expanded'] = 'false';
 			}
@@ -181,7 +180,7 @@ if ( ! class_exists( 'Bootstrap_Page_Walker' ) ) {
 			$attributes = '';
 			foreach ( $atts as $attr => $value ) {
 				if ( ! empty( $value ) ) {
-					$value = esc_attr( $value );
+					$value       = esc_attr( $value );
 					$attributes .= ' ' . $attr . '="' . $value . '"';
 				}
 			}
@@ -204,22 +203,22 @@ if ( ! class_exists( 'Bootstrap_Page_Walker' ) ) {
 				}
 
 				$date_format = empty( $args['date_format'] ) ? '' : $args['date_format'];
-				$output .= " " . mysql2date( $date_format, $time );
+				$output     .= ' ' . mysql2date( $date_format, $time );
 			}
 		}
 
 		/**
-		* Outputs the end of the current element in the tree.
-		*
-		* @since 2.1.0
-		*
-		* @see Walker::end_el()
-		*
-		* @param string  $output Used to append additional content. Passed by reference.
-		* @param WP_Post $page   Page data object. Not used.
-		* @param int     $depth  Optional. Depth of page. Default 0 (unused).
-		* @param array   $args   Optional. Array of arguments. Default empty array.
-		*/
+		 * Outputs the end of the current element in the tree.
+		 *
+		 * @since 2.1.0
+		 *
+		 * @see Walker::end_el()
+		 *
+		 * @param string  $output Used to append additional content. Passed by reference.
+		 * @param WP_Post $page   Page data object. Not used.
+		 * @param int     $depth  Optional. Depth of page. Default 0 (unused).
+		 * @param array   $args   Optional. Array of arguments. Default empty array.
+		 */
 		public function end_el( &$output, $page, $depth = 0, $args = array() ) {
 			if ( isset( $args['item_spacing'] ) && 'preserve' === $args['item_spacing'] ) {
 				$t = "\t";

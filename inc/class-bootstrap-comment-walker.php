@@ -7,15 +7,15 @@
  *     require get_template_directory() . '/inc/class-bootstrap-comment-walker.php';
  *
  * Replace wp_list_comments in your comments.php with this to use this
- * 		<?php
- *			wp_list_comments( array(
- *				'style'         => 'ol',
- *				'max_depth'     => 3,
- *				'short_ping'    => true,
- *				'avatar_size'   => '75',
- *				'walker'        => new Bootstrap_Comment_Walker(),
- *			) );
- *			?>
+ *      <?php
+ *          wp_list_comments( array(
+ *              'style'         => 'ol',
+ *              'max_depth'     => 3,
+ *              'short_ping'    => true,
+ *              'avatar_size'   => '75',
+ *              'walker'        => new Bootstrap_Comment_Walker(),
+ *          ) );
+ *          ?>
  *
  * @package     Positor
  */
@@ -39,26 +39,37 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 	 */
 	protected function html5_comment( $comment, $depth, $args ) {
 		$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
-		?>		
+		?>
+
 		<<?php echo $tag; // WPCS: XSS OK. ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'has-children media' : ' media' ); ?>> 
-			
+
 
 			<div class="media-body " id="div-comment-<?php comment_ID(); ?>">
 				<div class="media">
 					<div class="d-flex mr-3">
 						<?php if ( 0 !== $args['avatar_size'] ) : ?>
 							<img class="comment_avatar rounded-circle" src="
-								<?php echo esc_url( get_avatar_url( $comment, $args['avatar_size'], 'mm', '', array(
-									'default' => 'avatar_default',
-								) ) );
-								?>">
+								<?php
+								echo esc_url(
+									get_avatar_url(
+										$comment,
+										$args['avatar_size'],
+										'mm',
+										'',
+										array(
+											'default' => 'avatar_default',
+										)
+									)
+								);
+								?>
+								">
 						<?php endif; ?>
 					</div>
 					<div class="media-body mb-5">
-						<h4 class="media-heading "><?php echo get_comment_author_link() ?>
+						<h4 class="media-heading "><?php echo get_comment_author_link(); ?>
 							<time class="small text-muted" datetime="<?php comment_time( 'c' ); ?>">
-										<?php comment_date() ?>,
-										<?php comment_time() ?>
+										<?php comment_date(); ?>,
+										<?php comment_time(); ?>
 							</time>
 						</h4>
 						<div class="comment-content">
@@ -66,17 +77,22 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 						<div class="d-inline d-block">
 							<?php edit_comment_link( __( 'Edit', 'positor' ), '', '' ); ?>
 							<?php
-								comment_reply_link( array_merge( $args, array(
-									'add_below' => 'div',
-									'depth'     => $depth,
-									'max_depth' => $args['max_depth'],
-									'before'    => '',
-									'after'     => '',
-								) ) );
+								comment_reply_link(
+									array_merge(
+										$args,
+										array(
+											'add_below' => 'div',
+											'depth'     => $depth,
+											'max_depth' => $args['max_depth'],
+											'before'    => '',
+											'after'     => '',
+										)
+									)
+								);
 							?>
 						</div>
 					</div><!-- .comment-content -->
-					
+
 
 					</div><!-- .comment-metadata -->
 				</div>
@@ -86,10 +102,9 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 					<?php endif; ?>				
 				</div>
 
-								
 				<!-- </div> -->
 
 			<!-- </div>	 -->
-<?php
+		<?php
 	}
 }
