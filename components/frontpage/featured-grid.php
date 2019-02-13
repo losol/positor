@@ -18,17 +18,17 @@
 		 */
 		$args = array(
 			'posts_per_page' => '5',
-			'orderby' => 'modified',
-			'order' => 'desc',
-			'post__in'   => get_option( 'sticky_posts' ),
-			);
+			'orderby'        => 'modified',
+			'order'          => 'desc',
+			'post__in'       => get_option( 'sticky_posts' ),
+		);
 
 		// The Query.
 		$query = new WP_Query( $args );
 
 		// Sets counter, and start the post loop.
-		$count = (int) 0;
-		$posts_count = $query -> post_count;
+		$count             = (int) 0;
+		$posts_count       = $query->post_count;
 		$level_2_css_class = 'col-md-4';
 		if ( 3 === $posts_count ) {
 				$level_2_css_class = 'col-md-12';
@@ -61,7 +61,7 @@
 					get_template_part( 'components/card/card-standard' );
 					echo '</div>';
 				}
-				if ( $count > 2  ) {
+				if ( $count > 2 ) {
 					echo '<div class="grid-item level-2 d-flex p-1 ' . esc_html( $level_2_css_class ) . '">';
 					get_template_part( 'components/card/card-standard' );
 					echo '</div>';
@@ -69,5 +69,5 @@
 			endwhile;
 		}
 		wp_reset_postdata();
-	?>
+		?>
 </div>

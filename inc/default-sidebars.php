@@ -26,27 +26,32 @@ function positor_default_widgets() {
 	insert_widget_in_sidebar(
 		'recent-posts',
 		array(),
-	'footer-1');
+		'footer-1'
+	);
 
 	insert_widget_in_sidebar(
 		'recent-comments',
 		array(),
-	'footer-2');
+		'footer-2'
+	);
 
 	insert_widget_in_sidebar(
 		'search',
 		array(),
-	'footer-3');
+		'footer-3'
+	);
 
 	insert_widget_in_sidebar(
 		'categories',
 		array(),
-	'sidebar-frontpage');
+		'sidebar-frontpage'
+	);
 
 	insert_widget_in_sidebar(
 		'meta',
 		array(),
-	'sidebar-frontpage');
+		'sidebar-frontpage'
+	);
 
 }
 
@@ -66,7 +71,7 @@ function insert_widget_in_sidebar( $widget_id, $widget_data, $sidebar ) {
 
 	// Retrieve the key of the next widget instance.
 	$numeric_keys = array_filter( array_keys( $widget_instances ), 'is_int' );
-	$next_key = $numeric_keys ? max( $numeric_keys ) + 1 : 2;
+	$next_key     = $numeric_keys ? max( $numeric_keys ) + 1 : 2;
 
 	// Add this widget to the sidebar.
 	if ( ! isset( $sidebars_widgets[ $sidebar ] ) ) {

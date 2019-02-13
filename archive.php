@@ -21,17 +21,17 @@
 <div class="row">
 <!-- Loop -->
 	<?php
-	
 	if ( have_posts() ) :
 		// Check if there should be place for a sidebar.
 		if ( is_active_sidebar( 'sidebar-frontpage' ) ) {
-			echo '<div class="col-md-8">'; 
+			echo '<div class="col-md-8">';
 		} else {
 			echo '<div class="col">';
 		}
 
 		/* Start the Loop */
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
+			the_post();
 			echo '<div class="py-3">';
 			get_template_part( 'components/card/card-standard', get_post_format() );
 			echo '</div>';
@@ -53,7 +53,8 @@
 
 		get_template_part( 'components/post/content', 'none' );
 
-endif; ?>
+endif;
+?>
 </div>
 </div>
 <!-- End of Loop -->

@@ -24,7 +24,7 @@
  * Plugin:
  * require_once dirname( __FILE__ ) . '/path/to/class-tgm-plugin-activation.php';
  */
-require_once get_template_directory() . '/inc/tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'positor_register_required_plugins' );
 
@@ -40,9 +40,9 @@ function positor_register_required_plugins() {
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'      => 'Meta Box',
-			'slug'      => 'meta-box',
-			'required'  => false,
+			'name'     => 'Meta Box',
+			'slug'     => 'meta-box',
+			'required' => false,
 		),
 	);
 
@@ -66,13 +66,13 @@ function positor_register_required_plugins() {
 		'message'      => '',                      // Message to output right before the plugins table.
 
 		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'positor' ),
-			'menu_title'                      => __( 'Install Plugins', 'positor' ),
+			'page_title' => __( 'Install Required Plugins', 'positor' ),
+			'menu_title' => __( 'Install Plugins', 'positor' ),
 			/* translators: %s: plugin name. */
-			'installing'                      => __( 'Installing Plugin: %s', 'positor' ),
+			'installing' => __( 'Installing Plugin: %s', 'positor' ),
 			/* translators: %s: plugin name. */
-			'updating'                        => __( 'Updating Plugin: %s', 'positor' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'positor' ),
+			'updating'   => __( 'Updating Plugin: %s', 'positor' ),
+			'oops'       => __( 'Something went wrong with the plugin API.', 'positor' ),
 
 			/*
 			'notice_can_install_required'     => _n_noop(

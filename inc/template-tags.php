@@ -15,10 +15,10 @@ if ( ! function_exists( 'positor_the_custom_logo' ) ) :
 	/**
 	 * Return the custom Logo, or the blogname if no logo is found.
 	 */
-		function positor_the_custom_logo() {
-		$blog_title = get_bloginfo( 'name' );
+	function positor_the_custom_logo() {
+		$blog_title     = get_bloginfo( 'name' );
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
-		$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+		$logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 		if ( has_custom_logo() ) {
 			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
 				echo '<img src="' . esc_url( $logo[0] ) . '" alt="Logo ' . $blog_title . '" class="large-logo">';
@@ -35,10 +35,10 @@ if ( ! function_exists( 'positor_the_small_custom_logo' ) ) :
 	/**
 	 * Return the custom Logo, or the blogname if no logo is found.
 	 */
-		function positor_the_small_custom_logo() {
-		$blog_title = get_bloginfo( 'name' );
+	function positor_the_small_custom_logo() {
+		$blog_title     = get_bloginfo( 'name' );
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
-		$logo = wp_get_attachment_image_src( $custom_logo_id , 'small' );
+		$logo           = wp_get_attachment_image_src( $custom_logo_id, 'small' );
 		if ( has_custom_logo() ) {
 			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="navbar-brand link-no-decoration">';
 				echo '<img src="' . esc_url( $logo[0] ) . '" alt="Logo ' . $blog_title . '" class="d-inline-block align-top" width="120">';
@@ -63,8 +63,9 @@ if ( ! function_exists( 'the_post_thumbnail_caption' ) ) :
 		global $post;
 
 		$thumbnail_post_id = get_post_thumbnail_id( $post->ID );
-		$thumbnail_image = new WP_Query( array(
-			'p' => $thumbnail_post_id,
+		$thumbnail_image   = new WP_Query(
+			array(
+				'p' => $thumbnail_post_id,
 			)
 		);
 
@@ -144,7 +145,7 @@ if ( ! function_exists( 'positor_the_post_intro' ) ) :
 		elseif ( get_the_content( '', false ) !== get_the_content( '', true ) ) :
 
 			// Showing the teaser if the more tag exists.
-			$content = get_post_field( 'post_content', get_the_ID() );
+			$content       = get_post_field( 'post_content', get_the_ID() );
 			$content_parts = get_extended( $content );
 			echo esc_html( strip_tags( $content_parts['main'] ) );
 
@@ -221,17 +222,17 @@ if ( ! function_exists( 'positor_the_footer_bottom_text' ) ) :
 		$bottom_line = get_theme_mod( 'positor_footer_bottom_text' );
 
 		if ( empty( $bottom_line ) ) {
-			$bottom_line = 'Copyright <a href="' . esc_url( home_url() ) . '">' . get_bloginfo( 'name' ) . '</a>';
+			$bottom_line  = 'Copyright <a href="' . esc_url( home_url() ) . '">' . get_bloginfo( 'name' ) . '</a>';
 			$bottom_line .= ' &nbsp;&nbsp;&#124;&nbsp;&nbsp; Design <a href="https://losol.no/">losol.no</a>';
 		}
 
 		$allowed_html = array(
-			'a' => array(
-				'href' => array(),
+			'a'      => array(
+				'href'  => array(),
 				'title' => array(),
 			),
-			'br' => array(),
-			'em' => array(),
+			'br'     => array(),
+			'em'     => array(),
 			'strong' => array(),
 		);
 
@@ -266,12 +267,14 @@ function positor_categorized_blog() {
 	if ( empty( $blog_categories_count ) ) {
 
 		// Create an array of all the categories that are attached to posts.
-		$blog_categories_count = get_categories( array(
-			'fields'     => 'ids',
-			'hide_empty' => 1,
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		) );
+		$blog_categories_count = get_categories(
+			array(
+				'fields'     => 'ids',
+				'hide_empty' => 1,
+				// We only need to know if there is more than one category.
+				'number'     => 2,
+			)
+		);
 
 		// Count the number of categories that are attached to the posts.
 		$blog_categories_count = count( $blog_categories_count );
@@ -299,4 +302,4 @@ function positor_category_transient_flusher() {
 	delete_transient( 'positor_categories' );
 }
 add_action( 'edit_category', 'positor_category_transient_flusher' );
-add_action( 'save_post',     'positor_category_transient_flusher' );
+add_action( 'save_post', 'positor_category_transient_flusher' );

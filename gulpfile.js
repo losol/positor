@@ -38,8 +38,6 @@ var project = 'positor', // Project name, used for build zip.
 var gulp = require( 'gulp' ),
     rimraf = require( 'rimraf' ),
     concat = require( 'gulp-concat' ),
-    cssmin = require( 'gulp-cssmin' ),
-    uglify = require( 'gulp-uglify' ),
     sass = require( 'gulp-sass' ),
     rename = require( 'gulp-rename' ),
     plumber = require( 'gulp-plumber' ),
@@ -184,7 +182,7 @@ gulp.task( 'build:theme', function(  ) {
  */
 gulp.task( 'build:zip', function(  ) {
     return gulp.src( build + '/**/' )
-        .pipe( zip( project + '.zip' ) )
+        .pipe( zip( project + 'v' + version + '.zip' ) )
         .pipe( gulp.dest( paths.temp ) );
 } );
 

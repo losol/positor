@@ -13,5 +13,5 @@
 			// The content without the teaser.
 			the_content( '', true );
 
-		?>
+			?>
 	</div>

@@ -16,16 +16,20 @@
 			?>
 			<?php if ( '' !== get_the_post_thumbnail() ) : ?>
 				<div class="post-thumbnail py-1 ml-auto">		
-						<?php the_post_thumbnail( 'positor-featured-image', array(
-							'class' => '',
+						<?php
+						the_post_thumbnail(
+							'positor-featured-image',
+							array(
+								'class' => '',
 							)
-						); ?>
-						<p><?php echo esc_html( get_post( get_post_thumbnail_id() )->post_excerpt );  ?></p>
+						);
+						?>
+						<p><?php echo esc_html( get_post( get_post_thumbnail_id() )->post_excerpt ); ?></p>
 				</div>
 			<?php endif; ?>
 				<div><p class="lead">
 
-						<?php positor_the_post_intro() ?>
+						<?php positor_the_post_intro(); ?>
 
 				</p></div>
 			</div>
@@ -40,10 +44,14 @@
 		?>
 		<?php if ( '' !== get_the_post_thumbnail() ) : ?>
 			<div class="post-thumbnail py-1 ml-auto">		
-					<?php the_post_thumbnail( 'positor-featured-image', array(
-						'class' => 'mx-auto d-block',
+					<?php
+					the_post_thumbnail(
+						'positor-featured-image',
+						array(
+							'class' => 'mx-auto d-block',
 						)
-					); ?>
+					);
+					?>
 					<?php echo esc_html( get_post( get_post_thumbnail_id() )->post_excerpt ); ?>
 			</div>
 		<?php endif; ?>

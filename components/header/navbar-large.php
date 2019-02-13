@@ -14,7 +14,8 @@ if ( is_single() || is_page() ) {
 	$hide_navbar = get_post_meta( get_the_ID(), '_positor_hide_navbar', true );
 }
 
-if ( ! $hide_navbar ) { ?>
+if ( ! $hide_navbar ) {
+	?>
 <div class="header-large bg-dark bg-navbar bg-inverse">
 	<div class="container">
 		<div class="row py-2">
@@ -28,36 +29,34 @@ if ( ! $hide_navbar ) { ?>
 		</div>
 		<div class="row">
 			<div class="col-12">
-			
+
 			<nav id="site-navigation" class="navbar navbar-expand-lg navbar-dark link-no-decoration">			
 				<button class="d-lg-none btn btn-link pull-left text-light text-uppercase font-weight-200" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="material-icons align-middle">menu</i>&nbsp;<span><?php esc_html_e( 'Menu', 'positor' ); ?></span>
 				</button>
-			
+
 				<?php
-					wp_nav_menu( array(
-						'menu'            => 'top',
-						'theme_location'  => 'menu-1',
-						'container'       => 'div',
-						'container_id'    => 'navbar-menu',
-						'container_class' => 'navbar-collapse collapse text-light',
-						'menu_id'         => 'top_menu',
-						'menu_class'      => 'navbar-nav nav-fill w-100 mr-5',
-						'depth'           => 2,
-						'walker'          => new Bootstrap_Nav_Walker(),
-						'fallback_cb'     => 'Bootstrap_Nav_Walker::fallback',
+					wp_nav_menu(
+						array(
+							'menu'            => 'top',
+							'theme_location'  => 'menu-1',
+							'container'       => 'div',
+							'container_id'    => 'navbar-menu',
+							'container_class' => 'navbar-collapse collapse text-light',
+							'menu_id'         => 'top_menu',
+							'menu_class'      => 'navbar-nav nav-fill w-100 mr-5',
+							'depth'           => 2,
+							'walker'          => new Bootstrap_Nav_Walker(),
+							'fallback_cb'     => 'Bootstrap_Nav_Walker::fallback',
 						)
 					);
 
-					?>
-			
+				?>
+
 				<button class="btn btn-link text-light text-uppercase" type="button" data-toggle="collapse" data-target="#navbar-searchform" aria-controls="searchform" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="material-icons align-middle">search</i></i>&nbsp;<?php esc_html_e( 'Search', 'positor' ); ?>
 				</button>
-		
-				
-				
-			
+
 			</div>
 			</nav>
 			</div>
@@ -79,6 +78,6 @@ if ( ! $hide_navbar ) { ?>
 	</div>
 	</div>
 </div>
-<?php
+	<?php
 } // End if().
 ?>

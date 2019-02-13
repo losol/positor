@@ -10,9 +10,12 @@
 	<?php // The card image. ?>
 	<a href="<?php the_permalink(); ?>">
 		<?php
-		the_post_thumbnail( 'positor-featured-image', array(
-			'class' => 'card-img-top img-fluid w-100',
-		) );
+		the_post_thumbnail(
+			'positor-featured-image',
+			array(
+				'class' => 'card-img-top img-fluid w-100',
+			)
+		);
 		?>
 	</a>
 	<div class="card-body">

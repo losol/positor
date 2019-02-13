@@ -23,11 +23,12 @@
 	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'positor' ); ?></a>
 
 	<div class="container ad top-banner text-center">
-		<?php 
-		if( function_exists('the_ad_placement') ) { the_ad_placement('top-banner'); }
+		<?php
+		if ( function_exists( 'the_ad_placement' ) ) {
+			the_ad_placement( 'top-banner' ); }
 		?>
 	</div>
-	
+
 	<header id="header" class="site-header d-print-none">
 
 	<?php
@@ -35,12 +36,11 @@
 	 * Choose large or compact header.
 	 * Shows large header on front page if enabled.
 	 */
-	if ( is_home() && is_front_page() && get_theme_mod( 'positor_header_large_on_front' )) {
+	if ( is_home() && is_front_page() && get_theme_mod( 'positor_header_large_on_front' ) ) {
 		get_template_part( 'components/header/navbar-large' );
 	} else {
 		get_template_part( 'components/header/navbar' );
 	}
 	?>
 
-	
 	</header>

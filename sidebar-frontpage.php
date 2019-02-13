@@ -13,4 +13,3 @@ if ( ! is_active_sidebar( 'sidebar-frontpage' ) ) {
 
 <?php
 dynamic_sidebar( 'sidebar-frontpage' );
-
