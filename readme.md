@@ -1,6 +1,8 @@
-# Positor
+# ARCHIVED THEME: Positor
 
-[![Build Status](https://travis-ci.com/losol/positor.svg?branch=master)](https://travis-ci.com/losol/positor)
+
+## **ARCHIVED**: This WordPress theme is not maintained. 
+
 
 **Contributors:** losol, losvik
 **Requires at least:** 4.4.0
